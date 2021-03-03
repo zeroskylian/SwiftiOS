@@ -1,0 +1,16 @@
+PODS:
+  - FluentDarkModeKit (1.0.1)
+
+DEPENDENCIES:
+  - FluentDarkModeKit
+
+SPEC REPOS:
+  trunk:
+    - FluentDarkModeKit
+
+SPEC CHECKSUMS:
+  FluentDarkModeKit: 0c5f31ca81eb058f3e8b6d79b3d08afbe7c40c42
+
+PODFILE CHECKSUM: 6be09a13f3cfed6b0a20ddd07325bfc0eeadeede
+
+COCOAPODS: 1.10.1

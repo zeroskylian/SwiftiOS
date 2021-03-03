@@ -1,0 +1,6 @@
+module Pods_SwiftiOS {
+  umbrella header "Pods-SwiftiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
