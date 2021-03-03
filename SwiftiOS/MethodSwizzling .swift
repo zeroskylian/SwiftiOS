@@ -13,7 +13,7 @@ class MethodSwizzling {
     
     static let shared: MethodSwizzling = MethodSwizzling()
     
-    private static var swizzlingConfigured = false
+    fileprivate static var swizzlingConfigured = false
     
     private init() {}
     
@@ -23,9 +23,9 @@ class MethodSwizzling {
         UIViewController.swizzleViewDidAppear
         UIViewController.swizzleViewDidDisappear
         UIControl.swizzleSendAction
+        UIView.swizzleAddGesture
         UITableView.swizzleDelegate
         UICollectionView.swizzleDelegate
-        UIGestureRecognizer.swizzleInit
     }
 }
 
@@ -43,7 +43,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            print("target: \(type(of: self)) action: \(selector)")
+            print(["target": type(of: self),"action": selector])
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -57,7 +57,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            print("target: \(type(of: self)) action: \(selector)")
+            print(["target": type(of: self),"action": selector])
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -76,7 +76,7 @@ extension UIControl {
         let imp = method_getImplementation(method)
         class_replaceMethod(UIControl.self, selector, imp_implementationWithBlock({(self: UIControl, action: Selector, target: Any? ,event: UIEvent?) -> Void in
             if let target = target {
-                print("target: \(type(of: target)) action: \(action)")
+                print(["target": type(of: self), "action": selector, "type": "Button"])
             }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIControl, Selector, Selector, Any?, UIEvent?) -> Void ).self)
             oldIMP(self,selector,action,target,event)
@@ -84,7 +84,43 @@ extension UIControl {
     }()
 }
 
-
+extension UIView {
+    
+    static let swizzleAddGesture: Void = {
+        /// open func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer)
+        let selector = #selector(UIView.addGestureRecognizer(_:))
+        guard let method = class_getInstanceMethod(UIView.self, selector) else {
+            assertionFailure(swizzleFailed(class: UIView.self, selector: selector))
+            return
+        }
+        let imp = method_getImplementation(method)
+        class_replaceMethod(UIView.self, selector, imp_implementationWithBlock({ (self: UIView, gestureRecognizer: UIGestureRecognizer) -> Void in
+            if gestureRecognizer is UITapGestureRecognizer {
+                gestureRecognizer.addTarget(self, action: #selector(trigger(gesture:)))
+            }
+            let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIView, Selector, UIGestureRecognizer) -> Void ).self)
+            oldIMP(self,selector,gestureRecognizer)
+        } as @convention(block) (UIView, UIGestureRecognizer) -> Void), method_getTypeEncoding(method))
+    }()
+    
+    @objc func trigger(gesture: UITapGestureRecognizer) {
+        guard let vc = findViewController(),let view = gesture.view else {
+            return
+        }
+        print(["target": type(of: vc) ,"action": "Tap","type":type(of: view)])
+    }
+    
+    
+    func findViewController() -> UIViewController? {
+        if let nextResponder = self.next as? UIViewController {
+            return nextResponder
+        } else if let nextResponder = self.next as? UIView {
+            return nextResponder.findViewController()
+        } else {
+            return nil
+        }
+    }
+}
 extension UITableView {
     
     static let swizzleDelegate: Void = {
@@ -105,6 +141,7 @@ extension UITableView {
     
     
     static func swizzleTableViewDelegateDidSelect(delegate: UITableViewDelegate) {
+        guard !MethodSwizzling.swizzlingConfigured else { return }
         /// optional func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         let selector = #selector(UITableViewDelegate.tableView(_:didSelectRowAt:))
         guard delegate.responds(to: selector)  else { return }
@@ -114,7 +151,7 @@ extension UITableView {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(type(of: delegate), selector, imp_implementationWithBlock({(self:UITableViewDelegate, tableView: UITableView,indexPath: IndexPath) -> Void in
-            print("target: \(type(of: self)) tableView select: \(indexPath)")
+            print(["target": type(of: self),"action": indexPath, "type": "TableView"])
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UITableViewDelegate, Selector, UITableView, IndexPath) -> Void).self)
             oldIMP(self,selector,tableView,indexPath)
         } as @convention(block) (UITableViewDelegate, UITableView, IndexPath) -> Void), method_getTypeEncoding(method))
@@ -141,7 +178,7 @@ extension UICollectionView {
     }()
     
     static func swizzleCollectionViewDelegateDidSelect(delegate: UICollectionViewDelegate) {
-//        optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+        //        optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
         let selector = #selector(UICollectionViewDelegate.collectionView(_:didSelectItemAt:))
         guard delegate.responds(to: selector)  else { return }
         guard let method = class_getInstanceMethod(type(of: delegate), selector) else {
@@ -150,30 +187,29 @@ extension UICollectionView {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(type(of: delegate), selector, imp_implementationWithBlock({ (self:UICollectionViewDelegate, collectionView: UICollectionView,indexPath: IndexPath) -> Void in
-            print("target: \(type(of: self)) collectionView select: \(indexPath)")
+            print(["target": type(of: self),"action": indexPath, "type": "CollectionView"])
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UICollectionViewDelegate, Selector, UICollectionView, IndexPath) -> Void).self)
             oldIMP(self,selector,collectionView,indexPath)
         } as @convention(block) (UICollectionViewDelegate, UICollectionView, IndexPath) -> Void), method_getTypeEncoding(method))
     }
 }
 
-
-extension UIGestureRecognizer {
-    // public init(target: Any?, action: Selector?)
-    static let swizzleInit: Void = {
-        let selector = #selector(UIGestureRecognizer.init(target:action:))
-        guard let method = class_getInstanceMethod(UIGestureRecognizer.self, selector) else {
-            assertionFailure(swizzleFailed(class: UICollectionView.self, selector: selector))
-            return
-        }
-        let imp = method_getImplementation(method)
-        class_replaceMethod(UIGestureRecognizer.self, selector, imp_implementationWithBlock({(self: UIGestureRecognizer, target: Any?, action: Selector?) -> Void in
-            if self is UITapGestureRecognizer {
-                
-            }
-            
-            let oldImp = unsafeBitCast(imp, to: (@convention(c) (UIGestureRecognizer, Selector, Any?, Selector?) -> Void).self)
-            oldImp(self,selector,target,action)
-        } as @convention(block)(UIGestureRecognizer, Any?, Selector?) -> Void), method_getTypeEncoding(method))
-    }()
-}
+//extension UIGestureRecognizer {
+//    // public init(target: Any?, action: Selector?)
+//    static let swizzleInit: Void = {
+//        let selector = #selector(UIGestureRecognizer.init(target:action:))
+//        guard let method = class_getInstanceMethod(UIGestureRecognizer.self, selector) else {
+//            assertionFailure(swizzleFailed(class: UICollectionView.self, selector: selector))
+//            return
+//        }
+//        let imp = method_getImplementation(method)
+//        class_replaceMethod(UIGestureRecognizer.self, selector, imp_implementationWithBlock({(self: UIGestureRecognizer, target: Any?, action: Selector?) -> Void in
+//            if self is UITapGestureRecognizer {
+//
+//            }
+//
+//            let oldImp = unsafeBitCast(imp, to: (@convention(c) (UIGestureRecognizer, Selector, Any?, Selector?) -> Void).self)
+//            oldImp(self,selector,target,action)
+//        } as @convention(block)(UIGestureRecognizer, Any?, Selector?) -> Void), method_getTypeEncoding(method))
+//    }()
+//}

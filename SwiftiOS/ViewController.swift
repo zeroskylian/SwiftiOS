@@ -39,11 +39,20 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         let tap = UITapGestureRecognizer(target: self, action: #selector(showNext))
         imageView.addGestureRecognizer(tap)
+        
+        let button = UIButton(frame: CGRect(x: 200, y: collectionView.frame.maxY + 40, width: 80, height: 80))
+        button.backgroundColor = .cyan
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        view.addSubview(button)
     }
     
     @objc private func showNext() {
         let vc = ViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func buttonAction() {
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
