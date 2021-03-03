@@ -33,15 +33,19 @@ private func swizzleFailed(class cls: AnyClass, selector: Selector ) -> String {
     return "Method swizzling for theme failed! Class: \(cls), Selector: \(selector)"
 }
 
-private func addLog(target: AnyClass, action: Selector,type: String?) {
-    addLog(target: target, action: String(describing: action), type: type)
+private func addLog(target: UIViewController, action: Selector,actionType: String?) {
+    addLog(target: target, action: String(describing: action), actionType: actionType)
 }
 
-private func addLog(target: AnyClass, action: String,type: String?) {
+private func addLog(target: UIViewController, action: String, actionType: String?) {
     var log : [String : String] = [:]
-    log["target"] = String(describing: target)
+    if let title = target.title {
+        log["target"] = title
+    }else {
+        log["target"] = String(describing: type(of: target))
+    }
     log["action"] = action
-    log["type"] = type
+    log["actionType"] = actionType
     print(log)
 }
 
@@ -55,7 +59,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            addLog(target: type(of: self), action: selector, type: nil)
+            addLog(target: self, action: selector, actionType: nil)
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -69,7 +73,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            addLog(target: type(of: self), action: selector, type: nil)
+            addLog(target: self, action: selector, actionType: nil)
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -87,8 +91,8 @@ extension UIControl {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIControl.self, selector, imp_implementationWithBlock({(self: UIControl, action: Selector, target: Any? ,event: UIEvent?) -> Void in
-            if let target = target {
-                addLog(target: type(of: target as AnyObject), action: action, type: "Button")
+            if let vc = self.findViewController() {
+                addLog(target: vc, action: action, actionType: "Button")
             }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIControl, Selector, Selector, Any?, UIEvent?) -> Void ).self)
             oldIMP(self,selector,action,target,event)
@@ -119,7 +123,7 @@ extension UIView {
         guard let vc = findViewController(),let view = gesture.view else {
             return
         }
-        addLog(target: type(of: vc), action: "Tap", type: String(describing: type(of: view)))
+        addLog(target: vc, action: "Tap", actionType: String(describing: type(of: view)))
     }
     
     
@@ -162,7 +166,9 @@ extension UITableView {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(type(of: delegate), selector, imp_implementationWithBlock({(self:UITableViewDelegate, tableView: UITableView,indexPath: IndexPath) -> Void in
-            addLog(target: type(of: self), action: String(describing: indexPath), type: "TableView")
+            if let vc = tableView.findViewController() {
+                addLog(target: vc, action: String(describing: indexPath), actionType: "TableView")
+            }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UITableViewDelegate, Selector, UITableView, IndexPath) -> Void).self)
             oldIMP(self,selector,tableView,indexPath)
         } as @convention(block) (UITableViewDelegate, UITableView, IndexPath) -> Void), method_getTypeEncoding(method))
@@ -198,7 +204,9 @@ extension UICollectionView {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(type(of: delegate), selector, imp_implementationWithBlock({ (self:UICollectionViewDelegate, collectionView: UICollectionView,indexPath: IndexPath) -> Void in
-            addLog(target: type(of: self), action: String(describing: indexPath), type: "CollectionView")
+            if let vc = collectionView.findViewController() {
+                addLog(target: vc, action: String(describing: indexPath), actionType: "CollectionView")
+            }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UICollectionViewDelegate, Selector, UICollectionView, IndexPath) -> Void).self)
             oldIMP(self,selector,collectionView,indexPath)
         } as @convention(block) (UICollectionViewDelegate, UICollectionView, IndexPath) -> Void), method_getTypeEncoding(method))

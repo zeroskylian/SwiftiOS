@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        title = "主页"
     
         let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: view.frame.width, height: 200), style: .plain)
         tableView.delegate = self
