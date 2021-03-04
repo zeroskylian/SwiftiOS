@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "主页"
-    
+        
         let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: view.frame.width, height: 200), style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,6 +47,8 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.accessibilityIdentifier = "百度按钮"
         view.addSubview(button)
+        
+        let _ = TestView()
     }
     
     @objc private func showNext() {
@@ -54,9 +56,31 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    private var total: Int = 0
+    
+    private let lock: NSLock = NSLock()
+    
+    let queue = DispatchQueue.init(label: "com.test",attributes: .concurrent)
+    
+    
     @objc private func buttonAction() {
-        let vc = NextViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        
+        for i in 0 ... 4 {
+            queue.sync {
+                self.synchronized(self) {
+                    aaa += i
+                    print("aaa \(aaa)")
+                    aaa -= i
+                    print("aaa \(aaa)")
+                }
+            }
+        }
+    }
+    
+    func synchronized<T>(_ lock: AnyObject, _ closure: () throws -> T) rethrows -> T {
+        objc_sync_enter(lock)
+        defer { objc_sync_exit(lock) }
+        return try closure()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,6 +91,8 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
 }
+
+var aaa = 0
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
