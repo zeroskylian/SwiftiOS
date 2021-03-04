@@ -79,6 +79,7 @@ extension NextViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = "\(indexPath.row) + "
+        cell.accessibilityIdentifier = "TableViewCell \(indexPath.row)"
         return cell
     }
 }

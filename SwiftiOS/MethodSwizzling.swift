@@ -28,26 +28,40 @@ class MethodSwizzling {
         UICollectionView.swizzleDelegate
     }
 }
-#warning("UICollectionView / UITableView 会重复注册")
 
 private func swizzleFailed(class cls: AnyClass, selector: Selector ) -> String {
     return "Method swizzling for theme failed! Class: \(cls), Selector: \(selector)"
 }
 
-private func addLog(target: UIViewController, action: Selector,actionType: String?) {
-    addLog(target: target, action: String(describing: action), actionType: actionType)
-}
-
-private func addLog(target: UIViewController, action: String, actionType: String?) {
+private func addLog(point: String, target: String, action: String, actionType: String?) {
     var log : [String : String] = [:]
-    if let title = target.title {
-        log["target"] = title
-    }else {
-        log["target"] = String(describing: type(of: target))
-    }
+    log["point"] = point
+    log["target"] = target
     log["action"] = action
     log["actionType"] = actionType
     print(log)
+}
+
+extension UIView {
+    
+    var pointIdentifier : String {
+        if let id = accessibilityIdentifier {
+            return id
+        }else {
+            return String(describing: type(of: self))
+        }
+    }
+}
+
+extension UIViewController {
+    
+    var pointIdentifier : String {
+        if let id = title {
+            return id
+        }else {
+            return String(describing: type(of: self))
+        }
+    }
 }
 
 extension UIViewController {
@@ -60,7 +74,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            addLog(target: self, action: selector, actionType: nil)
+            addLog(point: self.pointIdentifier, target: self.pointIdentifier, action: "页面出现", actionType: nil)
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -74,7 +88,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            addLog(target: self, action: selector, actionType: nil)
+            addLog(point: self.pointIdentifier, target: self.pointIdentifier, action: "页面出现", actionType: nil)
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
@@ -93,7 +107,7 @@ extension UIControl {
         let imp = method_getImplementation(method)
         class_replaceMethod(UIControl.self, selector, imp_implementationWithBlock({(self: UIControl, action: Selector, target: Any? ,event: UIEvent?) -> Void in
             if let vc = self.findViewController() {
-                addLog(target: vc, action: action, actionType: "Button")
+                addLog(point: vc.pointIdentifier, target: self.pointIdentifier, action: String(describing: action), actionType: nil)
             }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIControl, Selector, Selector, Any?, UIEvent?) -> Void ).self)
             oldIMP(self,selector,action,target,event)
@@ -124,7 +138,7 @@ extension UIView {
         guard let vc = findViewController(),let view = gesture.view else {
             return
         }
-        addLog(target: vc, action: "Tap", actionType: String(describing: type(of: view)))
+        addLog(point: vc.pointIdentifier, target: view.pointIdentifier, action: "Tap", actionType: nil)
     }
     
     
@@ -176,8 +190,8 @@ extension UITableView {
         }
         let imp = method_getImplementation(method)
         let newImp = imp_implementationWithBlock({(self:UITableViewDelegate, tableView: UITableView,indexPath: IndexPath) -> Void in
-            if let vc = tableView.findViewController() {
-                addLog(target: vc, action: String(describing: indexPath), actionType: "TableView")
+            if let vc = tableView.findViewController() ,let cell = tableView.cellForRow(at: indexPath){
+                addLog(point: vc.pointIdentifier, target: cell.pointIdentifier, action: "点击\(indexPath)", actionType: nil)
             }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UITableViewDelegate, Selector, UITableView, IndexPath) -> Void).self)
             oldIMP(self,selector,tableView,indexPath)
@@ -224,8 +238,8 @@ extension UICollectionView {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(type(of: delegate), selector, imp_implementationWithBlock({ (self:UICollectionViewDelegate, collectionView: UICollectionView,indexPath: IndexPath) -> Void in
-            if let vc = collectionView.findViewController() {
-                addLog(target: vc, action: String(describing: indexPath), actionType: "CollectionView")
+            if let vc = collectionView.findViewController() , let cell = collectionView.cellForItem(at: indexPath) {
+                addLog(point: vc.pointIdentifier, target: cell.pointIdentifier, action: "点击\(indexPath)", actionType: nil)
             }
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UICollectionViewDelegate, Selector, UICollectionView, IndexPath) -> Void).self)
             oldIMP(self,selector,collectionView,indexPath)

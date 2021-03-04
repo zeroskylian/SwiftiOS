@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         let imageView = UIImageView(frame: CGRect(x: 100, y: collectionView.frame.maxY + 40, width: 80, height: 80))
         imageView.image = UIImage(named: "tieba")
         imageView.isUserInteractionEnabled = true
+        imageView.accessibilityIdentifier = "百度图片"
         view.addSubview(imageView)
         let tap = UITapGestureRecognizer(target: self, action: #selector(showNext))
         imageView.addGestureRecognizer(tap)
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 200, y: collectionView.frame.maxY + 40, width: 80, height: 80))
         button.backgroundColor = .cyan
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.accessibilityIdentifier = "百度按钮"
         view.addSubview(button)
     }
     
@@ -79,6 +81,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = "\(indexPath.row)"
+        cell.accessibilityIdentifier = "TableViewCell \(indexPath.row)"
         return cell
     }
 }
@@ -97,6 +100,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath)
         cell.backgroundColor = .orange
+        cell.accessibilityIdentifier = "CollectionViewCell \(indexPath.row)"
         return cell
     }
 }
