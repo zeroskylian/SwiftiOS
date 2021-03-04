@@ -1,46 +1,16 @@
 PODS:
   - FluentDarkModeKit (1.0.1)
-  - MMLayout (0.2.0)
-  - ReactiveObjC (3.1.1)
-  - SDWebImage (5.9.0):
-    - SDWebImage/Core (= 5.9.0)
-  - SDWebImage/Core (5.9.0)
-  - Toast (4.0.0)
-  - TXIMSDK_iOS (5.1.10)
-  - TXIMSDK_TUIKit_iOS (5.1.10):
-    - MMLayout (= 0.2.0)
-    - ReactiveObjC (= 3.1.1)
-    - SDWebImage (= 5.9.0)
-    - Toast (= 4.0.0)
-    - TXIMSDK_iOS (= 5.1.10)
-    - TXLiteAVSDK_TRTC (= 7.8.9519)
-  - TXLiteAVSDK_TRTC (7.8.9519)
 
 DEPENDENCIES:
   - FluentDarkModeKit
-  - TXIMSDK_TUIKit_iOS (= 5.1.10)
 
 SPEC REPOS:
   trunk:
     - FluentDarkModeKit
-    - MMLayout
-    - ReactiveObjC
-    - SDWebImage
-    - Toast
-    - TXIMSDK_iOS
-    - TXIMSDK_TUIKit_iOS
-    - TXLiteAVSDK_TRTC
 
 SPEC CHECKSUMS:
   FluentDarkModeKit: 0c5f31ca81eb058f3e8b6d79b3d08afbe7c40c42
-  MMLayout: 3fb59d58eeb8656c64e61d550fb0088e10666c11
-  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
-  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  TXIMSDK_iOS: dc60e32d33256cd0b358e24c1441c50b0ed66fb8
-  TXIMSDK_TUIKit_iOS: 9f3a833400ba2070b92c639083947ff8736e9106
-  TXLiteAVSDK_TRTC: c127880c4dbe844bdc7575a655be8042ce96024a
 
-PODFILE CHECKSUM: 9f1ab432c8649d9aa3aba399e0f5e8df734c6bc5
+PODFILE CHECKSUM: e97f1ead5072f0f5ffac6ec50b4b102e9d6699e0
 
 COCOAPODS: 1.10.1
