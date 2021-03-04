@@ -140,6 +140,8 @@ extension UIView {
 }
 extension UITableView {
     
+    static var TableViewDelegateSwizzleTypes: [AnyClass] = []
+    
     static let swizzleDelegate: Void = {
         let selector = #selector(setter: delegate)
         guard let method = class_getInstanceMethod(UITableView.self, selector) else {
@@ -161,6 +163,13 @@ extension UITableView {
         /// optional func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
         let selector = #selector(UITableViewDelegate.tableView(_:didSelectRowAt:))
         guard delegate.responds(to: selector)  else { return }
+        if !TableViewDelegateSwizzleTypes.contains(where: {
+            type(of: delegate) == $0
+        }) {
+            TableViewDelegateSwizzleTypes.append(type(of: delegate))
+        }else {
+            return
+        }
         guard let method = class_getInstanceMethod(type(of: delegate), selector) else {
             assertionFailure(swizzleFailed(class: UITableViewDelegate.self, selector: selector))
             return
@@ -179,6 +188,8 @@ extension UITableView {
 
 
 extension UICollectionView {
+    
+    static var CollectionViewDelegateSwizzleTypes: [AnyClass] = []
     
     static let swizzleDelegate: Void = {
         let selector = #selector(setter: delegate)
@@ -200,6 +211,13 @@ extension UICollectionView {
         //        optional func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
         let selector = #selector(UICollectionViewDelegate.collectionView(_:didSelectItemAt:))
         guard delegate.responds(to: selector)  else { return }
+        if !CollectionViewDelegateSwizzleTypes.contains(where: {
+            type(of: delegate) == $0
+        }) {
+            CollectionViewDelegateSwizzleTypes.append(type(of: delegate))
+        }else {
+            return
+        }
         guard let method = class_getInstanceMethod(type(of: delegate), selector) else {
             assertionFailure(swizzleFailed(class: UICollectionViewDelegate.self, selector: selector))
             return

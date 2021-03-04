@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 private var UIGestureRecognizerMethodKey: Void?
 extension UIGestureRecognizer {
     

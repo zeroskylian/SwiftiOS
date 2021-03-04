@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  NextViewController.swift
 //  SwiftiOS
 //
-//  Created by lian on 2021/3/1.
+//  Created by lian on 2021/3/4.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+
+class NextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "主页"
+        title = "主页2222"
     
         let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: view.frame.width, height: 200), style: .plain)
         tableView.delegate = self
@@ -53,8 +54,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func buttonAction() {
-        let vc = NextViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,38 +65,38 @@ class ViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
 }
-extension ViewController: UITableViewDelegate {
+extension NextViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension NextViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.textLabel?.text = "\(indexPath.row) + "
         return cell
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension NextViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension NextViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 35
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: indexPath)
-        cell.backgroundColor = .orange
+        cell.backgroundColor = .cyan
         return cell
     }
 }
