@@ -3,8 +3,9 @@ inhibit_all_warnings!
 use_modular_headers!
 
 target 'SwiftiOS' do
- 
-pod "FluentDarkModeKit"
+  
+  pod "FluentDarkModeKit"
+  pod 'TXIMSDK_TUIKit_iOS', '5.1.10'
 end
 
 
