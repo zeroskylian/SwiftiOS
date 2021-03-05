@@ -1,16 +1,27 @@
 PODS:
   - FluentDarkModeKit (1.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SQLiteMigrationManager.swift (0.7.0):
+    - SQLite.swift (~> 0.12.0)
 
 DEPENDENCIES:
   - FluentDarkModeKit
+  - SQLite.swift
+  - SQLiteMigrationManager.swift
 
 SPEC REPOS:
   trunk:
     - FluentDarkModeKit
+    - SQLite.swift
+    - SQLiteMigrationManager.swift
 
 SPEC CHECKSUMS:
   FluentDarkModeKit: 0c5f31ca81eb058f3e8b6d79b3d08afbe7c40c42
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SQLiteMigrationManager.swift: 2dd6f760d6e53f666176346436c689e55a608f7a
 
-PODFILE CHECKSUM: e97f1ead5072f0f5ffac6ec50b4b102e9d6699e0
+PODFILE CHECKSUM: 9bd602446847076acaf938bb134b002157fe4ff3
 
 COCOAPODS: 1.10.1

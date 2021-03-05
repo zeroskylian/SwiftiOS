@@ -11,7 +11,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        print(UIApplication.shared.keyWindow?.safeAreaInsets)
+        
+        view.backgroundColor = .orange
         title = "主页"
         
         let tableView = UITableView(frame: CGRect(x: 0, y: 88, width: view.frame.width, height: 200), style: .plain)
@@ -19,8 +21,9 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.tableFooterView = UIView()
+        tableView.contentInsetAdjustmentBehavior = .never
         view.addSubview(tableView)
-        
+        extendedLayoutIncludesOpaqueBars = true
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 50, height: 50)
@@ -48,7 +51,14 @@ class ViewController: UIViewController {
         button.accessibilityIdentifier = "百度按钮"
         view.addSubview(button)
         
-        let _ = TestView()
+        
+        
+        let current = Date()
+        let next = current.addingTimeInterval(-60 * 60 * 24 - 30)
+        let formatter = DateFormatter()
+        formatter.locale = Locale.init(identifier: "zh_cn")
+        formatter.dateFormat = "EEEE"
+        print(formatter.string(from: next))
     }
     
     @objc private func showNext() {
@@ -65,12 +75,12 @@ class ViewController: UIViewController {
     
     @objc private func buttonAction() {
         
-        for i in 0 ... 4 {
+        for _ in 0 ... 4 {
             queue.sync {
                 self.synchronized(self) {
-                    aaa += i
+                    aaa += 1
                     print("aaa \(aaa)")
-                    aaa -= i
+                    aaa -= 1
                     print("aaa \(aaa)")
                 }
             }
@@ -85,6 +95,9 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print(view.safeAreaLayoutGuide.layoutFrame)
+        print(view.safeAreaInsets)
+        print(view.frame)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -106,6 +119,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        cell.backgroundColor = .cyan
         cell.textLabel?.text = "\(indexPath.row)"
         cell.accessibilityIdentifier = "TableViewCell \(indexPath.row)"
         return cell

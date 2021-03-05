@@ -5,6 +5,8 @@ use_modular_headers!
 target 'SwiftiOS' do
   
   pod "FluentDarkModeKit"
+  pod 'SQLite.swift'
+  pod 'SQLiteMigrationManager.swift'
 end
 
 
