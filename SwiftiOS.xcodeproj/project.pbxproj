@@ -13,13 +13,12 @@
 		6389CFBA25EF2EEE00826759 /* MethodSwizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389CFB925EF2EEE00826759 /* MethodSwizzling.swift */; };
 		63AB19CE25EF90E400FB51CC /* UIGestureRecognizer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB19CD25EF90E400FB51CC /* UIGestureRecognizer+Extension.swift */; };
 		63AB1A0525F076AB00FB51CC /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB1A0425F076AB00FB51CC /* NextViewController.swift */; };
-		63AB1A1625F08FAC00FB51CC /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB1A1525F08FAC00FB51CC /* TestClass.swift */; };
-		63AB1A1A25F0904600FB51CC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB1A1925F0904600FB51CC /* TestView.m */; };
 		63EA23AF25EC891800F44502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA23AE25EC891800F44502 /* AppDelegate.swift */; };
 		63EA23B325EC891800F44502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA23B225EC891800F44502 /* ViewController.swift */; };
 		63EA23B625EC891800F44502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EA23B425EC891800F44502 /* Main.storyboard */; };
 		63EA23B825EC891900F44502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63EA23B725EC891900F44502 /* Assets.xcassets */; };
 		63EA23BB25EC891900F44502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EA23B925EC891900F44502 /* LaunchScreen.storyboard */; };
+		63F2F19C25F89C2900E75C16 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F2F19B25F89C2900E75C16 /* FirstViewController.swift */; };
 		E6BF3054889AA72022A37A79 /* libPods-SwiftiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D492D5762A7A08EE8988456C /* libPods-SwiftiOS.a */; };
 /* End PBXBuildFile section */
 
@@ -32,9 +31,6 @@
 		63AB19CD25EF90E400FB51CC /* UIGestureRecognizer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Extension.swift"; sourceTree = "<group>"; };
 		63AB19D125EFA5A400FB51CC /* SwiftiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		63AB1A0425F076AB00FB51CC /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		63AB1A1525F08FAC00FB51CC /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
-		63AB1A1825F0904600FB51CC /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		63AB1A1925F0904600FB51CC /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		63EA23AB25EC891800F44502 /* SwiftiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EA23AE25EC891800F44502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EA23B225EC891800F44502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +38,7 @@
 		63EA23B725EC891900F44502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63EA23BA25EC891900F44502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63EA23BC25EC891900F44502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F2F19B25F89C2900E75C16 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6DAA7F949CB001C8497C263B /* Pods-SwiftiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftiOS.release.xcconfig"; path = "Target Support Files/Pods-SwiftiOS/Pods-SwiftiOS.release.xcconfig"; sourceTree = "<group>"; };
 		D492D5762A7A08EE8988456C /* libPods-SwiftiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,10 +66,8 @@
 		63AB19CB25EF8F0F00FB51CC /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
-				63AB19D125EFA5A400FB51CC /* SwiftiOS-Bridging-Header.h */,
 				63AB19CC25EF906D00FB51CC /* Category */,
-				63AB1A1825F0904600FB51CC /* TestView.h */,
-				63AB1A1925F0904600FB51CC /* TestView.m */,
+				63AB19D125EFA5A400FB51CC /* SwiftiOS-Bridging-Header.h */,
 			);
 			path = ObjectiveC;
 			sourceTree = "<group>";
@@ -108,8 +103,7 @@
 				6339E6BF25F21D18009D11FE /* Extensions */,
 				63EA23AE25EC891800F44502 /* AppDelegate.swift */,
 				63EA23B225EC891800F44502 /* ViewController.swift */,
-				63AB1A0425F076AB00FB51CC /* NextViewController.swift */,
-				63AB1A1525F08FAC00FB51CC /* TestClass.swift */,
+				63F2F19A25F89C1900E75C16 /* PointDemo */,
 				6339E6C425F21D49009D11FE /* Logger.swift */,
 				6339E6C325F21D49009D11FE /* MError.swift */,
 				63AB19CB25EF8F0F00FB51CC /* ObjectiveC */,
@@ -121,6 +115,15 @@
 				63EA23BC25EC891900F44502 /* Info.plist */,
 			);
 			path = SwiftiOS;
+			sourceTree = "<group>";
+		};
+		63F2F19A25F89C1900E75C16 /* PointDemo */ = {
+			isa = PBXGroup;
+			children = (
+				63AB1A0425F076AB00FB51CC /* NextViewController.swift */,
+				63F2F19B25F89C2900E75C16 /* FirstViewController.swift */,
+			);
+			path = PointDemo;
 			sourceTree = "<group>";
 		};
 		DF4918B7C2C90F6D2FDC00F7 /* Pods */ = {
@@ -237,15 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F2F19C25F89C2900E75C16 /* FirstViewController.swift in Sources */,
 				6339E6C125F21D21009D11FE /* OptionalExtensions.swift in Sources */,
-				63AB1A1A25F0904600FB51CC /* TestView.m in Sources */,
 				63AB1A0525F076AB00FB51CC /* NextViewController.swift in Sources */,
 				6339E6C525F21D49009D11FE /* MError.swift in Sources */,
 				63EA23B325EC891800F44502 /* ViewController.swift in Sources */,
 				63EA23AF25EC891800F44502 /* AppDelegate.swift in Sources */,
 				6389CFBA25EF2EEE00826759 /* MethodSwizzling.swift in Sources */,
 				6339E6C625F21D49009D11FE /* Logger.swift in Sources */,
-				63AB1A1625F08FAC00FB51CC /* TestClass.swift in Sources */,
 				63AB19CE25EF90E400FB51CC /* UIGestureRecognizer+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

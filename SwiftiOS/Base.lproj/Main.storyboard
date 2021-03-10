@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="81V-yc-Wtm"/>
+                    <navigationItem key="navigationItem" title="Title" id="XlD-mm-ROE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="0Tu-Cd-xoQ">
+                            <connections>
+                                <action selector="leftItemAction:" destination="BYZ-38-t0r" id="eKZ-GQ-uG9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
