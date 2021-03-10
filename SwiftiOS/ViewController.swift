@@ -11,8 +11,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UIApplication.shared.keyWindow?.safeAreaInsets)
-        
         view.backgroundColor = .orange
         title = "主页"
         
@@ -75,16 +73,6 @@ class ViewController: UIViewController {
     
     @objc private func buttonAction() {
         
-        for _ in 0 ... 4 {
-            queue.sync {
-                self.synchronized(self) {
-                    aaa += 1
-                    print("aaa \(aaa)")
-                    aaa -= 1
-                    print("aaa \(aaa)")
-                }
-            }
-        }
     }
     
     func synchronized<T>(_ lock: AnyObject, _ closure: () throws -> T) rethrows -> T {
@@ -105,7 +93,7 @@ class ViewController: UIViewController {
     }
 }
 
-var aaa = 0
+
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

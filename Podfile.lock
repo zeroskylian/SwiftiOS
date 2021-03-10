@@ -1,27 +1,22 @@
 PODS:
   - FluentDarkModeKit (1.0.1)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
-  - SQLiteMigrationManager.swift (0.7.0):
-    - SQLite.swift (~> 0.12.0)
+  - GRDB.swift (5.5.0):
+    - GRDB.swift/standard (= 5.5.0)
+  - GRDB.swift/standard (5.5.0)
 
 DEPENDENCIES:
   - FluentDarkModeKit
-  - SQLite.swift
-  - SQLiteMigrationManager.swift
+  - GRDB.swift
 
 SPEC REPOS:
   trunk:
     - FluentDarkModeKit
-    - SQLite.swift
-    - SQLiteMigrationManager.swift
+    - GRDB.swift
 
 SPEC CHECKSUMS:
   FluentDarkModeKit: 0c5f31ca81eb058f3e8b6d79b3d08afbe7c40c42
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
-  SQLiteMigrationManager.swift: 2dd6f760d6e53f666176346436c689e55a608f7a
+  GRDB.swift: 10a3fda76720f3b5438e57d23455e2336226aa4d
 
-PODFILE CHECKSUM: 9bd602446847076acaf938bb134b002157fe4ff3
+PODFILE CHECKSUM: c10a02fa2c8a56120d45068fde71d3cd0b3cadbf
 
 COCOAPODS: 1.10.1

@@ -7,217 +7,385 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00D420FADB29020A6395929C73FB67F9 /* Pods-SwiftiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 600BCD2AC8A182C07FA8DC55414933AD /* Pods-SwiftiOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		06E9F7A8FD6B8BB0DC5908A595475288 /* UISlider+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2D3DCD9ABB379E9DA837D5919B1905 /* UISlider+DarkModeKit.swift */; };
-		07490F3340432D3497240B126742A69D /* Pods-SwiftiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B2657E53E3E0F5417B0144EDB3C3E /* Pods-SwiftiOS-dummy.m */; };
-		12AEC0B4C35E8BDE4366D57CE6805481 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE3195393B83D5489801BCB7F54DEC /* Blob.swift */; };
-		2055E68B97D1765FA677CBA34AE4FFFD /* SQLiteMigrationManager.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B675111F5D5F6F577126ED9DB1C683 /* SQLiteMigrationManager.swift-dummy.m */; };
-		22658AEED5E13E1E1BDD00EF2A4AEF94 /* UIImage+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDFEF7317B9B8D6F8B2754F30057E4 /* UIImage+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		24278C34FB55C00F71852960F388A132 /* UIColor+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B085AA9F553F2C60EF8F099A3AA265 /* UIColor+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		26D84D2836C13B2D939D5A5E2B1BD47B /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F572AC9870C925CE6B24D73AD95916 /* Schema.swift */; };
-		2D87E1AEC45003E3C2203D5A623DB6E1 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140C15739856C1E1CD767EB75681643 /* Expression.swift */; };
-		30E3FF5DE72D56612993D499EBED8C9B /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E1B5D70B4CE626577454296E26F03 /* AggregateFunctions.swift */; };
-		31DCC4A7B5A1BAD9D01967650F83BAF8 /* UIView+DarkModeKitSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD48FD89AE517843F46BEDAAB111AC8 /* UIView+DarkModeKitSwizzling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		33BEEE21FAAC8DB456E4A04E9655BE58 /* UIView+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B047051DA41471BF51A13AFB18CBD54 /* UIView+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		39A5C378DFF4F2546527BAF1A007B977 /* DMDynamicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2722B54B194C3D2960B559E127EDCE9D /* DMDynamicColor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3D38D3143F60F22FF8148BA31C508E73 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B688847FEA3162554BE7DEED3ADFA /* Operators.swift */; };
-		3FE867A2D2916AA887DDE262CB40726E /* DMEnvironmentConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF2210E9C252D956093F3759354A0EE /* DMEnvironmentConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		44AD41843DBDDE316FBDB31CD1F6ECDA /* UILabel+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85AA2D1C646ED129BD5697F26101EA4 /* UILabel+DarkModeKit.swift */; };
-		455988DC94C54715500FB3D350BF5617 /* SQLiteMigrationManager.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD6D4FD1EC508084F85EC39F6773BE3 /* SQLiteMigrationManager.swift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		47DCA06F824B462C28E37AA0A2F935CC /* UIButton+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DB3618A960D3786D67C504A8CF4D5 /* UIButton+DarkModeKit.swift */; };
-		4E9CE023E6D1A02BC3B97032519F5F30 /* UIProgressView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157FEDAE16244A206567D25280A8BF4 /* UIProgressView+DarkModeKit.swift */; };
-		537ABC04D43C7771B74B484DF1489272 /* UIImage+DarkModeKitSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 95AFE2B226F6DA78CC018F5752A0EA74 /* UIImage+DarkModeKitSwizzling.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		54155F6769681C2D3C23EA9BC954DF50 /* UIImageView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B2D86833A9FF9730E19A3558F20F6A /* UIImageView+DarkModeKit.swift */; };
-		566B02F81167FAAB363014E42ED15BFF /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A09D7F594D7939F853CC7F6A9CC0A /* Foundation.swift */; };
-		58670BDA59BC1476ECD1AE42A65DEDB4 /* SQLiteObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B82CFB3CF48BC633168265375EB6954 /* SQLiteObjc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5C1CA3347EEEE3021A42D4CD6181A01C /* UIPageControl+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE216FA91233BC0CA0930ECD3316B1 /* UIPageControl+DarkModeKit.swift */; };
-		685DEAF5DD86C1E0C3C465B9E8384A81 /* DMNamespace.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E69657D84335329CCFD6FEBA78588F /* DMNamespace.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		68F7071AB87ED8CB4B8CF11F7BF9A78E /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD7B77594B359D8ABCF86264D2E7830 /* Connection.swift */; };
-		6CA7BEBBDD9651E4F42B770FEAAB84BC /* DMTraitCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 478F8D25C596DFFFCCDA426DB3C090F6 /* DMTraitCollection.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6EAC3C9446063F09611B9BE55D8D34C1 /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F95EC44B306C8A5FEA786F0540F46C /* SQLiteObjc.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		76D06EAB7CBCB7DEA07979B05C091CC0 /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41806C2F82974E3E0C75658D007567 /* DarkModeManager.swift */; };
-		78F35E8FC8585B8AAFABCDBEF7C37B09 /* UIView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339558C10FE69BA936743B9FA406F8AF /* UIView+DarkModeKit.swift */; };
-		7C223CCCA8FDA2AFC24233CF2C80D507 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B2EA8A6051DBBB25A5B1522EFF46A33D /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7EC46B562D348B6AD54EE593DDA2BCF9 /* UIViewController+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EF6D0774D298B3C075E0A0D7DB65DA /* UIViewController+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8043A7E0B334D03CF18AF57B63B8B407 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E4E0F4C0014B5883778F09C4B65E4 /* CoreFunctions.swift */; };
-		806490B33AE436577A4444055225F9FC /* UIImage+DarkModeKitSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A9C30972DF489B60BE3BE63A1D375 /* UIImage+DarkModeKitSwizzling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		81FB742E180F41C72D057FF65125BC3F /* UIActivityIndicatorView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84056031F870810FF61B49A5A7ED834 /* UIActivityIndicatorView+DarkModeKit.swift */; };
-		85290514199956D820FB90C92DBD0002 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79654B70A8196CFD8BA02EBA4862737C /* Collation.swift */; };
-		8EBB3045D411C26911D1E82CB7DCFC1F /* DMTraitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B270B7564565AD97CBDDCCE0A701C7E /* DMTraitCollection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		921C1F239586B4E7118399375F45BAB5 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B5E99F83EF6D51C08CDC09C6A72F80 /* DateAndTimeFunctions.swift */; };
-		94D28595353D013C0530A91A7AA81FCF /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84170D61CD33A0CA26D1046C01C849 /* Query.swift */; };
-		96704FB79427D5AF24C24EF36DE900AB /* UITabBar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267EC985991854197C24A1410D492474 /* UITabBar+DarkModeKit.swift */; };
-		A3CEE06A4A16FE7A1CBA145CE1F97B62 /* UITextField+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AA18D72C3CDB1914A98CBDBAC99EC /* UITextField+DarkModeKit.swift */; };
-		A61CFBAE237DF0F6F4F308045C6BF1D3 /* UINavigationBar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3E466D8D11CE66EE88C92A2F861A0 /* UINavigationBar+DarkModeKit.swift */; };
-		A72B86C93F37D655366BF24A99A0A65D /* UITableView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D6A23C8407398D648B612AE338BD0 /* UITableView+DarkModeKit.swift */; };
-		A902E94BC79F6FA99E9BB0300EA305B3 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90F3A660F7A91E6B6D2A1493C5D5E60 /* CustomFunctions.swift */; };
-		ABB8181CAAB54B07EBA071F5C0695063 /* FluentDarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD1287007997CF1C3EDD466346E93A0 /* FluentDarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ABDB62A3587079936913CE3A371C805C /* UIView+DarkModeKitSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 7360625D31E34C462F201E3E2F7B63BA /* UIView+DarkModeKitSwizzling.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B313B4CD89DE957E65568853E118A819 /* DMDynamicColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E9741698183ECB0EFE9C0240BD1005C6 /* DMDynamicColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B592BEA6F00B6CB2A68FF21EE18DCCE5 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AB035C0EFA980EEED9A97A56C85F8 /* FTS4.swift */; };
-		B897A16D9E134CCDF7BF57EABAA364A8 /* UIScrollView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AA89D1B4FF57F6261EB2483A06C75 /* UIScrollView+DarkModeKit.swift */; };
-		BBF354A04E33E53B2F5FD9092FB4963C /* UITextView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213CA5A09FF57BC7CBECC4AC68B2B89 /* UITextView+DarkModeKit.swift */; };
-		BC4EB746D2E13352424A93FDC7A52F78 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF32169B03E8D5A58761FA7F680BF5F /* Errors.swift */; };
-		BDA8115EE332ABAEE907F65C2BBBE70C /* FluentDarkModeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F41AAFDD5D1A0CBD93B2B6CC105D71E1 /* FluentDarkModeKit-dummy.m */; };
-		BFF536B78DC4850A4A285C1D03F56057 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = D31CB8861A2DB2AF73D49BFC00EDC2FC /* SQLite.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C074FBCC49C20B9D3D5B47F1B850EBC0 /* SQLiteMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8327A6615D9A1B8FBA648608A84EB884 /* SQLiteMigrationManager.swift */; };
-		C34CAA832D70B5735AEC3A8DD5A28F27 /* UIViewController+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E06EF9A95175302EFE67BFC72DBD8510 /* UIViewController+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C72087EDCF1BAE223A1BB8C94BA87329 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CD3E17B892E8CA7EC8F6C79D5F72F /* Statement.swift */; };
-		C8CA93408951C97601FCFAC3CC80D98C /* UIView+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6631ACEABC2E6D75E9BAC5E5BD661240 /* UIView+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CB4A714AB78B0858FB9CB9FE499BCF89 /* UIColor+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 27982F0F0C18BF2EC601FF90A3938E6E /* UIColor+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CB7A5FD2D111FB945D4C60F8F9CEB90A /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F6C698C0151F96049A36B34B91AE2 /* RTree.swift */; };
-		CBD00AD2D050E606B432EF764F0443EF /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF94CB181A8A17B1D192599CE3FCEE /* FTS5.swift */; };
-		D596C9949CCCE0BF83DF332DA1B3A3BD /* DMDynamicImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 772624F375C3FBF6815A0512DA4AB953 /* DMDynamicImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D8F09E6FFEAEFBFFA69546C6F36EF74F /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD025A51736C5D8701B4723E91F1B85 /* Coding.swift */; };
-		DAB780119FA2C193596021CE41061B1E /* DMEnvironmentConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 09971AC03D63E4ECB79E4E4D1A816976 /* DMEnvironmentConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DB02626D12C516C4CD6A9EA98D20A50A /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41609E697D02E27EB23260FB39D0A3F0 /* SQLite.swift-dummy.m */; };
-		DB5891014AF5583F4CE70D67063FEBF4 /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1BEB397C42FE04C78C2C67687037352 /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DE6EA56940522BB51A9B3547AE4E1552 /* FluentDarkModeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19FB589543DA3DA20D441DA179EDEA82 /* FluentDarkModeKit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E23B04C3E52181DF8F69A5FD77EBAB2D /* DMDynamicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 669D43D165EF3C20F89DE06B4A7C48C5 /* DMDynamicImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E78529FBA5C035888371AE6EE12276A8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C471EF7A7E969D7D334CEB00FA37876 /* Helpers.swift */; };
-		EBE7E7879DA3FFCE932375A563C9CE6F /* UIToolbar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D4EDD3864CC96C7FFA02D6EFA02B08 /* UIToolbar+DarkModeKit.swift */; };
-		F167CCE2838CD4DF3161F75877A2858C /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0FE07413042E5C2CF816A2EAC2C64A /* Value.swift */; };
-		FD23ADF2B7C85A3432B97D3872BD6BD5 /* UIImage+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D33E1F18B6250663F702DBFCDF2A2E /* UIImage+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FDFC423A4243CFA179481946B523C999 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651EED4E87D4E224A96A7755FD76BB63 /* Setter.swift */; };
+		024A636E59A0E552A989088F6EC5F0F1 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C8EEAA1AD08B393C521BC2E7478D76 /* Statement.swift */; };
+		06E9F7A8FD6B8BB0DC5908A595475288 /* UISlider+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ECCF5D3C5801C4BD1138AE8851BC3C /* UISlider+DarkModeKit.swift */; };
+		083AF0A857C153E23B67C7658EED25C1 /* FTS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC229932E5F5824BC471EFED8EC61CC9 /* FTS3.swift */; };
+		08810CF6FDB8DD4A6A8831B7F63C460D /* DatabasePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42E77C618BFA77F314033A8AAE2EB1F /* DatabasePromise.swift */; };
+		0C3D6EA11487AAA418B882269246FDFF /* DatabaseValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5911AEBC2E246F05C9CF382509131A2 /* DatabaseValueConvertible.swift */; };
+		0D535024DD70E00F711E2418DC45AC33 /* HasManyThroughAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A7CF79E831A3BC0FDD6D92967F3D9 /* HasManyThroughAssociation.swift */; };
+		0DDBBAACFE0179C8208C61DA5A2E007E /* SQLGenerationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331B0A6F23B64487AA65B8F6DFE60FC /* SQLGenerationContext.swift */; };
+		0DF21E6735AFA1E179C214768D843C3A /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169867D75372AFAE710F73EBEDA4FDB /* FetchRequest.swift */; };
+		0F00690ED897A28C9D94D842E63110A2 /* SQLQueryGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4758A5D72F7BDB5F323029F5C320FF /* SQLQueryGenerator.swift */; };
+		10F90AF5CE00AC62EC5993592852ECF6 /* SQLInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B618FD09EF243C1CD7858968DD6DC87 /* SQLInterpolation.swift */; };
+		15C1E7531CEE93514B2A02F82E9FC9B0 /* Association.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CB620986EF53DD6778176894CE53D /* Association.swift */; };
+		177D63DA115DD5EE22FA15BDAE86DA7B /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B068DD237B2FA3BE2B4763BE6F30E /* DatabaseError.swift */; };
+		18BC75DDCDE39EC22BB7B2741D9C2E56 /* DatabaseRegionObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF8FB3B63F20D643C71290D5998B28E /* DatabaseRegionObservation.swift */; };
+		1971BEEAB6641BD92A30F060D7D1659D /* SQLiteDateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC8031A2617A2DD19869A818B16987 /* SQLiteDateParser.swift */; };
+		1C6BDB845F61AB3D94A0440EDF74D484 /* VirtualTableModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA3D9F6B397F028159B4D0D4AFCA19 /* VirtualTableModule.swift */; };
+		1E6C74A0C28C499846EF03F846C63810 /* OnDemandFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE2B52424C9D92F55A49E880FA57F5 /* OnDemandFuture.swift */; };
+		22658AEED5E13E1E1BDD00EF2A4AEF94 /* UIImage+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C31C1FDC9064800CE2D39F16FE11E58 /* UIImage+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2268BEB130C04D0CF0D255738B074E1B /* SQLAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40B032A45F7924712A5DB3E8E3F3358 /* SQLAssociation.swift */; };
+		2288EBB2E2554A56967399D307877DA1 /* DatabaseSchemaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93144CC6A35A60E6B3EFFB5654E1DC4 /* DatabaseSchemaCache.swift */; };
+		231D1B541EEC56E2D9C221B665B8E77E /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9340CB8DB0C302EA9522D14E0E77FF /* FTS5.swift */; };
+		24278C34FB55C00F71852960F388A132 /* UIColor+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A550F13337BB1F7282E6903FC4F464 /* UIColor+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27EA2E256994A31F37ADBF6293EF4AF8 /* SQLInterpolation+QueryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F97CD3E5BF675D28A1B33FB565413B /* SQLInterpolation+QueryInterface.swift */; };
+		2D945D4A8C4BC6BB0A5EE1C60BFABDAD /* TransactionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82CE82F754EDF666D30002BCE118C7 /* TransactionObserver.swift */; };
+		2DB53DCF93FF14AF6C1EE79CCAF0A40C /* FetchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2E521891864AD2C5741030CF20058 /* FetchableRecord.swift */; };
+		2E2C396527B984AD5DDB8EFB3076F262 /* DatabaseValueConvertible+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC167E77EB1E23D60204599236E39613 /* DatabaseValueConvertible+RawRepresentable.swift */; };
+		2FC1601D302BF321068669EAF77BC940 /* GRDB.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1163DA62B1F218F1BFB497D8B5183A /* GRDB.swift-dummy.m */; };
+		302BD0EE1FE150BA284FD0D7CAEEF424 /* FetchableRecord+TableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A4D245702557964852A4B179625E7 /* FetchableRecord+TableRecord.swift */; };
+		31B75D4198C71BA568753AD00A75C4E5 /* SQLForeignKeyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C048CEB74B502830EED1BEEDD1CDC6C /* SQLForeignKeyRequest.swift */; };
+		31DCC4A7B5A1BAD9D01967650F83BAF8 /* UIView+DarkModeKitSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 767055A85BD8D6EAB942381BD4ADF5F5 /* UIView+DarkModeKitSwizzling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3300401EB1C1422C9394EF6F1B68C908 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E41F08DD0EE66C33FD1FD885F2AB3 /* Configuration.swift */; };
+		33BEEE21FAAC8DB456E4A04E9655BE58 /* UIView+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC2548F7ED9F557732ECAB4726697E7 /* UIView+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		340298B4298FC98F2EA4536CF088C7E1 /* RowDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A834DB407E15C53FD79EC8B3E462F5 /* RowDecodingError.swift */; };
+		38487F3F38A0558EBB3F6C604FB33C9F /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F133B9CA0CF9A6163EC868FDCFF932F /* Export.swift */; };
+		39A5C378DFF4F2546527BAF1A007B977 /* DMDynamicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4593C36998210A1E2CCB49A9190158 /* DMDynamicColor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3D3A17D3F6F6F03B787E7400C1C3F5ED /* Refinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B6D500378339BB5BE54E1A54E327D2 /* Refinable.swift */; };
+		3FE867A2D2916AA887DDE262CB40726E /* DMEnvironmentConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B50721AC7ABE08DB2A5CEFED5938527 /* DMEnvironmentConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		436B8039E658283EB9914548320950AC /* RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA8C92BD0700B6C2FE204B6C4E9374 /* RemoveDuplicates.swift */; };
+		44494BC1D721385361F9AF8F9D106C53 /* FTS5CustomTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA891428FEA627FD1033F8C676A1D /* FTS5CustomTokenizer.swift */; };
+		4471ECF239A4AA6C37025B8498CA6F3F /* TableDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DFBF7952C3E2521DF17603FF8BB823 /* TableDefinition.swift */; };
+		44AD41843DBDDE316FBDB31CD1F6ECDA /* UILabel+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECE780FD129737D7144865C96D2F6C /* UILabel+DarkModeKit.swift */; };
+		45CF79556D3093BFBA98966CBC825706 /* TableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A013ACB638AB2C6F93BA6701A2D0 /* TableRecord.swift */; };
+		4659A0AC889D5C69F871F22542BAF80D /* DatabaseValueConvertible+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4200067DAAAD796124673FEA5F53A2 /* DatabaseValueConvertible+Encodable.swift */; };
+		4720E0F7DA4C042B231521CF1B744C91 /* Pods-SwiftiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 012B2657E53E3E0F5417B0144EDB3C3E /* Pods-SwiftiOS-dummy.m */; };
+		4772456C7547B8AFB9F1DF2DA2F674D7 /* SQLSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088B6EF6C1045136502BFF2BEAF0E02F /* SQLSelection.swift */; };
+		47DCA06F824B462C28E37AA0A2F935CC /* UIButton+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B3D6D8FF8B87AA0F619B1C61CFD175 /* UIButton+DarkModeKit.swift */; };
+		489EE6479681A3CC94F11380A0A36F45 /* DatabaseCollation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F635BA4CEB6E19B3B4BBF96D206E285 /* DatabaseCollation.swift */; };
+		4D9326D6DC01E7E2D4BE5466547BDE85 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D300074ADF315524C8FBBF3158F50F /* Map.swift */; };
+		4DEF5FE64698089753A217EED2CE17D6 /* StatementColumnConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15487F39962AB9E4653740FB6FFDB823 /* StatementColumnConvertible.swift */; };
+		4E9CE023E6D1A02BC3B97032519F5F30 /* UIProgressView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEBE20D002480D6010F739869D9C6F /* UIProgressView+DarkModeKit.swift */; };
+		4F6494B2EF9FCAE3AED51379A58824F7 /* Database+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30B5203231F8369187688D3C79E0A20 /* Database+Schema.swift */; };
+		502CF832D6F53791E5F0D1F5A26F7963 /* NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF80819EE593E158561873404F2F9BD7 /* NSNumber.swift */; };
+		530F3956622BDDFD1921CEF243D16B23 /* RowAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4219292BA8A8230CE6BB8DC0CCE0862 /* RowAdapter.swift */; };
+		537ABC04D43C7771B74B484DF1489272 /* UIImage+DarkModeKitSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71A0EA43B5BDE95BB315DB0D373548 /* UIImage+DarkModeKitSwizzling.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53B848EE76D8000DECC7F1A336908ADB /* StandardLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F59A89F92A0819B25EA4A468BDC78F /* StandardLibrary.swift */; };
+		53C9C6F0D15C6E1C4DACE0917FC2BCEF /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095FCAE708EE4B7382D404563CEEE326 /* OrderedDictionary.swift */; };
+		54155F6769681C2D3C23EA9BC954DF50 /* UIImageView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAFA6441B963F4178936CEF48511E4 /* UIImageView+DarkModeKit.swift */; };
+		547C9A9FCD1E631DC314D628E79355C9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BA2119E971964B8F5FC4F241F80BB9 /* Date.swift */; };
+		54FE022DAD84F16FC22CD6F0AC89728B /* FTS5+QueryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A380791D039BB6CD7863197793EFF /* FTS5+QueryInterface.swift */; };
+		59614817FA12F129EA3D5570494D4E77 /* ValueObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD32089677A595D194E4B51DFC992F3 /* ValueObserver.swift */; };
+		5A10868BEC5E738C3735E998E33684D7 /* FTS5Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D8A15B6237015491D356398B4AB72 /* FTS5Tokenizer.swift */; };
+		5A3F44B7A93DDE5BE8717C4208278E8E /* DatabaseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7261A8CB84762972FA5E0110423F63 /* DatabaseWriter.swift */; };
+		5C1CA3347EEEE3021A42D4CD6181A01C /* UIPageControl+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3989AA0F137AA481A4813C7489B6795 /* UIPageControl+DarkModeKit.swift */; };
+		5D5BC9D20F736B30EF245D6E50B1D117 /* SQLCollatedExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F25D21CEA0FB5F5695C0A610BCF3D /* SQLCollatedExpression.swift */; };
+		5E4DE477F8CB6221E1292220750F88FF /* FTS3TokenizerDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DB09BD06B52C7F6F9B189BC61E70F /* FTS3TokenizerDescriptor.swift */; };
+		6075FDA209538488800153EC91003C52 /* SQLLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75535E41E66C2A405E49F1AB054FC52C /* SQLLiteral.swift */; };
+		615D1FB11BBF4E7E57C29015FB0F7E4B /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD2CBEA62C51D56E2187998E330F03 /* NSString.swift */; };
+		6328ED24642E3881F2B698C50CECD782 /* Pods-SwiftiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 600BCD2AC8A182C07FA8DC55414933AD /* Pods-SwiftiOS-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		63433FC6547E27DC6980BE79A927F10D /* GRDB.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9649E3B399391711B5826EFFD56FE1E9 /* GRDB.swift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6362FC9832005C621C2DE833E2F7C989 /* ReceiveValuesOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3559C9CF515076A620F34229E17C73B5 /* ReceiveValuesOn.swift */; };
+		685DEAF5DD86C1E0C3C465B9E8384A81 /* DMNamespace.h in Headers */ = {isa = PBXBuildFile; fileRef = 556D8197354BA3749FBF25EEEFC6F0E6 /* DMNamespace.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		699346BAEA8F71A3E3B3D63E63F3E83A /* FTS3Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054BCDBEAB4B36F3EC4994AC23BBEC4A /* FTS3Pattern.swift */; };
+		6A0A4B37A25DECF51F5861011807309B /* grdb_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E1CCFE23A8F9926AD68994B5545C30 /* grdb_config.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6A6485FE8A63CCA7191C5DB2EA0880C7 /* SQLCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57E6427CCC253958373569FCFC92BC6 /* SQLCollection.swift */; };
+		6B8937166C1F974FAB7ACE70A2E2CC18 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B96CFEFEB4183BAF4C30A6F3C01B3 /* Column.swift */; };
+		6CA7BEBBDD9651E4F42B770FEAAB84BC /* DMTraitCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 815C8F704F1E909AD09B82E5E70599F0 /* DMTraitCollection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E694D6BF657150E98C1909BA37A2AC1 /* ValueObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED56174DFD512E4D3279A879A99BF6 /* ValueObservation.swift */; };
+		70FB436C143C40044EF24F7A716D2E41 /* SchedulingWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F217B6633B951F227094BFA4E898D01 /* SchedulingWatchdog.swift */; };
+		752B39DD602C5DBB695BACB4354C8DCB /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AA0E67F2023437F003612BFF3226E /* URL.swift */; };
+		75D2F3FF4AE85DAB6C7B037C728B8D5C /* DatabaseCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3BAB8F80253E8109066AA06307AEA /* DatabaseCancellable.swift */; };
+		76D06EAB7CBCB7DEA07979B05C091CC0 /* DarkModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4840BD317829061E3AA7909F063C9FF2 /* DarkModeManager.swift */; };
+		78F35E8FC8585B8AAFABCDBEF7C37B09 /* UIView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49071F5EA8903A988BF1A4AABE01F08 /* UIView+DarkModeKit.swift */; };
+		78F8DB86866EB4652B534F223F57289D /* Inflections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAEEC8DD57867394D699B491F600C0 /* Inflections.swift */; };
+		792A3985C32C64FC531DB062ECD52B97 /* SQLRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9F9607281F43948544A692851F1D3 /* SQLRelation.swift */; };
+		79E0E451C3ABEDF124175092477BC686 /* TableRecord+Association.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9158281EDB02DF091DC84D7200F31E65 /* TableRecord+Association.swift */; };
+		79EC0EC1D7FD4CBB1CB8DEDC7BB8FDDD /* Database+Statements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0C13DD8FC72DFB52F86D4F3264CF4 /* Database+Statements.swift */; };
+		7BC98E41783256C003FFDFBE3649776F /* AssociationAggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D1512BF2BE8FA318DD4AA595D670A6 /* AssociationAggregate.swift */; };
+		7EC46B562D348B6AD54EE593DDA2BCF9 /* UIViewController+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDA4CF1F3BA5BC85B98C46A25EE09F4 /* UIViewController+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		806490B33AE436577A4444055225F9FC /* UIImage+DarkModeKitSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F9A9953854D97B4412CC2F85BF669 /* UIImage+DarkModeKitSwizzling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		80BC69FEB9B70CE2F274F761A02444DC /* DatabasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62F1AD72196373BA5B6829B4745EB46 /* DatabasePool.swift */; };
+		814729FFCC305A148925E11E61D0991C /* FetchableRecord+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169A96E1EC69D7A254377178663A4BC2 /* FetchableRecord+Decodable.swift */; };
+		81FB742E180F41C72D057FF65125BC3F /* UIActivityIndicatorView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B7A4CB43094D1D4CE5E0904BE466 /* UIActivityIndicatorView+DarkModeKit.swift */; };
+		86BB0588CFDF9E057D1968421FD34B61 /* Inflections+English.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FF5E4FC4DAF3262181E59327DFE07 /* Inflections+English.swift */; };
+		87060C194EDC2632CA5254C2A1434A62 /* RequestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8F630CFC13222E3838B80DB31ED84 /* RequestProtocols.swift */; };
+		88DFB2CEA7BB46CFAE378934FE89183B /* SerializedDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C571C2D12FC34A2F1DD3DAD107B4D /* SerializedDatabase.swift */; };
+		8C7DDEC423FFE817CBA282D70B129122 /* FTS5TokenizerDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA1C2AF9BDB3950A762AEFE5E59F26 /* FTS5TokenizerDescriptor.swift */; };
+		8EBB3045D411C26911D1E82CB7DCFC1F /* DMTraitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 383FFF19BBF0256265F95F8293967ABE /* DMTraitCollection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F7929AEFCCB8D50EA905D3AD50E9F3D /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFBE61A5B64CE8305A1CD6D32847725 /* Cursor.swift */; };
+		92F397A6BB69F9D7EEEC07EDC651DC21 /* NSNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D09F2167E0CE9C1377061192A7A7 /* NSNull.swift */; };
+		933EADD2BCA276559AF9188BB4C3D365 /* CommonTableExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD57E4504AD3AC5A900DA464EA15F5 /* CommonTableExpression.swift */; };
+		93E24C5F8EB14A05DD011B6D4FE4C203 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F784E89F316FF07A4D909770036317D /* FTS4.swift */; };
+		956D50AD75111296794CFFFBDCD04175 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8EB511ECAB7CE09DDAA6931E26B8F /* Migration.swift */; };
+		959FAC066EE05C8995C1583C66CB934E /* EncodableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749FC74916B35963EA020EBEE0D129A0 /* EncodableRecord.swift */; };
+		96704FB79427D5AF24C24EF36DE900AB /* UITabBar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2A343D09AF9BABE917AA5A3CB3066 /* UITabBar+DarkModeKit.swift */; };
+		9A16B3BEB0D9314435E738C687D26194 /* FTS5WrapperTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE63C6292986EDAEBB1DF083CC7A7B9 /* FTS5WrapperTokenizer.swift */; };
+		9EBB3092995AE7AE730B454F06117F9B /* SQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C481BA19D23CC72E5F8426FDE206177 /* SQLExpression.swift */; };
+		A1EF5F5CAB64309CB84D79107332D4BB /* StatementAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748BCFD8C247EBAA86DE5237E8495BDF /* StatementAuthorizer.swift */; };
+		A3CEE06A4A16FE7A1CBA145CE1F97B62 /* UITextField+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEFA5047094A1BC5A1589D7A488B697 /* UITextField+DarkModeKit.swift */; };
+		A5D7051CD16A7B31C8590F7073C7812C /* DatabaseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C1A26AA33506752BEA1EC7E6A6D0A4 /* DatabaseQueue.swift */; };
+		A61CFBAE237DF0F6F4F308045C6BF1D3 /* UINavigationBar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D88743F6F7A21C9911826E628C306 /* UINavigationBar+DarkModeKit.swift */; };
+		A72B86C93F37D655366BF24A99A0A65D /* UITableView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB69AE4E2D80B6EAD76B60F999CDA9F /* UITableView+DarkModeKit.swift */; };
+		A7F7E8AB25362FF2B652F8F75A9A6A7D /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58444605CE00E23E3D43D70D5D6D14C /* Database.swift */; };
+		AA608B56128AF9C2FDBE7860CDDBE9FA /* SQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6C3C505456981AD7C302436DB5EE7 /* SQLQuery.swift */; };
+		AB7A83445263E567537373CFF62DEDCC /* SQLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C576021319FA0896C6B39BA0257B68A /* SQLFunctions.swift */; };
+		ABB8181CAAB54B07EBA071F5C0695063 /* FluentDarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6574D1539CC15743DAEF00D97571E787 /* FluentDarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ABDB62A3587079936913CE3A371C805C /* UIView+DarkModeKitSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C2B6565ECF7C42DE78453FC9C874A7C /* UIView+DarkModeKitSwizzling.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD335BB0554106C3F09560178414EC88 /* ForeignKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D9DAECC24770FB4C5CC934BD032AB9 /* ForeignKey.swift */; };
+		B2E3952CD7814D0282CA134402BB05DC /* DatabaseValueConvertible+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4220348D11DE00F382410DE41BD99 /* DatabaseValueConvertible+Decodable.swift */; };
+		B313B4CD89DE957E65568853E118A819 /* DMDynamicColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D06ADB42DC74E74A4F45B31886F70BD /* DMDynamicColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B59D9F8B6799C6218AB93622DB92F26B /* DatabaseMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513F2A0F7916C46DCC2FA3BD28D914D /* DatabaseMigrator.swift */; };
+		B88C8E3F601EA583AE99C136ABADF03B /* NSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D69CB6772A08BF4A8354E52F688801E /* NSData.swift */; };
+		B897A16D9E134CCDF7BF57EABAA364A8 /* UIScrollView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFF928AC857C4C69D89F60483410C5 /* UIScrollView+DarkModeKit.swift */; };
+		BB007B7821C075E33B8C26667674D98A /* DatabaseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490F96AF4F65AE9019D161E6FCB04874 /* DatabaseValue.swift */; };
+		BBF354A04E33E53B2F5FD9092FB4963C /* UITextView+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF74C0F5B046350574A69B9CA109C1 /* UITextView+DarkModeKit.swift */; };
+		BC09A7A36631D396EED229EE0B024891 /* JoinAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140B73DE5B72489C56919FFD737CEDB /* JoinAssociation.swift */; };
+		BD5BCD5FE3A474E284EE5C2224A1FCBC /* SQLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7891EBFD34B477C5F1B4597ED3FA45 /* SQLRequest.swift */; };
+		BDA8115EE332ABAEE907F65C2BBBE70C /* FluentDarkModeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3BFE4303E2ED4695F9E1BE01AD7F1 /* FluentDarkModeKit-dummy.m */; };
+		BDB527167C45902F3DEE6F961B4AF718 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B4CFF7103F4F42BA00A209FC6B1DD /* CGFloat.swift */; };
+		BEDE54390ACF38D89A0B998D10040CAC /* LockedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2BDF7341B566A1C7D212388276D759 /* LockedBox.swift */; };
+		C00116FFD7797243D782E84F7FA716FF /* SQLOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D8DF24FFD2B0FC729A6A808F4E882E /* SQLOperators.swift */; };
+		C17667A28337C848432D9FEA41113E62 /* DatabaseDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84A61424D9079EDA8579F8C5F3B0577 /* DatabaseDateComponents.swift */; };
+		C34CAA832D70B5735AEC3A8DD5A28F27 /* UIViewController+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4620D621F83292F3052A03406915AD /* UIViewController+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4D9E75023C79A28261D7A2C51AAC554 /* FTS5Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06BB2EBFFFFA4E804C73B855A5790E /* FTS5Pattern.swift */; };
+		C66D3B4DE147BFF7EB1DBE0FAB00A301 /* SQLOrdering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B0CA5CBB06672F6CB28DFC478E6F4 /* SQLOrdering.swift */; };
+		C73F1F0E114540AB886A640530AF9CA3 /* TableRecord+QueryInterfaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DC29E1E5B7378B4CFF1C3799CA942 /* TableRecord+QueryInterfaceRequest.swift */; };
+		C82D01AD44413CD4F35FCC90A65ADB5A /* DatabaseSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD60A0E7B178BF059B13CE5F03CA063 /* DatabaseSnapshot.swift */; };
+		C8CA93408951C97601FCFAC3CC80D98C /* UIView+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E365D7C6E94EB85CE7A50F50F5C81A70 /* UIView+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CB4A714AB78B0858FB9CB9FE499BCF89 /* UIColor+DarkModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6E0AB96E937EAD96EC34C43D943EF /* UIColor+DarkModeKit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CD1CC41BA96F2A223FE524935D53674D /* Trace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E1FAFBD0A643D11285E96555A30C9 /* Trace.swift */; };
+		D282C432DE4BC61EF724A7F9554D8414 /* HasOneAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E62C8C942A5CBC1E428C514FF424B /* HasOneAssociation.swift */; };
+		D33D7835A8D77E65884CE112D318D397 /* QueryInterfaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE37806FD1BF3E35C08FD901009E731 /* QueryInterfaceRequest.swift */; };
+		D49579E6005A46523945CDD9F839BD24 /* DatabaseValueConvertible+ReferenceConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F3B4F2A94E2914B7977CF5884B3BAD /* DatabaseValueConvertible+ReferenceConvertible.swift */; };
+		D596C9949CCCE0BF83DF332DA1B3A3BD /* DMDynamicImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 65415F9F79657D9BDF6A9AF0B2D788C4 /* DMDynamicImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6E792A8FD8B3229D64AC109888DC043 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FCB941250BF6C4E1DE021483652950 /* Row.swift */; };
+		DAACBD6168F7565FFE7B2A4E829CF702 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7C622183E424E11D2E3564618BBAD /* Fetch.swift */; };
+		DAB780119FA2C193596021CE41061B1E /* DMEnvironmentConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6910FCC6ABE95AC70FEAEE89B9ACD7 /* DMEnvironmentConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD16AFBA2FD64E827EA43597D42CCDBA /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B179EB65BC16B3ABA53FCAE2A669CF6E /* UUID.swift */; };
+		DE6EA56940522BB51A9B3547AE4E1552 /* FluentDarkModeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB3AFFAA2092984807993BF08D54F37 /* FluentDarkModeKit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DEEC30E915EB852014E2EA3B9B0386A9 /* HasOneThroughAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A70DB0E3E796D401A6641479D0E7ADB /* HasOneThroughAssociation.swift */; };
+		E23B04C3E52181DF8F69A5FD77EBAB2D /* DMDynamicImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A4697A24ADB2F7368706266013BED7 /* DMDynamicImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E442487FA123D91A3D8280677EA0E571 /* GRDB-5.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26B024BA4A71B7EBD01790304106555 /* GRDB-5.0.swift */; };
+		E7EC3441B3E6D5CE28ED0A0C4FE7353D /* HasManyAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3C7B1D4D77E674446358A9296B4FD /* HasManyAssociation.swift */; };
+		E955733E1FA75C66866072E5162A5601 /* ValueObservationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8B1CD640EE76736C5B5F92CB452EB /* ValueObservationScheduler.swift */; };
+		EB7D13CA9ACA56C5F882D72DD72C3067 /* ValueReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D16B54AF9E722AA533B5AD66E7E2AE /* ValueReducer.swift */; };
+		EBE7E7879DA3FFCE932375A563C9CE6F /* UIToolbar+DarkModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856E32FE6B634A22DF034820BB17F8E4 /* UIToolbar+DarkModeKit.swift */; };
+		EC5114A59E22BCFF9EDB33E07695D29C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945A6142169CD34E3839C47FD73AA1D /* Data.swift */; };
+		EC947105BFE1325C49C96AD1416FC777 /* DatabaseFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BF5C326CA063BD69A4B9EA7A3F8FE6 /* DatabaseFunction.swift */; };
+		ED2A5BD7BF711F9A329D9C6F3653889F /* DatabaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE6A36BA4873119B184FA3D79F446C /* DatabaseReader.swift */; };
+		EF477833BE9BB4B74A291ECA66F0D832 /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B0F4CAB571AC33696EB133C5746D2 /* Pool.swift */; };
+		F014449D2FD9A2AF4EECD7E86B63A214 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601CFBCCE23C7B0150B4B49839240E22 /* Record.swift */; };
+		F1B458133EC27666A67D8B5BA4215E91 /* ReadWriteBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E91F1A9AB05D2B540563DB88D4916F /* ReadWriteBox.swift */; };
+		F2B4EDBBF4E6757D1FAC949471EA1DA3 /* FTS3+QueryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF0C4E5F231ABB454E0D9B6005511F /* FTS3+QueryInterface.swift */; };
+		F670E9BB368076967AAAAEE10A867C3D /* EncodableRecord+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936ED88A1B701923678555B24AC3F82 /* EncodableRecord+Encodable.swift */; };
+		FA3EE8DDFA08931875A82EC091FCB14C /* SQLSubquery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F9B8A4D7062C45A6583E06B0A694C2 /* SQLSubquery.swift */; };
+		FBBFD7CC70C4689F92BE9992CD3D5C30 /* BelongsToAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0DBF330A991DA88B8AF2014FB38535 /* BelongsToAssociation.swift */; };
+		FBDB2B016EC225913682E952645A5918 /* PersistableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D5A73DE53240524097650945FB5B1 /* PersistableRecord.swift */; };
+		FC40F9E4A849251402CE2AE7F46A0788 /* DatabasePublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE117B1784F6EB160CC621E44626329 /* DatabasePublishers.swift */; };
+		FC8C80E22810406D1B2D67411090C36A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1AE425653172927C0063CDBBB7FCE5 /* Utils.swift */; };
+		FD23ADF2B7C85A3432B97D3872BD6BD5 /* UIImage+DarkModeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 90C740CB468EDD144FB832B713B1ED0D /* UIImage+DarkModeKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FEB5F6E6A50550F5F3D813F5F907612C /* DatabaseRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806F524ADB3ED45CC533055F8B97B83 /* DatabaseRegion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		441DEF4C1B12A03B556CC6A3574BA07A /* PBXContainerItemProxy */ = {
+		144BC92BB2C5880A8F44B899CA76342A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A86C228CFCBC35A1FD284274ED0930F;
+			remoteInfo = GRDB.swift;
+		};
+		FA8E29BFF30B3B4473298779B43789EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 155BF1269EF587A2F12050C60EFF878E;
 			remoteInfo = FluentDarkModeKit;
 		};
-		462C7F8D402DB52E175FACB0C411A6A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F2C1776D90B62B156DB52C41A5C419C;
-			remoteInfo = SQLite.swift;
-		};
-		688DF3FC932B888E937126EAB4524559 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F2C1776D90B62B156DB52C41A5C419C;
-			remoteInfo = SQLite.swift;
-		};
-		CE1B5C4AC19166805F4E3A3E4C0BA86C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6FE0C2334D8053AEB95BCCADE9C2D2E0;
-			remoteInfo = SQLiteMigrationManager.swift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D07DA3A55F377119B226B4524B9706 /* FluentDarkModeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FluentDarkModeKit.release.xcconfig; sourceTree = "<group>"; };
 		012B2657E53E3E0F5417B0144EDB3C3E /* Pods-SwiftiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftiOS-dummy.m"; sourceTree = "<group>"; };
-		02F572AC9870C925CE6B24D73AD95916 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+		03FA1C2AF9BDB3950A762AEFE5E59F26 /* FTS5TokenizerDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5TokenizerDescriptor.swift; path = GRDB/FTS/FTS5TokenizerDescriptor.swift; sourceTree = "<group>"; };
+		0427B7A4CB43094D1D4CE5E0904BE466 /* UIActivityIndicatorView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActivityIndicatorView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIActivityIndicatorView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		054BCDBEAB4B36F3EC4994AC23BBEC4A /* FTS3Pattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS3Pattern.swift; path = GRDB/FTS/FTS3Pattern.swift; sourceTree = "<group>"; };
+		06EB7E7AD261C16432F80F9A0ABA3C49 /* GRDB.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRDB.swift-prefix.pch"; sourceTree = "<group>"; };
 		07186D63C92ECFA4C0E44BC7F8DC6B0E /* Pods-SwiftiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftiOS.release.xcconfig"; sourceTree = "<group>"; };
+		0806F524ADB3ED45CC533055F8B97B83 /* DatabaseRegion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseRegion.swift; path = GRDB/Core/DatabaseRegion.swift; sourceTree = "<group>"; };
 		082DB2319F72FF4B5E7B867A74F227E8 /* libPods-SwiftiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SwiftiOS.a"; path = "libPods-SwiftiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09971AC03D63E4ECB79E4E4D1A816976 /* DMEnvironmentConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMEnvironmentConfiguration.h; path = Sources/DarkModeCore/DMEnvironmentConfiguration.h; sourceTree = "<group>"; };
-		17E60FBA9DC8601019CD4C7AE5E6E863 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
-		19FB589543DA3DA20D441DA179EDEA82 /* FluentDarkModeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FluentDarkModeKit-umbrella.h"; sourceTree = "<group>"; };
-		1AF2210E9C252D956093F3759354A0EE /* DMEnvironmentConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMEnvironmentConfiguration.m; path = Sources/DarkModeCore/DMEnvironmentConfiguration.m; sourceTree = "<group>"; };
-		1C0FE07413042E5C2CF816A2EAC2C64A /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
-		1CD7B77594B359D8ABCF86264D2E7830 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
-		267EC985991854197C24A1410D492474 /* UITabBar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITabBar+DarkModeKit.swift"; sourceTree = "<group>"; };
-		2722B54B194C3D2960B559E127EDCE9D /* DMDynamicColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMDynamicColor.m; path = Sources/DarkModeCore/DMDynamicColor.m; sourceTree = "<group>"; };
-		27982F0F0C18BF2EC601FF90A3938E6E /* UIColor+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+DarkModeKit.m"; path = "Sources/DarkModeCore/UIColor+DarkModeKit.m"; sourceTree = "<group>"; };
-		2A9CD3E17B892E8CA7EC8F6C79D5F72F /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
-		2C471EF7A7E969D7D334CEB00FA37876 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
-		2F8A9C30972DF489B60BE3BE63A1D375 /* UIImage+DarkModeKitSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+DarkModeKitSwizzling.m"; path = "Sources/DarkModeCore/UIImage+DarkModeKitSwizzling.m"; sourceTree = "<group>"; };
+		088B6EF6C1045136502BFF2BEAF0E02F /* SQLSelection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSelection.swift; path = GRDB/QueryInterface/SQL/SQLSelection.swift; sourceTree = "<group>"; };
+		095FCAE708EE4B7382D404563CEEE326 /* OrderedDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderedDictionary.swift; path = GRDB/Utils/OrderedDictionary.swift; sourceTree = "<group>"; };
+		097DC29E1E5B7378B4CFF1C3799CA942 /* TableRecord+QueryInterfaceRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TableRecord+QueryInterfaceRequest.swift"; path = "GRDB/QueryInterface/TableRecord+QueryInterfaceRequest.swift"; sourceTree = "<group>"; };
+		0A6910FCC6ABE95AC70FEAEE89B9ACD7 /* DMEnvironmentConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMEnvironmentConfiguration.h; path = Sources/DarkModeCore/DMEnvironmentConfiguration.h; sourceTree = "<group>"; };
+		0C576021319FA0896C6B39BA0257B68A /* SQLFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLFunctions.swift; path = GRDB/QueryInterface/SQL/SQLFunctions.swift; sourceTree = "<group>"; };
+		0D0E41F08DD0EE66C33FD1FD885F2AB3 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = GRDB/Core/Configuration.swift; sourceTree = "<group>"; };
+		0DD32089677A595D194E4B51DFC992F3 /* ValueObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueObserver.swift; path = GRDB/ValueObservation/ValueObserver.swift; sourceTree = "<group>"; };
+		0EE63C6292986EDAEBB1DF083CC7A7B9 /* FTS5WrapperTokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5WrapperTokenizer.swift; path = GRDB/FTS/FTS5WrapperTokenizer.swift; sourceTree = "<group>"; };
+		0FD60A0E7B178BF059B13CE5F03CA063 /* DatabaseSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseSnapshot.swift; path = GRDB/Core/DatabaseSnapshot.swift; sourceTree = "<group>"; };
+		11EFF928AC857C4C69D89F60483410C5 /* UIScrollView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIScrollView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		1331B0A6F23B64487AA65B8F6DFE60FC /* SQLGenerationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLGenerationContext.swift; path = GRDB/QueryInterface/SQLGeneration/SQLGenerationContext.swift; sourceTree = "<group>"; };
+		153E62C8C942A5CBC1E428C514FF424B /* HasOneAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HasOneAssociation.swift; path = GRDB/QueryInterface/Request/Association/HasOneAssociation.swift; sourceTree = "<group>"; };
+		15487F39962AB9E4653740FB6FFDB823 /* StatementColumnConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatementColumnConvertible.swift; path = GRDB/Core/StatementColumnConvertible.swift; sourceTree = "<group>"; };
+		169A96E1EC69D7A254377178663A4BC2 /* FetchableRecord+Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FetchableRecord+Decodable.swift"; path = "GRDB/Record/FetchableRecord+Decodable.swift"; sourceTree = "<group>"; };
+		17ABD68E920293F080122810A8881638 /* libGRDB.swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGRDB.swift.a; path = libGRDB.swift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F59A89F92A0819B25EA4A468BDC78F /* StandardLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StandardLibrary.swift; path = GRDB/Core/Support/StandardLibrary/StandardLibrary.swift; sourceTree = "<group>"; };
+		1945A6142169CD34E3839C47FD73AA1D /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = GRDB/Core/Support/Foundation/Data.swift; sourceTree = "<group>"; };
+		1D06ADB42DC74E74A4F45B31886F70BD /* DMDynamicColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMDynamicColor.h; path = Sources/DarkModeCore/DMDynamicColor.h; sourceTree = "<group>"; };
+		1F635BA4CEB6E19B3B4BBF96D206E285 /* DatabaseCollation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseCollation.swift; path = GRDB/Core/DatabaseCollation.swift; sourceTree = "<group>"; };
+		1FA3BFE4303E2ED4695F9E1BE01AD7F1 /* FluentDarkModeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FluentDarkModeKit-dummy.m"; sourceTree = "<group>"; };
+		230E12D4E8A160CE9C74C3EA73ADBF17 /* FluentDarkModeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FluentDarkModeKit.modulemap; sourceTree = "<group>"; };
+		24E6C3C505456981AD7C302436DB5EE7 /* SQLQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLQuery.swift; path = GRDB/QueryInterface/SQL/SQLQuery.swift; sourceTree = "<group>"; };
+		25C8EEAA1AD08B393C521BC2E7478D76 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = GRDB/Core/Statement.swift; sourceTree = "<group>"; };
+		25DFBF7952C3E2521DF17603FF8BB823 /* TableDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDefinition.swift; path = GRDB/QueryInterface/Schema/TableDefinition.swift; sourceTree = "<group>"; };
+		265832C50A208D663366F52949C9A998 /* FluentDarkModeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FluentDarkModeKit.debug.xcconfig; sourceTree = "<group>"; };
+		27A2E521891864AD2C5741030CF20058 /* FetchableRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FetchableRecord.swift; path = GRDB/Record/FetchableRecord.swift; sourceTree = "<group>"; };
+		2AF4220348D11DE00F382410DE41BD99 /* DatabaseValueConvertible+Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DatabaseValueConvertible+Decodable.swift"; path = "GRDB/Core/Support/StandardLibrary/DatabaseValueConvertible+Decodable.swift"; sourceTree = "<group>"; };
+		2C048CEB74B502830EED1BEEDD1CDC6C /* SQLForeignKeyRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLForeignKeyRequest.swift; path = GRDB/QueryInterface/SQL/SQLForeignKeyRequest.swift; sourceTree = "<group>"; };
+		2CA8F630CFC13222E3838B80DB31ED84 /* RequestProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestProtocols.swift; path = GRDB/QueryInterface/Request/RequestProtocols.swift; sourceTree = "<group>"; };
+		2E69A013ACB638AB2C6F93BA6701A2D0 /* TableRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableRecord.swift; path = GRDB/Record/TableRecord.swift; sourceTree = "<group>"; };
+		318A4D245702557964852A4B179625E7 /* FetchableRecord+TableRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FetchableRecord+TableRecord.swift"; path = "GRDB/Record/FetchableRecord+TableRecord.swift"; sourceTree = "<group>"; };
+		31FCB941250BF6C4E1DE021483652950 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = GRDB/Core/Row.swift; sourceTree = "<group>"; };
 		3291F359925F4D1ED12A65A643DADC8D /* Pods-SwiftiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftiOS.modulemap"; sourceTree = "<group>"; };
-		339558C10FE69BA936743B9FA406F8AF /* UIView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		3437353D25BD2029FF760B6DB309327B /* SQLiteMigrationManager.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLiteMigrationManager.swift-prefix.pch"; sourceTree = "<group>"; };
-		345F6C698C0151F96049A36B34B91AE2 /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
-		356B688847FEA3162554BE7DEED3ADFA /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
-		38D33E1F18B6250663F702DBFCDF2A2E /* UIImage+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+DarkModeKit.h"; path = "Sources/DarkModeCore/UIImage+DarkModeKit.h"; sourceTree = "<group>"; };
-		3B047051DA41471BF51A13AFB18CBD54 /* UIView+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+DarkModeKit.h"; path = "Sources/DarkModeCore/UIView+DarkModeKit.h"; sourceTree = "<group>"; };
-		41609E697D02E27EB23260FB39D0A3F0 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
-		457A09D7F594D7939F853CC7F6A9CC0A /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
-		478F8D25C596DFFFCCDA426DB3C090F6 /* DMTraitCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMTraitCollection.h; path = Sources/DarkModeCore/DMTraitCollection.h; sourceTree = "<group>"; };
-		4B270B7564565AD97CBDDCCE0A701C7E /* DMTraitCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMTraitCollection.m; path = Sources/DarkModeCore/DMTraitCollection.m; sourceTree = "<group>"; };
-		4BCDFEF7317B9B8D6F8B2754F30057E4 /* UIImage+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+DarkModeKit.m"; path = "Sources/DarkModeCore/UIImage+DarkModeKit.m"; sourceTree = "<group>"; };
-		51B675111F5D5F6F577126ED9DB1C683 /* SQLiteMigrationManager.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLiteMigrationManager.swift-dummy.m"; sourceTree = "<group>"; };
-		55B5E99F83EF6D51C08CDC09C6A72F80 /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
-		59FFCFC23F3DAD748BF3ADE779887EAE /* FluentDarkModeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FluentDarkModeKit.modulemap; sourceTree = "<group>"; };
+		329FF5E4FC4DAF3262181E59327DFE07 /* Inflections+English.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Inflections+English.swift"; path = "GRDB/Utils/Inflections+English.swift"; sourceTree = "<group>"; };
+		33ED56174DFD512E4D3279A879A99BF6 /* ValueObservation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueObservation.swift; path = GRDB/ValueObservation/ValueObservation.swift; sourceTree = "<group>"; };
+		3559C9CF515076A620F34229E17C73B5 /* ReceiveValuesOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReceiveValuesOn.swift; path = GRDB/Utils/ReceiveValuesOn.swift; sourceTree = "<group>"; };
+		363822E386E228DA80984AF0B76F447E /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
+		37D9DAECC24770FB4C5CC934BD032AB9 /* ForeignKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ForeignKey.swift; path = GRDB/QueryInterface/ForeignKey.swift; sourceTree = "<group>"; };
+		383FFF19BBF0256265F95F8293967ABE /* DMTraitCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMTraitCollection.m; path = Sources/DarkModeCore/DMTraitCollection.m; sourceTree = "<group>"; };
+		391A7CF79E831A3BC0FDD6D92967F3D9 /* HasManyThroughAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HasManyThroughAssociation.swift; path = GRDB/QueryInterface/Request/Association/HasManyThroughAssociation.swift; sourceTree = "<group>"; };
+		3A1AE425653172927C0063CDBBB7FCE5 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = GRDB/Utils/Utils.swift; sourceTree = "<group>"; };
+		3A70DB0E3E796D401A6641479D0E7ADB /* HasOneThroughAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HasOneThroughAssociation.swift; path = GRDB/QueryInterface/Request/Association/HasOneThroughAssociation.swift; sourceTree = "<group>"; };
+		3BFBE61A5B64CE8305A1CD6D32847725 /* Cursor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cursor.swift; path = GRDB/Core/Cursor.swift; sourceTree = "<group>"; };
+		3C31C1FDC9064800CE2D39F16FE11E58 /* UIImage+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+DarkModeKit.m"; path = "Sources/DarkModeCore/UIImage+DarkModeKit.m"; sourceTree = "<group>"; };
+		3F133B9CA0CF9A6163EC868FDCFF932F /* Export.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Export.swift; path = GRDB/Export.swift; sourceTree = "<group>"; };
+		3F784E89F316FF07A4D909770036317D /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = GRDB/FTS/FTS4.swift; sourceTree = "<group>"; };
+		4140B73DE5B72489C56919FFD737CEDB /* JoinAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JoinAssociation.swift; path = GRDB/QueryInterface/Request/Association/JoinAssociation.swift; sourceTree = "<group>"; };
+		44B8B1CD640EE76736C5B5F92CB452EB /* ValueObservationScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueObservationScheduler.swift; path = GRDB/ValueObservation/ValueObservationScheduler.swift; sourceTree = "<group>"; };
+		46A7C622183E424E11D2E3564618BBAD /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = GRDB/ValueObservation/ValueReducer/Fetch.swift; sourceTree = "<group>"; };
+		4840BD317829061E3AA7909F063C9FF2 /* DarkModeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DarkModeManager.swift; path = Sources/FluentDarkModeKit/DarkModeManager.swift; sourceTree = "<group>"; };
+		48C6E0AB96E937EAD96EC34C43D943EF /* UIColor+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+DarkModeKit.m"; path = "Sources/DarkModeCore/UIColor+DarkModeKit.m"; sourceTree = "<group>"; };
+		490F96AF4F65AE9019D161E6FCB04874 /* DatabaseValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseValue.swift; path = GRDB/Core/DatabaseValue.swift; sourceTree = "<group>"; };
+		4A7C571C2D12FC34A2F1DD3DAD107B4D /* SerializedDatabase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerializedDatabase.swift; path = GRDB/Core/SerializedDatabase.swift; sourceTree = "<group>"; };
+		4EB69AE4E2D80B6EAD76B60F999CDA9F /* UITableView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITableView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		4EDA8C92BD0700B6C2FE204B6C4E9374 /* RemoveDuplicates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoveDuplicates.swift; path = GRDB/ValueObservation/ValueReducer/RemoveDuplicates.swift; sourceTree = "<group>"; };
+		538DD22EE2FD72AA71C4AE0A90F84760 /* GRDB.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GRDB.swift.debug.xcconfig; sourceTree = "<group>"; };
+		53ECCF5D3C5801C4BD1138AE8851BC3C /* UISlider+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UISlider+DarkModeKit.swift"; sourceTree = "<group>"; };
+		556D8197354BA3749FBF25EEEFC6F0E6 /* DMNamespace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMNamespace.h; path = Sources/DarkModeCore/DMNamespace.h; sourceTree = "<group>"; };
+		59A550F13337BB1F7282E6903FC4F464 /* UIColor+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+DarkModeKit.h"; path = "Sources/DarkModeCore/UIColor+DarkModeKit.h"; sourceTree = "<group>"; };
+		5B618FD09EF243C1CD7858968DD6DC87 /* SQLInterpolation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLInterpolation.swift; path = GRDB/Core/SQLInterpolation.swift; sourceTree = "<group>"; };
+		5BDD2CBEA62C51D56E2187998E330F03 /* NSString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSString.swift; path = GRDB/Core/Support/Foundation/NSString.swift; sourceTree = "<group>"; };
+		5DDD57E4504AD3AC5A900DA464EA15F5 /* CommonTableExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommonTableExpression.swift; path = GRDB/QueryInterface/Request/CommonTableExpression.swift; sourceTree = "<group>"; };
+		5DECE780FD129737D7144865C96D2F6C /* UILabel+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UILabel+DarkModeKit.swift"; sourceTree = "<group>"; };
 		600BCD2AC8A182C07FA8DC55414933AD /* Pods-SwiftiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftiOS-umbrella.h"; sourceTree = "<group>"; };
-		63DE216FA91233BC0CA0930ECD3316B1 /* UIPageControl+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIPageControl+DarkModeKit.swift"; sourceTree = "<group>"; };
-		651EED4E87D4E224A96A7755FD76BB63 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
-		6631ACEABC2E6D75E9BAC5E5BD661240 /* UIView+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+DarkModeKit.m"; path = "Sources/DarkModeCore/UIView+DarkModeKit.m"; sourceTree = "<group>"; };
-		669D43D165EF3C20F89DE06B4A7C48C5 /* DMDynamicImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMDynamicImage.m; path = Sources/DarkModeCore/DMDynamicImage.m; sourceTree = "<group>"; };
-		6B82CFB3CF48BC633168265375EB6954 /* SQLiteObjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLiteObjc.h; path = Sources/SQLiteObjc/include/SQLiteObjc.h; sourceTree = "<group>"; };
-		700AA89D1B4FF57F6261EB2483A06C75 /* UIScrollView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIScrollView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		7360625D31E34C462F201E3E2F7B63BA /* UIView+DarkModeKitSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+DarkModeKitSwizzling.h"; path = "Sources/DarkModeCore/UIView+DarkModeKitSwizzling.h"; sourceTree = "<group>"; };
-		772624F375C3FBF6815A0512DA4AB953 /* DMDynamicImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMDynamicImage.h; path = Sources/DarkModeCore/DMDynamicImage.h; sourceTree = "<group>"; };
-		79654B70A8196CFD8BA02EBA4862737C /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
-		7F6DB3618A960D3786D67C504A8CF4D5 /* UIButton+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIButton+DarkModeKit.swift"; sourceTree = "<group>"; };
-		8327A6615D9A1B8FBA648608A84EB884 /* SQLiteMigrationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteMigrationManager.swift; path = Sources/SQLiteMigrationManager.swift; sourceTree = "<group>"; };
+		601CFBCCE23C7B0150B4B49839240E22 /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = GRDB/Record/Record.swift; sourceTree = "<group>"; };
+		604F25D21CEA0FB5F5695C0A610BCF3D /* SQLCollatedExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCollatedExpression.swift; path = GRDB/QueryInterface/SQL/SQLCollatedExpression.swift; sourceTree = "<group>"; };
+		61E1CCFE23A8F9926AD68994B5545C30 /* grdb_config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = grdb_config.h; path = Support/grdb_config.h; sourceTree = "<group>"; };
+		62E2A343D09AF9BABE917AA5A3CB3066 /* UITabBar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITabBar+DarkModeKit.swift"; sourceTree = "<group>"; };
+		65415F9F79657D9BDF6A9AF0B2D788C4 /* DMDynamicImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMDynamicImage.h; path = Sources/DarkModeCore/DMDynamicImage.h; sourceTree = "<group>"; };
+		6574D1539CC15743DAEF00D97571E787 /* FluentDarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FluentDarkModeKit.h; path = Sources/DarkModeCore/FluentDarkModeKit.h; sourceTree = "<group>"; };
+		66D0C13DD8FC72DFB52F86D4F3264CF4 /* Database+Statements.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Database+Statements.swift"; path = "GRDB/Core/Database+Statements.swift"; sourceTree = "<group>"; };
+		6B50721AC7ABE08DB2A5CEFED5938527 /* DMEnvironmentConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMEnvironmentConfiguration.m; path = Sources/DarkModeCore/DMEnvironmentConfiguration.m; sourceTree = "<group>"; };
+		6DE37806FD1BF3E35C08FD901009E731 /* QueryInterfaceRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryInterfaceRequest.swift; path = GRDB/QueryInterface/Request/QueryInterfaceRequest.swift; sourceTree = "<group>"; };
+		6F4F9A9953854D97B4412CC2F85BF669 /* UIImage+DarkModeKitSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+DarkModeKitSwizzling.m"; path = "Sources/DarkModeCore/UIImage+DarkModeKitSwizzling.m"; sourceTree = "<group>"; };
+		700A380791D039BB6CD7863197793EFF /* FTS5+QueryInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FTS5+QueryInterface.swift"; path = "GRDB/QueryInterface/FTS5+QueryInterface.swift"; sourceTree = "<group>"; };
+		70FF74C0F5B046350574A69B9CA109C1 /* UITextView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITextView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		7169867D75372AFAE710F73EBEDA4FDB /* FetchRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FetchRequest.swift; path = GRDB/Core/FetchRequest.swift; sourceTree = "<group>"; };
+		72CAFA6441B963F4178936CEF48511E4 /* UIImageView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIImageView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		7307C780BA89FDB05068D37B0D2C9DC2 /* GRDB.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GRDB.swift.release.xcconfig; sourceTree = "<group>"; };
+		748BCFD8C247EBAA86DE5237E8495BDF /* StatementAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatementAuthorizer.swift; path = GRDB/Core/StatementAuthorizer.swift; sourceTree = "<group>"; };
+		749FC74916B35963EA020EBEE0D129A0 /* EncodableRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncodableRecord.swift; path = GRDB/Record/EncodableRecord.swift; sourceTree = "<group>"; };
+		74BA2119E971964B8F5FC4F241F80BB9 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = GRDB/Core/Support/Foundation/Date.swift; sourceTree = "<group>"; };
+		75535E41E66C2A405E49F1AB054FC52C /* SQLLiteral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLLiteral.swift; path = GRDB/Core/SQLLiteral.swift; sourceTree = "<group>"; };
+		767055A85BD8D6EAB942381BD4ADF5F5 /* UIView+DarkModeKitSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+DarkModeKitSwizzling.m"; path = "Sources/DarkModeCore/UIView+DarkModeKitSwizzling.m"; sourceTree = "<group>"; };
+		786B96CFEFEB4183BAF4C30A6F3C01B3 /* Column.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Column.swift; path = GRDB/QueryInterface/SQL/Column.swift; sourceTree = "<group>"; };
+		7936ED88A1B701923678555B24AC3F82 /* EncodableRecord+Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EncodableRecord+Encodable.swift"; path = "GRDB/Record/EncodableRecord+Encodable.swift"; sourceTree = "<group>"; };
+		7C2B6565ECF7C42DE78453FC9C874A7C /* UIView+DarkModeKitSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+DarkModeKitSwizzling.h"; path = "Sources/DarkModeCore/UIView+DarkModeKitSwizzling.h"; sourceTree = "<group>"; };
+		7CDE2B52424C9D92F55A49E880FA57F5 /* OnDemandFuture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnDemandFuture.swift; path = GRDB/Utils/OnDemandFuture.swift; sourceTree = "<group>"; };
+		7E5B0CA5CBB06672F6CB28DFC478E6F4 /* SQLOrdering.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOrdering.swift; path = GRDB/QueryInterface/SQL/SQLOrdering.swift; sourceTree = "<group>"; };
+		7F217B6633B951F227094BFA4E898D01 /* SchedulingWatchdog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulingWatchdog.swift; path = GRDB/Core/SchedulingWatchdog.swift; sourceTree = "<group>"; };
+		815C8F704F1E909AD09B82E5E70599F0 /* DMTraitCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMTraitCollection.h; path = Sources/DarkModeCore/DMTraitCollection.h; sourceTree = "<group>"; };
 		84E9F0C615CC7EF50988F630C8079FCA /* Pods-SwiftiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8560E86D7353BF8E0B3D4451EF381FD5 /* SQLite.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.debug.xcconfig; sourceTree = "<group>"; };
-		8811CEADB147A1338AEC4566E8E04538 /* FluentDarkModeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FluentDarkModeKit.release.xcconfig; sourceTree = "<group>"; };
-		89D4EDD3864CC96C7FFA02D6EFA02B08 /* UIToolbar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIToolbar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIToolbar+DarkModeKit.swift"; sourceTree = "<group>"; };
-		89EF6D0774D298B3C075E0A0D7DB65DA /* UIViewController+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+DarkModeKit.m"; path = "Sources/DarkModeCore/UIViewController+DarkModeKit.m"; sourceTree = "<group>"; };
-		8B2D3DCD9ABB379E9DA837D5919B1905 /* UISlider+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UISlider+DarkModeKit.swift"; sourceTree = "<group>"; };
-		9140C15739856C1E1CD767EB75681643 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
-		9213CA5A09FF57BC7CBECC4AC68B2B89 /* UITextView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITextView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		95AFE2B226F6DA78CC018F5752A0EA74 /* UIImage+DarkModeKitSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+DarkModeKitSwizzling.h"; path = "Sources/DarkModeCore/UIImage+DarkModeKitSwizzling.h"; sourceTree = "<group>"; };
-		97F95EC44B306C8A5FEA786F0540F46C /* SQLiteObjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SQLiteObjc.m; path = Sources/SQLiteObjc/SQLiteObjc.m; sourceTree = "<group>"; };
-		990E1B5D70B4CE626577454296E26F03 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
-		9C7E2553EB0BE583F81F27287DAE5C23 /* libSQLiteMigrationManager.swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSQLiteMigrationManager.swift.a; path = libSQLiteMigrationManager.swift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		856E32FE6B634A22DF034820BB17F8E4 /* UIToolbar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIToolbar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIToolbar+DarkModeKit.swift"; sourceTree = "<group>"; };
+		864D5A73DE53240524097650945FB5B1 /* PersistableRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistableRecord.swift; path = GRDB/Record/PersistableRecord.swift; sourceTree = "<group>"; };
+		8A82CE82F754EDF666D30002BCE118C7 /* TransactionObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransactionObserver.swift; path = GRDB/Core/TransactionObserver.swift; sourceTree = "<group>"; };
+		8C481BA19D23CC72E5F8426FDE206177 /* SQLExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLExpression.swift; path = GRDB/QueryInterface/SQL/SQLExpression.swift; sourceTree = "<group>"; };
+		8D69CB6772A08BF4A8354E52F688801E /* NSData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSData.swift; path = GRDB/Core/Support/Foundation/NSData.swift; sourceTree = "<group>"; };
+		90C740CB468EDD144FB832B713B1ED0D /* UIImage+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+DarkModeKit.h"; path = "Sources/DarkModeCore/UIImage+DarkModeKit.h"; sourceTree = "<group>"; };
+		9158281EDB02DF091DC84D7200F31E65 /* TableRecord+Association.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TableRecord+Association.swift"; path = "GRDB/QueryInterface/TableRecord+Association.swift"; sourceTree = "<group>"; };
+		9649E3B399391711B5826EFFD56FE1E9 /* GRDB.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRDB.swift-umbrella.h"; sourceTree = "<group>"; };
+		9A2BDF7341B566A1C7D212388276D759 /* LockedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LockedBox.swift; path = GRDB/Utils/LockedBox.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F41806C2F82974E3E0C75658D007567 /* DarkModeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DarkModeManager.swift; path = Sources/FluentDarkModeKit/DarkModeManager.swift; sourceTree = "<group>"; };
-		A157FEDAE16244A206567D25280A8BF4 /* UIProgressView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIProgressView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIProgressView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		A19E4E0F4C0014B5883778F09C4B65E4 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
-		A2EF94CB181A8A17B1D192599CE3FCEE /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
-		A5E69657D84335329CCFD6FEBA78588F /* DMNamespace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMNamespace.h; path = Sources/DarkModeCore/DMNamespace.h; sourceTree = "<group>"; };
-		AAC3E466D8D11CE66EE88C92A2F861A0 /* UINavigationBar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UINavigationBar+DarkModeKit.swift"; sourceTree = "<group>"; };
-		AD84170D61CD33A0CA26D1046C01C849 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		9F9DB09BD06B52C7F6F9B189BC61E70F /* FTS3TokenizerDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS3TokenizerDescriptor.swift; path = GRDB/FTS/FTS3TokenizerDescriptor.swift; sourceTree = "<group>"; };
+		A4219292BA8A8230CE6BB8DC0CCE0862 /* RowAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowAdapter.swift; path = GRDB/Core/RowAdapter.swift; sourceTree = "<group>"; };
+		A49071F5EA8903A988BF1A4AABE01F08 /* UIView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIView+DarkModeKit.swift"; sourceTree = "<group>"; };
+		A4E9F9607281F43948544A692851F1D3 /* SQLRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLRelation.swift; path = GRDB/QueryInterface/SQL/SQLRelation.swift; sourceTree = "<group>"; };
+		AAEC8031A2617A2DD19869A818B16987 /* SQLiteDateParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteDateParser.swift; path = GRDB/Core/Support/Foundation/SQLiteDateParser.swift; sourceTree = "<group>"; };
+		AC229932E5F5824BC471EFED8EC61CC9 /* FTS3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS3.swift; path = GRDB/FTS/FTS3.swift; sourceTree = "<group>"; };
+		AC7B4CFF7103F4F42BA00A209FC6B1DD /* CGFloat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloat.swift; path = GRDB/Core/Support/CoreGraphics/CGFloat.swift; sourceTree = "<group>"; };
+		AEF8FB3B63F20D643C71290D5998B28E /* DatabaseRegionObservation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseRegionObservation.swift; path = GRDB/Core/DatabaseRegionObservation.swift; sourceTree = "<group>"; };
+		AFEA3D9F6B397F028159B4D0D4AFCA19 /* VirtualTableModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VirtualTableModule.swift; path = GRDB/QueryInterface/Schema/VirtualTableModule.swift; sourceTree = "<group>"; };
+		B0A3C7B1D4D77E674446358A9296B4FD /* HasManyAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HasManyAssociation.swift; path = GRDB/QueryInterface/Request/Association/HasManyAssociation.swift; sourceTree = "<group>"; };
+		B179EB65BC16B3ABA53FCAE2A669CF6E /* UUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUID.swift; path = GRDB/Core/Support/Foundation/UUID.swift; sourceTree = "<group>"; };
 		B1847E31A44A137AF8A827C1489E41AC /* Pods-SwiftiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B2EA8A6051DBBB25A5B1522EFF46A33D /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
-		B8EE3195393B83D5489801BCB7F54DEC /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
-		BE2E134C86B341C04A7CAD52578ECFA9 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
-		C5B085AA9F553F2C60EF8F099A3AA265 /* UIColor+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+DarkModeKit.h"; path = "Sources/DarkModeCore/UIColor+DarkModeKit.h"; sourceTree = "<group>"; };
-		C68AA18D72C3CDB1914A98CBDBAC99EC /* UITextField+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITextField+DarkModeKit.swift"; sourceTree = "<group>"; };
-		C9B2D86833A9FF9730E19A3558F20F6A /* UIImageView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIImageView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		CAD1287007997CF1C3EDD466346E93A0 /* FluentDarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FluentDarkModeKit.h; path = Sources/DarkModeCore/FluentDarkModeKit.h; sourceTree = "<group>"; };
-		CAD48FD89AE517843F46BEDAAB111AC8 /* UIView+DarkModeKitSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+DarkModeKitSwizzling.m"; path = "Sources/DarkModeCore/UIView+DarkModeKitSwizzling.m"; sourceTree = "<group>"; };
-		D28D6A23C8407398D648B612AE338BD0 /* UITableView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITableView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		D31CB8861A2DB2AF73D49BFC00EDC2FC /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
-		D51C66D7121D7463D897BECEFA500DE5 /* SQLite.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.release.xcconfig; sourceTree = "<group>"; };
+		B2E3BAB8F80253E8109066AA06307AEA /* DatabaseCancellable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseCancellable.swift; path = GRDB/ValueObservation/DatabaseCancellable.swift; sourceTree = "<group>"; };
+		B2F9B8A4D7062C45A6583E06B0A694C2 /* SQLSubquery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSubquery.swift; path = GRDB/QueryInterface/SQL/SQLSubquery.swift; sourceTree = "<group>"; };
+		B5B6D500378339BB5BE54E1A54E327D2 /* Refinable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Refinable.swift; path = GRDB/Utils/Refinable.swift; sourceTree = "<group>"; };
+		B5CAEEC8DD57867394D699B491F600C0 /* Inflections.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Inflections.swift; path = GRDB/Utils/Inflections.swift; sourceTree = "<group>"; };
+		B9D1512BF2BE8FA318DD4AA595D670A6 /* AssociationAggregate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssociationAggregate.swift; path = GRDB/QueryInterface/Request/Association/AssociationAggregate.swift; sourceTree = "<group>"; };
+		BA0DBF330A991DA88B8AF2014FB38535 /* BelongsToAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BelongsToAssociation.swift; path = GRDB/QueryInterface/Request/Association/BelongsToAssociation.swift; sourceTree = "<group>"; };
+		BB1163DA62B1F218F1BFB497D8B5183A /* GRDB.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GRDB.swift-dummy.m"; sourceTree = "<group>"; };
+		BC167E77EB1E23D60204599236E39613 /* DatabaseValueConvertible+RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DatabaseValueConvertible+RawRepresentable.swift"; path = "GRDB/Core/Support/StandardLibrary/DatabaseValueConvertible+RawRepresentable.swift"; sourceTree = "<group>"; };
+		BC7891EBFD34B477C5F1B4597ED3FA45 /* SQLRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLRequest.swift; path = GRDB/Core/SQLRequest.swift; sourceTree = "<group>"; };
+		BE7261A8CB84762972FA5E0110423F63 /* DatabaseWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseWriter.swift; path = GRDB/Core/DatabaseWriter.swift; sourceTree = "<group>"; };
+		BF7E1FAFBD0A643D11285E96555A30C9 /* Trace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trace.swift; path = GRDB/ValueObservation/ValueReducer/Trace.swift; sourceTree = "<group>"; };
+		C0BF5C326CA063BD69A4B9EA7A3F8FE6 /* DatabaseFunction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseFunction.swift; path = GRDB/Core/DatabaseFunction.swift; sourceTree = "<group>"; };
+		C1E91F1A9AB05D2B540563DB88D4916F /* ReadWriteBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadWriteBox.swift; path = GRDB/Utils/ReadWriteBox.swift; sourceTree = "<group>"; };
+		C2D300074ADF315524C8FBBF3158F50F /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = GRDB/ValueObservation/ValueReducer/Map.swift; sourceTree = "<group>"; };
+		C3989AA0F137AA481A4813C7489B6795 /* UIPageControl+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIPageControl+DarkModeKit.swift"; sourceTree = "<group>"; };
+		C3A834DB407E15C53FD79EC8B3E462F5 /* RowDecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowDecodingError.swift; path = GRDB/Core/RowDecodingError.swift; sourceTree = "<group>"; };
+		C42E77C618BFA77F314033A8AAE2EB1F /* DatabasePromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePromise.swift; path = GRDB/QueryInterface/SQL/DatabasePromise.swift; sourceTree = "<group>"; };
+		C4C1A26AA33506752BEA1EC7E6A6D0A4 /* DatabaseQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseQueue.swift; path = GRDB/Core/DatabaseQueue.swift; sourceTree = "<group>"; };
+		C57E6427CCC253958373569FCFC92BC6 /* SQLCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCollection.swift; path = GRDB/QueryInterface/SQL/SQLCollection.swift; sourceTree = "<group>"; };
+		C6F3B4F2A94E2914B7977CF5884B3BAD /* DatabaseValueConvertible+ReferenceConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DatabaseValueConvertible+ReferenceConvertible.swift"; path = "GRDB/Core/Support/Foundation/DatabaseValueConvertible+ReferenceConvertible.swift"; sourceTree = "<group>"; };
+		CA4593C36998210A1E2CCB49A9190158 /* DMDynamicColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMDynamicColor.m; path = Sources/DarkModeCore/DMDynamicColor.m; sourceTree = "<group>"; };
+		CC4620D621F83292F3052A03406915AD /* UIViewController+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DarkModeKit.h"; path = "Sources/DarkModeCore/UIViewController+DarkModeKit.h"; sourceTree = "<group>"; };
+		CC83D09F2167E0CE9C1377061192A7A7 /* NSNull.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNull.swift; path = GRDB/Core/Support/Foundation/NSNull.swift; sourceTree = "<group>"; };
+		CC8D8A15B6237015491D356398B4AB72 /* FTS5Tokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5Tokenizer.swift; path = GRDB/FTS/FTS5Tokenizer.swift; sourceTree = "<group>"; };
+		CD06BB2EBFFFFA4E804C73B855A5790E /* FTS5Pattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5Pattern.swift; path = GRDB/FTS/FTS5Pattern.swift; sourceTree = "<group>"; };
+		CD4758A5D72F7BDB5F323029F5C320FF /* SQLQueryGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLQueryGenerator.swift; path = GRDB/QueryInterface/SQLGeneration/SQLQueryGenerator.swift; sourceTree = "<group>"; };
+		D26B024BA4A71B7EBD01790304106555 /* GRDB-5.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GRDB-5.0.swift"; path = "GRDB/Fixit/GRDB-5.0.swift"; sourceTree = "<group>"; };
 		D563ECB0F83F488B8A40B8F23A7A1461 /* Pods-SwiftiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftiOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		D85AA2D1C646ED129BD5697F26101EA4 /* UILabel+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UILabel+DarkModeKit.swift"; sourceTree = "<group>"; };
-		DA6BCB85536386FA7DCB166FDFB14DFA /* SQLiteMigrationManager.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLiteMigrationManager.swift.modulemap; sourceTree = "<group>"; };
-		DBD6D4FD1EC508084F85EC39F6773BE3 /* SQLiteMigrationManager.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLiteMigrationManager.swift-umbrella.h"; sourceTree = "<group>"; };
-		E06EF9A95175302EFE67BFC72DBD8510 /* UIViewController+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DarkModeKit.h"; path = "Sources/DarkModeCore/UIViewController+DarkModeKit.h"; sourceTree = "<group>"; };
-		E1BEB397C42FE04C78C2C67687037352 /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
-		E29153701112556D05FC9B02547DD9B0 /* SQLiteMigrationManager.swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLiteMigrationManager.swift.debug.xcconfig; sourceTree = "<group>"; };
-		E84056031F870810FF61B49A5A7ED834 /* UIActivityIndicatorView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActivityIndicatorView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIActivityIndicatorView+DarkModeKit.swift"; sourceTree = "<group>"; };
-		E9741698183ECB0EFE9C0240BD1005C6 /* DMDynamicColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMDynamicColor.h; path = Sources/DarkModeCore/DMDynamicColor.h; sourceTree = "<group>"; };
-		EBD025A51736C5D8701B4723E91F1B85 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/SQLite/Typed/Coding.swift; sourceTree = "<group>"; };
-		EBF32169B03E8D5A58761FA7F680BF5F /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
-		F207194CA770378042686032B2919DE1 /* SQLiteMigrationManager.swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLiteMigrationManager.swift.release.xcconfig; sourceTree = "<group>"; };
-		F41AAFDD5D1A0CBD93B2B6CC105D71E1 /* FluentDarkModeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FluentDarkModeKit-dummy.m"; sourceTree = "<group>"; };
-		F50F78751D03EF0ADE44818D5190FB17 /* FluentDarkModeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FluentDarkModeKit-prefix.pch"; sourceTree = "<group>"; };
-		F5FA45A44C42CC2CA3A324A3E914CE19 /* libSQLite.swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSQLite.swift.a; path = libSQLite.swift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F73AB035C0EFA980EEED9A97A56C85F8 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
-		F90F3A660F7A91E6B6D2A1493C5D5E60 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		D58444605CE00E23E3D43D70D5D6D14C /* Database.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Database.swift; path = GRDB/Core/Database.swift; sourceTree = "<group>"; };
+		D7A4697A24ADB2F7368706266013BED7 /* DMDynamicImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DMDynamicImage.m; path = Sources/DarkModeCore/DMDynamicImage.m; sourceTree = "<group>"; };
+		D88B068DD237B2FA3BE2B4763BE6F30E /* DatabaseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseError.swift; path = GRDB/Core/DatabaseError.swift; sourceTree = "<group>"; };
+		D8D8DF24FFD2B0FC729A6A808F4E882E /* SQLOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOperators.swift; path = GRDB/QueryInterface/SQL/SQLOperators.swift; sourceTree = "<group>"; };
+		D9B3D6D8FF8B87AA0F619B1C61CFD175 /* UIButton+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIButton+DarkModeKit.swift"; sourceTree = "<group>"; };
+		DC9340CB8DB0C302EA9522D14E0E77FF /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = GRDB/FTS/FTS5.swift; sourceTree = "<group>"; };
+		DE71A0EA43B5BDE95BB315DB0D373548 /* UIImage+DarkModeKitSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+DarkModeKitSwizzling.h"; path = "Sources/DarkModeCore/UIImage+DarkModeKitSwizzling.h"; sourceTree = "<group>"; };
+		DEB3AFFAA2092984807993BF08D54F37 /* FluentDarkModeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FluentDarkModeKit-umbrella.h"; sourceTree = "<group>"; };
+		DFC2548F7ED9F557732ECAB4726697E7 /* UIView+DarkModeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+DarkModeKit.h"; path = "Sources/DarkModeCore/UIView+DarkModeKit.h"; sourceTree = "<group>"; };
+		DFE117B1784F6EB160CC621E44626329 /* DatabasePublishers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePublishers.swift; path = GRDB/Core/DatabasePublishers.swift; sourceTree = "<group>"; };
+		E2D386F7E9473CF81D01DD3B0F6E821E /* FluentDarkModeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FluentDarkModeKit-prefix.pch"; sourceTree = "<group>"; };
+		E365D7C6E94EB85CE7A50F50F5C81A70 /* UIView+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+DarkModeKit.m"; path = "Sources/DarkModeCore/UIView+DarkModeKit.m"; sourceTree = "<group>"; };
+		E3F97CD3E5BF675D28A1B33FB565413B /* SQLInterpolation+QueryInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SQLInterpolation+QueryInterface.swift"; path = "GRDB/QueryInterface/SQLInterpolation+QueryInterface.swift"; sourceTree = "<group>"; };
+		E40B032A45F7924712A5DB3E8E3F3358 /* SQLAssociation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLAssociation.swift; path = GRDB/QueryInterface/SQL/SQLAssociation.swift; sourceTree = "<group>"; };
+		E4A8EB511ECAB7CE09DDAA6931E26B8F /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = GRDB/Migration/Migration.swift; sourceTree = "<group>"; };
+		E513F2A0F7916C46DCC2FA3BD28D914D /* DatabaseMigrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseMigrator.swift; path = GRDB/Migration/DatabaseMigrator.swift; sourceTree = "<group>"; };
+		E55B0F4CAB571AC33696EB133C5746D2 /* Pool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pool.swift; path = GRDB/Utils/Pool.swift; sourceTree = "<group>"; };
+		E5911AEBC2E246F05C9CF382509131A2 /* DatabaseValueConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseValueConvertible.swift; path = GRDB/Core/DatabaseValueConvertible.swift; sourceTree = "<group>"; };
+		E62F1AD72196373BA5B6829B4745EB46 /* DatabasePool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePool.swift; path = GRDB/Core/DatabasePool.swift; sourceTree = "<group>"; };
+		E6BF0C4E5F231ABB454E0D9B6005511F /* FTS3+QueryInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FTS3+QueryInterface.swift"; path = "GRDB/QueryInterface/FTS3+QueryInterface.swift"; sourceTree = "<group>"; };
+		E93144CC6A35A60E6B3EFFB5654E1DC4 /* DatabaseSchemaCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseSchemaCache.swift; path = GRDB/Core/DatabaseSchemaCache.swift; sourceTree = "<group>"; };
+		EB1AA0E67F2023437F003612BFF3226E /* URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URL.swift; path = GRDB/Core/Support/Foundation/URL.swift; sourceTree = "<group>"; };
+		ED4200067DAAAD796124673FEA5F53A2 /* DatabaseValueConvertible+Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DatabaseValueConvertible+Encodable.swift"; path = "GRDB/Core/Support/StandardLibrary/DatabaseValueConvertible+Encodable.swift"; sourceTree = "<group>"; };
+		EE9CA891428FEA627FD1033F8C676A1D /* FTS5CustomTokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5CustomTokenizer.swift; path = GRDB/FTS/FTS5CustomTokenizer.swift; sourceTree = "<group>"; };
+		EEDA4CF1F3BA5BC85B98C46A25EE09F4 /* UIViewController+DarkModeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+DarkModeKit.m"; path = "Sources/DarkModeCore/UIViewController+DarkModeKit.m"; sourceTree = "<group>"; };
+		EF80819EE593E158561873404F2F9BD7 /* NSNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNumber.swift; path = GRDB/Core/Support/Foundation/NSNumber.swift; sourceTree = "<group>"; };
+		F0D16B54AF9E722AA533B5AD66E7E2AE /* ValueReducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueReducer.swift; path = GRDB/ValueObservation/ValueReducer/ValueReducer.swift; sourceTree = "<group>"; };
+		F30B5203231F8369187688D3C79E0A20 /* Database+Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Database+Schema.swift"; path = "GRDB/Core/Database+Schema.swift"; sourceTree = "<group>"; };
+		F4AE6A36BA4873119B184FA3D79F446C /* DatabaseReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseReader.swift; path = GRDB/Core/DatabaseReader.swift; sourceTree = "<group>"; };
+		F84A61424D9079EDA8579F8C5F3B0577 /* DatabaseDateComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseDateComponents.swift; path = GRDB/Core/Support/Foundation/DatabaseDateComponents.swift; sourceTree = "<group>"; };
+		F92D88743F6F7A21C9911826E628C306 /* UINavigationBar+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UINavigationBar+DarkModeKit.swift"; sourceTree = "<group>"; };
+		FA8CB620986EF53DD6778176894CE53D /* Association.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Association.swift; path = GRDB/QueryInterface/Request/Association/Association.swift; sourceTree = "<group>"; };
+		FBEFA5047094A1BC5A1589D7A488B697 /* UITextField+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UITextField+DarkModeKit.swift"; sourceTree = "<group>"; };
+		FCFEBE20D002480D6010F739869D9C6F /* UIProgressView+DarkModeKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIProgressView+DarkModeKit.swift"; path = "Sources/FluentDarkModeKit/Extensions/UIProgressView+DarkModeKit.swift"; sourceTree = "<group>"; };
 		FE307ED0F10805D68F11347163B5AF36 /* libFluentDarkModeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFluentDarkModeKit.a; path = libFluentDarkModeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF6DA3668D9B86A2B1FBADA8E727A35A /* FluentDarkModeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FluentDarkModeKit.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		36AEF827F430769C485E0D4292C76150 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4573D855AA91F1E6A2C4F3A57F09219C /* Frameworks */ = {
+		2E79B2D88CDDFE189BF1FA8745B2034B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83E6F56551D35482FE1861B7C021F61A /* Frameworks */ = {
+		A93154D338F7074D60C0843E1E1C6AEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,71 +409,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00B23C54FC8530467F5793E81F39A9FA /* Pods */ = {
+		0290DDC621BB6B6253AF59677383DC4E /* GRDB.swift */ = {
 			isa = PBXGroup;
 			children = (
-				416C3A8EA49B446E0D4BA2EA5C526244 /* FluentDarkModeKit */,
-				32DF16BEE9B8CD5A5B772E919D2809DD /* SQLite.swift */,
-				E8BBE039BEE6279C1B1DB26B3C4AB5EA /* SQLiteMigrationManager.swift */,
+				726C2B78C16A133DD612BDC72A75B61C /* standard */,
+				7A2D3B5ED597CBFAAA0A10DFA5627B0F /* Support Files */,
 			);
-			name = Pods;
+			name = GRDB.swift;
+			path = GRDB.swift;
 			sourceTree = "<group>";
 		};
-		32DF16BEE9B8CD5A5B772E919D2809DD /* SQLite.swift */ = {
+		45D777330319FAE644850B101384268C /* FluentDarkModeKit */ = {
 			isa = PBXGroup;
 			children = (
-				EE46E020A9180BD4CA0108F2CB4DD6CA /* standard */,
-				B59A562774F526D1E82F954A4417755E /* Support Files */,
-			);
-			name = SQLite.swift;
-			path = SQLite.swift;
-			sourceTree = "<group>";
-		};
-		416C3A8EA49B446E0D4BA2EA5C526244 /* FluentDarkModeKit */ = {
-			isa = PBXGroup;
-			children = (
-				9F41806C2F82974E3E0C75658D007567 /* DarkModeManager.swift */,
-				E9741698183ECB0EFE9C0240BD1005C6 /* DMDynamicColor.h */,
-				2722B54B194C3D2960B559E127EDCE9D /* DMDynamicColor.m */,
-				772624F375C3FBF6815A0512DA4AB953 /* DMDynamicImage.h */,
-				669D43D165EF3C20F89DE06B4A7C48C5 /* DMDynamicImage.m */,
-				09971AC03D63E4ECB79E4E4D1A816976 /* DMEnvironmentConfiguration.h */,
-				1AF2210E9C252D956093F3759354A0EE /* DMEnvironmentConfiguration.m */,
-				A5E69657D84335329CCFD6FEBA78588F /* DMNamespace.h */,
-				478F8D25C596DFFFCCDA426DB3C090F6 /* DMTraitCollection.h */,
-				4B270B7564565AD97CBDDCCE0A701C7E /* DMTraitCollection.m */,
-				CAD1287007997CF1C3EDD466346E93A0 /* FluentDarkModeKit.h */,
-				E84056031F870810FF61B49A5A7ED834 /* UIActivityIndicatorView+DarkModeKit.swift */,
-				7F6DB3618A960D3786D67C504A8CF4D5 /* UIButton+DarkModeKit.swift */,
-				C5B085AA9F553F2C60EF8F099A3AA265 /* UIColor+DarkModeKit.h */,
-				27982F0F0C18BF2EC601FF90A3938E6E /* UIColor+DarkModeKit.m */,
-				38D33E1F18B6250663F702DBFCDF2A2E /* UIImage+DarkModeKit.h */,
-				4BCDFEF7317B9B8D6F8B2754F30057E4 /* UIImage+DarkModeKit.m */,
-				95AFE2B226F6DA78CC018F5752A0EA74 /* UIImage+DarkModeKitSwizzling.h */,
-				2F8A9C30972DF489B60BE3BE63A1D375 /* UIImage+DarkModeKitSwizzling.m */,
-				C9B2D86833A9FF9730E19A3558F20F6A /* UIImageView+DarkModeKit.swift */,
-				D85AA2D1C646ED129BD5697F26101EA4 /* UILabel+DarkModeKit.swift */,
-				AAC3E466D8D11CE66EE88C92A2F861A0 /* UINavigationBar+DarkModeKit.swift */,
-				63DE216FA91233BC0CA0930ECD3316B1 /* UIPageControl+DarkModeKit.swift */,
-				A157FEDAE16244A206567D25280A8BF4 /* UIProgressView+DarkModeKit.swift */,
-				700AA89D1B4FF57F6261EB2483A06C75 /* UIScrollView+DarkModeKit.swift */,
-				8B2D3DCD9ABB379E9DA837D5919B1905 /* UISlider+DarkModeKit.swift */,
-				267EC985991854197C24A1410D492474 /* UITabBar+DarkModeKit.swift */,
-				D28D6A23C8407398D648B612AE338BD0 /* UITableView+DarkModeKit.swift */,
-				C68AA18D72C3CDB1914A98CBDBAC99EC /* UITextField+DarkModeKit.swift */,
-				9213CA5A09FF57BC7CBECC4AC68B2B89 /* UITextView+DarkModeKit.swift */,
-				89D4EDD3864CC96C7FFA02D6EFA02B08 /* UIToolbar+DarkModeKit.swift */,
-				3B047051DA41471BF51A13AFB18CBD54 /* UIView+DarkModeKit.h */,
-				6631ACEABC2E6D75E9BAC5E5BD661240 /* UIView+DarkModeKit.m */,
-				339558C10FE69BA936743B9FA406F8AF /* UIView+DarkModeKit.swift */,
-				7360625D31E34C462F201E3E2F7B63BA /* UIView+DarkModeKitSwizzling.h */,
-				CAD48FD89AE517843F46BEDAAB111AC8 /* UIView+DarkModeKitSwizzling.m */,
-				E06EF9A95175302EFE67BFC72DBD8510 /* UIViewController+DarkModeKit.h */,
-				89EF6D0774D298B3C075E0A0D7DB65DA /* UIViewController+DarkModeKit.m */,
-				C3122CBAA886820E07FA86307D848E43 /* Support Files */,
+				4840BD317829061E3AA7909F063C9FF2 /* DarkModeManager.swift */,
+				1D06ADB42DC74E74A4F45B31886F70BD /* DMDynamicColor.h */,
+				CA4593C36998210A1E2CCB49A9190158 /* DMDynamicColor.m */,
+				65415F9F79657D9BDF6A9AF0B2D788C4 /* DMDynamicImage.h */,
+				D7A4697A24ADB2F7368706266013BED7 /* DMDynamicImage.m */,
+				0A6910FCC6ABE95AC70FEAEE89B9ACD7 /* DMEnvironmentConfiguration.h */,
+				6B50721AC7ABE08DB2A5CEFED5938527 /* DMEnvironmentConfiguration.m */,
+				556D8197354BA3749FBF25EEEFC6F0E6 /* DMNamespace.h */,
+				815C8F704F1E909AD09B82E5E70599F0 /* DMTraitCollection.h */,
+				383FFF19BBF0256265F95F8293967ABE /* DMTraitCollection.m */,
+				6574D1539CC15743DAEF00D97571E787 /* FluentDarkModeKit.h */,
+				0427B7A4CB43094D1D4CE5E0904BE466 /* UIActivityIndicatorView+DarkModeKit.swift */,
+				D9B3D6D8FF8B87AA0F619B1C61CFD175 /* UIButton+DarkModeKit.swift */,
+				59A550F13337BB1F7282E6903FC4F464 /* UIColor+DarkModeKit.h */,
+				48C6E0AB96E937EAD96EC34C43D943EF /* UIColor+DarkModeKit.m */,
+				90C740CB468EDD144FB832B713B1ED0D /* UIImage+DarkModeKit.h */,
+				3C31C1FDC9064800CE2D39F16FE11E58 /* UIImage+DarkModeKit.m */,
+				DE71A0EA43B5BDE95BB315DB0D373548 /* UIImage+DarkModeKitSwizzling.h */,
+				6F4F9A9953854D97B4412CC2F85BF669 /* UIImage+DarkModeKitSwizzling.m */,
+				72CAFA6441B963F4178936CEF48511E4 /* UIImageView+DarkModeKit.swift */,
+				5DECE780FD129737D7144865C96D2F6C /* UILabel+DarkModeKit.swift */,
+				F92D88743F6F7A21C9911826E628C306 /* UINavigationBar+DarkModeKit.swift */,
+				C3989AA0F137AA481A4813C7489B6795 /* UIPageControl+DarkModeKit.swift */,
+				FCFEBE20D002480D6010F739869D9C6F /* UIProgressView+DarkModeKit.swift */,
+				11EFF928AC857C4C69D89F60483410C5 /* UIScrollView+DarkModeKit.swift */,
+				53ECCF5D3C5801C4BD1138AE8851BC3C /* UISlider+DarkModeKit.swift */,
+				62E2A343D09AF9BABE917AA5A3CB3066 /* UITabBar+DarkModeKit.swift */,
+				4EB69AE4E2D80B6EAD76B60F999CDA9F /* UITableView+DarkModeKit.swift */,
+				FBEFA5047094A1BC5A1589D7A488B697 /* UITextField+DarkModeKit.swift */,
+				70FF74C0F5B046350574A69B9CA109C1 /* UITextView+DarkModeKit.swift */,
+				856E32FE6B634A22DF034820BB17F8E4 /* UIToolbar+DarkModeKit.swift */,
+				DFC2548F7ED9F557732ECAB4726697E7 /* UIView+DarkModeKit.h */,
+				E365D7C6E94EB85CE7A50F50F5C81A70 /* UIView+DarkModeKit.m */,
+				A49071F5EA8903A988BF1A4AABE01F08 /* UIView+DarkModeKit.swift */,
+				7C2B6565ECF7C42DE78453FC9C874A7C /* UIView+DarkModeKitSwizzling.h */,
+				767055A85BD8D6EAB942381BD4ADF5F5 /* UIView+DarkModeKitSwizzling.m */,
+				CC4620D621F83292F3052A03406915AD /* UIViewController+DarkModeKit.h */,
+				EEDA4CF1F3BA5BC85B98C46A25EE09F4 /* UIViewController+DarkModeKit.m */,
+				4D4F965BDF567A8C658E20A29D0BB061 /* Support Files */,
 			);
 			name = FluentDarkModeKit;
 			path = FluentDarkModeKit;
+			sourceTree = "<group>";
+		};
+		4D4F965BDF567A8C658E20A29D0BB061 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				230E12D4E8A160CE9C74C3EA73ADBF17 /* FluentDarkModeKit.modulemap */,
+				1FA3BFE4303E2ED4695F9E1BE01AD7F1 /* FluentDarkModeKit-dummy.m */,
+				E2D386F7E9473CF81D01DD3B0F6E821E /* FluentDarkModeKit-prefix.pch */,
+				DEB3AFFAA2092984807993BF08D54F37 /* FluentDarkModeKit-umbrella.h */,
+				265832C50A208D663366F52949C9A998 /* FluentDarkModeKit.debug.xcconfig */,
+				00D07DA3A55F377119B226B4524B9706 /* FluentDarkModeKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FluentDarkModeKit";
 			sourceTree = "<group>";
 		};
 		54A46F0783058C125FF2E8E5973EDAB8 /* Targets Support Files */ = {
@@ -316,46 +488,160 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B3F87E6FDFE5134B82DE9770025F1FB4 /* Support Files */ = {
+		726C2B78C16A133DD612BDC72A75B61C /* standard */ = {
 			isa = PBXGroup;
 			children = (
-				DA6BCB85536386FA7DCB166FDFB14DFA /* SQLiteMigrationManager.swift.modulemap */,
-				51B675111F5D5F6F577126ED9DB1C683 /* SQLiteMigrationManager.swift-dummy.m */,
-				3437353D25BD2029FF760B6DB309327B /* SQLiteMigrationManager.swift-prefix.pch */,
-				DBD6D4FD1EC508084F85EC39F6773BE3 /* SQLiteMigrationManager.swift-umbrella.h */,
-				E29153701112556D05FC9B02547DD9B0 /* SQLiteMigrationManager.swift.debug.xcconfig */,
-				F207194CA770378042686032B2919DE1 /* SQLiteMigrationManager.swift.release.xcconfig */,
+				FA8CB620986EF53DD6778176894CE53D /* Association.swift */,
+				B9D1512BF2BE8FA318DD4AA595D670A6 /* AssociationAggregate.swift */,
+				BA0DBF330A991DA88B8AF2014FB38535 /* BelongsToAssociation.swift */,
+				AC7B4CFF7103F4F42BA00A209FC6B1DD /* CGFloat.swift */,
+				786B96CFEFEB4183BAF4C30A6F3C01B3 /* Column.swift */,
+				5DDD57E4504AD3AC5A900DA464EA15F5 /* CommonTableExpression.swift */,
+				0D0E41F08DD0EE66C33FD1FD885F2AB3 /* Configuration.swift */,
+				3BFBE61A5B64CE8305A1CD6D32847725 /* Cursor.swift */,
+				1945A6142169CD34E3839C47FD73AA1D /* Data.swift */,
+				D58444605CE00E23E3D43D70D5D6D14C /* Database.swift */,
+				F30B5203231F8369187688D3C79E0A20 /* Database+Schema.swift */,
+				66D0C13DD8FC72DFB52F86D4F3264CF4 /* Database+Statements.swift */,
+				B2E3BAB8F80253E8109066AA06307AEA /* DatabaseCancellable.swift */,
+				1F635BA4CEB6E19B3B4BBF96D206E285 /* DatabaseCollation.swift */,
+				F84A61424D9079EDA8579F8C5F3B0577 /* DatabaseDateComponents.swift */,
+				D88B068DD237B2FA3BE2B4763BE6F30E /* DatabaseError.swift */,
+				C0BF5C326CA063BD69A4B9EA7A3F8FE6 /* DatabaseFunction.swift */,
+				E513F2A0F7916C46DCC2FA3BD28D914D /* DatabaseMigrator.swift */,
+				E62F1AD72196373BA5B6829B4745EB46 /* DatabasePool.swift */,
+				C42E77C618BFA77F314033A8AAE2EB1F /* DatabasePromise.swift */,
+				DFE117B1784F6EB160CC621E44626329 /* DatabasePublishers.swift */,
+				C4C1A26AA33506752BEA1EC7E6A6D0A4 /* DatabaseQueue.swift */,
+				F4AE6A36BA4873119B184FA3D79F446C /* DatabaseReader.swift */,
+				0806F524ADB3ED45CC533055F8B97B83 /* DatabaseRegion.swift */,
+				AEF8FB3B63F20D643C71290D5998B28E /* DatabaseRegionObservation.swift */,
+				E93144CC6A35A60E6B3EFFB5654E1DC4 /* DatabaseSchemaCache.swift */,
+				0FD60A0E7B178BF059B13CE5F03CA063 /* DatabaseSnapshot.swift */,
+				490F96AF4F65AE9019D161E6FCB04874 /* DatabaseValue.swift */,
+				E5911AEBC2E246F05C9CF382509131A2 /* DatabaseValueConvertible.swift */,
+				2AF4220348D11DE00F382410DE41BD99 /* DatabaseValueConvertible+Decodable.swift */,
+				ED4200067DAAAD796124673FEA5F53A2 /* DatabaseValueConvertible+Encodable.swift */,
+				BC167E77EB1E23D60204599236E39613 /* DatabaseValueConvertible+RawRepresentable.swift */,
+				C6F3B4F2A94E2914B7977CF5884B3BAD /* DatabaseValueConvertible+ReferenceConvertible.swift */,
+				BE7261A8CB84762972FA5E0110423F63 /* DatabaseWriter.swift */,
+				74BA2119E971964B8F5FC4F241F80BB9 /* Date.swift */,
+				749FC74916B35963EA020EBEE0D129A0 /* EncodableRecord.swift */,
+				7936ED88A1B701923678555B24AC3F82 /* EncodableRecord+Encodable.swift */,
+				3F133B9CA0CF9A6163EC868FDCFF932F /* Export.swift */,
+				46A7C622183E424E11D2E3564618BBAD /* Fetch.swift */,
+				27A2E521891864AD2C5741030CF20058 /* FetchableRecord.swift */,
+				169A96E1EC69D7A254377178663A4BC2 /* FetchableRecord+Decodable.swift */,
+				318A4D245702557964852A4B179625E7 /* FetchableRecord+TableRecord.swift */,
+				7169867D75372AFAE710F73EBEDA4FDB /* FetchRequest.swift */,
+				37D9DAECC24770FB4C5CC934BD032AB9 /* ForeignKey.swift */,
+				AC229932E5F5824BC471EFED8EC61CC9 /* FTS3.swift */,
+				E6BF0C4E5F231ABB454E0D9B6005511F /* FTS3+QueryInterface.swift */,
+				054BCDBEAB4B36F3EC4994AC23BBEC4A /* FTS3Pattern.swift */,
+				9F9DB09BD06B52C7F6F9B189BC61E70F /* FTS3TokenizerDescriptor.swift */,
+				3F784E89F316FF07A4D909770036317D /* FTS4.swift */,
+				DC9340CB8DB0C302EA9522D14E0E77FF /* FTS5.swift */,
+				700A380791D039BB6CD7863197793EFF /* FTS5+QueryInterface.swift */,
+				EE9CA891428FEA627FD1033F8C676A1D /* FTS5CustomTokenizer.swift */,
+				CD06BB2EBFFFFA4E804C73B855A5790E /* FTS5Pattern.swift */,
+				CC8D8A15B6237015491D356398B4AB72 /* FTS5Tokenizer.swift */,
+				03FA1C2AF9BDB3950A762AEFE5E59F26 /* FTS5TokenizerDescriptor.swift */,
+				0EE63C6292986EDAEBB1DF083CC7A7B9 /* FTS5WrapperTokenizer.swift */,
+				D26B024BA4A71B7EBD01790304106555 /* GRDB-5.0.swift */,
+				61E1CCFE23A8F9926AD68994B5545C30 /* grdb_config.h */,
+				B0A3C7B1D4D77E674446358A9296B4FD /* HasManyAssociation.swift */,
+				391A7CF79E831A3BC0FDD6D92967F3D9 /* HasManyThroughAssociation.swift */,
+				153E62C8C942A5CBC1E428C514FF424B /* HasOneAssociation.swift */,
+				3A70DB0E3E796D401A6641479D0E7ADB /* HasOneThroughAssociation.swift */,
+				B5CAEEC8DD57867394D699B491F600C0 /* Inflections.swift */,
+				329FF5E4FC4DAF3262181E59327DFE07 /* Inflections+English.swift */,
+				4140B73DE5B72489C56919FFD737CEDB /* JoinAssociation.swift */,
+				9A2BDF7341B566A1C7D212388276D759 /* LockedBox.swift */,
+				C2D300074ADF315524C8FBBF3158F50F /* Map.swift */,
+				E4A8EB511ECAB7CE09DDAA6931E26B8F /* Migration.swift */,
+				8D69CB6772A08BF4A8354E52F688801E /* NSData.swift */,
+				CC83D09F2167E0CE9C1377061192A7A7 /* NSNull.swift */,
+				EF80819EE593E158561873404F2F9BD7 /* NSNumber.swift */,
+				5BDD2CBEA62C51D56E2187998E330F03 /* NSString.swift */,
+				7CDE2B52424C9D92F55A49E880FA57F5 /* OnDemandFuture.swift */,
+				095FCAE708EE4B7382D404563CEEE326 /* OrderedDictionary.swift */,
+				864D5A73DE53240524097650945FB5B1 /* PersistableRecord.swift */,
+				E55B0F4CAB571AC33696EB133C5746D2 /* Pool.swift */,
+				6DE37806FD1BF3E35C08FD901009E731 /* QueryInterfaceRequest.swift */,
+				C1E91F1A9AB05D2B540563DB88D4916F /* ReadWriteBox.swift */,
+				3559C9CF515076A620F34229E17C73B5 /* ReceiveValuesOn.swift */,
+				601CFBCCE23C7B0150B4B49839240E22 /* Record.swift */,
+				B5B6D500378339BB5BE54E1A54E327D2 /* Refinable.swift */,
+				4EDA8C92BD0700B6C2FE204B6C4E9374 /* RemoveDuplicates.swift */,
+				2CA8F630CFC13222E3838B80DB31ED84 /* RequestProtocols.swift */,
+				31FCB941250BF6C4E1DE021483652950 /* Row.swift */,
+				A4219292BA8A8230CE6BB8DC0CCE0862 /* RowAdapter.swift */,
+				C3A834DB407E15C53FD79EC8B3E462F5 /* RowDecodingError.swift */,
+				7F217B6633B951F227094BFA4E898D01 /* SchedulingWatchdog.swift */,
+				4A7C571C2D12FC34A2F1DD3DAD107B4D /* SerializedDatabase.swift */,
+				E40B032A45F7924712A5DB3E8E3F3358 /* SQLAssociation.swift */,
+				604F25D21CEA0FB5F5695C0A610BCF3D /* SQLCollatedExpression.swift */,
+				C57E6427CCC253958373569FCFC92BC6 /* SQLCollection.swift */,
+				8C481BA19D23CC72E5F8426FDE206177 /* SQLExpression.swift */,
+				2C048CEB74B502830EED1BEEDD1CDC6C /* SQLForeignKeyRequest.swift */,
+				0C576021319FA0896C6B39BA0257B68A /* SQLFunctions.swift */,
+				1331B0A6F23B64487AA65B8F6DFE60FC /* SQLGenerationContext.swift */,
+				5B618FD09EF243C1CD7858968DD6DC87 /* SQLInterpolation.swift */,
+				E3F97CD3E5BF675D28A1B33FB565413B /* SQLInterpolation+QueryInterface.swift */,
+				AAEC8031A2617A2DD19869A818B16987 /* SQLiteDateParser.swift */,
+				75535E41E66C2A405E49F1AB054FC52C /* SQLLiteral.swift */,
+				D8D8DF24FFD2B0FC729A6A808F4E882E /* SQLOperators.swift */,
+				7E5B0CA5CBB06672F6CB28DFC478E6F4 /* SQLOrdering.swift */,
+				24E6C3C505456981AD7C302436DB5EE7 /* SQLQuery.swift */,
+				CD4758A5D72F7BDB5F323029F5C320FF /* SQLQueryGenerator.swift */,
+				A4E9F9607281F43948544A692851F1D3 /* SQLRelation.swift */,
+				BC7891EBFD34B477C5F1B4597ED3FA45 /* SQLRequest.swift */,
+				088B6EF6C1045136502BFF2BEAF0E02F /* SQLSelection.swift */,
+				B2F9B8A4D7062C45A6583E06B0A694C2 /* SQLSubquery.swift */,
+				17F59A89F92A0819B25EA4A468BDC78F /* StandardLibrary.swift */,
+				25C8EEAA1AD08B393C521BC2E7478D76 /* Statement.swift */,
+				748BCFD8C247EBAA86DE5237E8495BDF /* StatementAuthorizer.swift */,
+				15487F39962AB9E4653740FB6FFDB823 /* StatementColumnConvertible.swift */,
+				25DFBF7952C3E2521DF17603FF8BB823 /* TableDefinition.swift */,
+				2E69A013ACB638AB2C6F93BA6701A2D0 /* TableRecord.swift */,
+				9158281EDB02DF091DC84D7200F31E65 /* TableRecord+Association.swift */,
+				097DC29E1E5B7378B4CFF1C3799CA942 /* TableRecord+QueryInterfaceRequest.swift */,
+				BF7E1FAFBD0A643D11285E96555A30C9 /* Trace.swift */,
+				8A82CE82F754EDF666D30002BCE118C7 /* TransactionObserver.swift */,
+				EB1AA0E67F2023437F003612BFF3226E /* URL.swift */,
+				3A1AE425653172927C0063CDBBB7FCE5 /* Utils.swift */,
+				B179EB65BC16B3ABA53FCAE2A669CF6E /* UUID.swift */,
+				33ED56174DFD512E4D3279A879A99BF6 /* ValueObservation.swift */,
+				44B8B1CD640EE76736C5B5F92CB452EB /* ValueObservationScheduler.swift */,
+				0DD32089677A595D194E4B51DFC992F3 /* ValueObserver.swift */,
+				F0D16B54AF9E722AA533B5AD66E7E2AE /* ValueReducer.swift */,
+				AFEA3D9F6B397F028159B4D0D4AFCA19 /* VirtualTableModule.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLiteMigrationManager.swift";
+			name = standard;
 			sourceTree = "<group>";
 		};
-		B59A562774F526D1E82F954A4417755E /* Support Files */ = {
+		737C0199AF116251C2BC81D24A224BC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17E60FBA9DC8601019CD4C7AE5E6E863 /* SQLite.swift.modulemap */,
-				41609E697D02E27EB23260FB39D0A3F0 /* SQLite.swift-dummy.m */,
-				BE2E134C86B341C04A7CAD52578ECFA9 /* SQLite.swift-prefix.pch */,
-				E1BEB397C42FE04C78C2C67687037352 /* SQLite.swift-umbrella.h */,
-				8560E86D7353BF8E0B3D4451EF381FD5 /* SQLite.swift.debug.xcconfig */,
-				D51C66D7121D7463D897BECEFA500DE5 /* SQLite.swift.release.xcconfig */,
+				FE307ED0F10805D68F11347163B5AF36 /* libFluentDarkModeKit.a */,
+				17ABD68E920293F080122810A8881638 /* libGRDB.swift.a */,
+				082DB2319F72FF4B5E7B867A74F227E8 /* libPods-SwiftiOS.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLite.swift";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		C3122CBAA886820E07FA86307D848E43 /* Support Files */ = {
+		7A2D3B5ED597CBFAAA0A10DFA5627B0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				59FFCFC23F3DAD748BF3ADE779887EAE /* FluentDarkModeKit.modulemap */,
-				F41AAFDD5D1A0CBD93B2B6CC105D71E1 /* FluentDarkModeKit-dummy.m */,
-				F50F78751D03EF0ADE44818D5190FB17 /* FluentDarkModeKit-prefix.pch */,
-				19FB589543DA3DA20D441DA179EDEA82 /* FluentDarkModeKit-umbrella.h */,
-				FF6DA3668D9B86A2B1FBADA8E727A35A /* FluentDarkModeKit.debug.xcconfig */,
-				8811CEADB147A1338AEC4566E8E04538 /* FluentDarkModeKit.release.xcconfig */,
+				363822E386E228DA80984AF0B76F447E /* GRDB.swift.modulemap */,
+				BB1163DA62B1F218F1BFB497D8B5183A /* GRDB.swift-dummy.m */,
+				06EB7E7AD261C16432F80F9A0ABA3C49 /* GRDB.swift-prefix.pch */,
+				9649E3B399391711B5826EFFD56FE1E9 /* GRDB.swift-umbrella.h */,
+				538DD22EE2FD72AA71C4AE0A90F84760 /* GRDB.swift.debug.xcconfig */,
+				7307C780BA89FDB05068D37B0D2C9DC2 /* GRDB.swift.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/FluentDarkModeKit";
+			path = "../Target Support Files/GRDB.swift";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -363,8 +649,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				00B23C54FC8530467F5793E81F39A9FA /* Pods */,
-				EDADA0ECCED2F08FD92C32AEEA1E7A62 /* Products */,
+				FF1C8DA131B9DAAED196C0CCCBF1AC4B /* Pods */,
+				737C0199AF116251C2BC81D24A224BC2 /* Products */,
 				54A46F0783058C125FF2E8E5973EDAB8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -391,57 +677,13 @@
 			path = "Target Support Files/Pods-SwiftiOS";
 			sourceTree = "<group>";
 		};
-		E8BBE039BEE6279C1B1DB26B3C4AB5EA /* SQLiteMigrationManager.swift */ = {
+		FF1C8DA131B9DAAED196C0CCCBF1AC4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8327A6615D9A1B8FBA648608A84EB884 /* SQLiteMigrationManager.swift */,
-				B3F87E6FDFE5134B82DE9770025F1FB4 /* Support Files */,
+				45D777330319FAE644850B101384268C /* FluentDarkModeKit */,
+				0290DDC621BB6B6253AF59677383DC4E /* GRDB.swift */,
 			);
-			name = SQLiteMigrationManager.swift;
-			path = SQLiteMigrationManager.swift;
-			sourceTree = "<group>";
-		};
-		EDADA0ECCED2F08FD92C32AEEA1E7A62 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FE307ED0F10805D68F11347163B5AF36 /* libFluentDarkModeKit.a */,
-				082DB2319F72FF4B5E7B867A74F227E8 /* libPods-SwiftiOS.a */,
-				F5FA45A44C42CC2CA3A324A3E914CE19 /* libSQLite.swift.a */,
-				9C7E2553EB0BE583F81F27287DAE5C23 /* libSQLiteMigrationManager.swift.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EE46E020A9180BD4CA0108F2CB4DD6CA /* standard */ = {
-			isa = PBXGroup;
-			children = (
-				990E1B5D70B4CE626577454296E26F03 /* AggregateFunctions.swift */,
-				B8EE3195393B83D5489801BCB7F54DEC /* Blob.swift */,
-				EBD025A51736C5D8701B4723E91F1B85 /* Coding.swift */,
-				79654B70A8196CFD8BA02EBA4862737C /* Collation.swift */,
-				1CD7B77594B359D8ABCF86264D2E7830 /* Connection.swift */,
-				A19E4E0F4C0014B5883778F09C4B65E4 /* CoreFunctions.swift */,
-				F90F3A660F7A91E6B6D2A1493C5D5E60 /* CustomFunctions.swift */,
-				55B5E99F83EF6D51C08CDC09C6A72F80 /* DateAndTimeFunctions.swift */,
-				EBF32169B03E8D5A58761FA7F680BF5F /* Errors.swift */,
-				9140C15739856C1E1CD767EB75681643 /* Expression.swift */,
-				457A09D7F594D7939F853CC7F6A9CC0A /* Foundation.swift */,
-				B2EA8A6051DBBB25A5B1522EFF46A33D /* fts3_tokenizer.h */,
-				F73AB035C0EFA980EEED9A97A56C85F8 /* FTS4.swift */,
-				A2EF94CB181A8A17B1D192599CE3FCEE /* FTS5.swift */,
-				2C471EF7A7E969D7D334CEB00FA37876 /* Helpers.swift */,
-				356B688847FEA3162554BE7DEED3ADFA /* Operators.swift */,
-				AD84170D61CD33A0CA26D1046C01C849 /* Query.swift */,
-				345F6C698C0151F96049A36B34B91AE2 /* RTree.swift */,
-				02F572AC9870C925CE6B24D73AD95916 /* Schema.swift */,
-				651EED4E87D4E224A96A7755FD76BB63 /* Setter.swift */,
-				D31CB8861A2DB2AF73D49BFC00EDC2FC /* SQLite.h */,
-				6B82CFB3CF48BC633168265375EB6954 /* SQLiteObjc.h */,
-				97F95EC44B306C8A5FEA786F0540F46C /* SQLiteObjc.m */,
-				2A9CD3E17B892E8CA7EC8F6C79D5F72F /* Statement.swift */,
-				1C0FE07413042E5C2CF816A2EAC2C64A /* Value.swift */,
-			);
-			name = standard;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,36 +709,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B84B3119EF41A7049A15ADE1E971382 /* Headers */ = {
+		3176C766C664BB78BD1833544005D3CC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455988DC94C54715500FB3D350BF5617 /* SQLiteMigrationManager.swift-umbrella.h in Headers */,
+				63433FC6547E27DC6980BE79A927F10D /* GRDB.swift-umbrella.h in Headers */,
+				6A0A4B37A25DECF51F5861011807309B /* grdb_config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB83F227694ADF8D8CCE9F961A22C9A9 /* Headers */ = {
+		DA0C93C2DDE5BFF7915DF566DE307F47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D420FADB29020A6395929C73FB67F9 /* Pods-SwiftiOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D89663E2DB8D7DD0634E5C6BF3CD44A2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C223CCCA8FDA2AFC24233CF2C80D507 /* fts3_tokenizer.h in Headers */,
-				BFF536B78DC4850A4A285C1D03F56057 /* SQLite.h in Headers */,
-				DB5891014AF5583F4CE70D67063FEBF4 /* SQLite.swift-umbrella.h in Headers */,
-				58670BDA59BC1476ECD1AE42A65DEDB4 /* SQLiteObjc.h in Headers */,
+				6328ED24642E3881F2B698C50CECD782 /* Pods-SwiftiOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0A86C228CFCBC35A1FD284274ED0930F /* GRDB.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13BE3105862B456204BDF6E2BF732DB2 /* Build configuration list for PBXNativeTarget "GRDB.swift" */;
+			buildPhases = (
+				3176C766C664BB78BD1833544005D3CC /* Headers */,
+				94BBA1E59460B8979F37E33C4529824E /* Sources */,
+				2E79B2D88CDDFE189BF1FA8745B2034B /* Frameworks */,
+				74E04C389256DD9C47ED74B8BC2233A6 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GRDB.swift;
+			productName = GRDB.swift;
+			productReference = 17ABD68E920293F080122810A8881638 /* libGRDB.swift.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		155BF1269EF587A2F12050C60EFF878E /* FluentDarkModeKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 552420818205616FBB307BFAAA8DA832 /* Build configuration list for PBXNativeTarget "FluentDarkModeKit" */;
@@ -515,57 +765,19 @@
 			productReference = FE307ED0F10805D68F11347163B5AF36 /* libFluentDarkModeKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3F2C1776D90B62B156DB52C41A5C419C /* SQLite.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4831832D716DE9C50FF96385B6482F4A /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
-			buildPhases = (
-				D89663E2DB8D7DD0634E5C6BF3CD44A2 /* Headers */,
-				5EE6B8A56A8A13C9228CFEE7FC036FA2 /* Sources */,
-				83E6F56551D35482FE1861B7C021F61A /* Frameworks */,
-				FBDBDFFAD990AD9508B3EFA011AEFC86 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SQLite.swift;
-			productName = SQLite.swift;
-			productReference = F5FA45A44C42CC2CA3A324A3E914CE19 /* libSQLite.swift.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		6FE0C2334D8053AEB95BCCADE9C2D2E0 /* SQLiteMigrationManager.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 19A22C614E68D19DF8C2317C0943ABCF /* Build configuration list for PBXNativeTarget "SQLiteMigrationManager.swift" */;
-			buildPhases = (
-				7B84B3119EF41A7049A15ADE1E971382 /* Headers */,
-				417515805BAB3EE060F73CE05127651D /* Sources */,
-				36AEF827F430769C485E0D4292C76150 /* Frameworks */,
-				B5E134D08627387DE4812052E6CB0AB7 /* Copy generated compatibility header */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E20A8BE4696545A36FD6E4E2F94A449 /* PBXTargetDependency */,
-			);
-			name = SQLiteMigrationManager.swift;
-			productName = SQLiteMigrationManager.swift;
-			productReference = 9C7E2553EB0BE583F81F27287DAE5C23 /* libSQLiteMigrationManager.swift.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		FFC1FAE7A179917F0F26688F7771F768 /* Pods-SwiftiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B0CDCDB3CC4D2D3F9C55E2CA3F0AEF6 /* Build configuration list for PBXNativeTarget "Pods-SwiftiOS" */;
+			buildConfigurationList = 5F097F232490135EDA7060303ADC993D /* Build configuration list for PBXNativeTarget "Pods-SwiftiOS" */;
 			buildPhases = (
-				BB83F227694ADF8D8CCE9F961A22C9A9 /* Headers */,
-				3FF313CB6304768634D8DE5043FE96E4 /* Sources */,
-				4573D855AA91F1E6A2C4F3A57F09219C /* Frameworks */,
+				DA0C93C2DDE5BFF7915DF566DE307F47 /* Headers */,
+				3C26DC58406BB0B924B349D24DF2E9B1 /* Sources */,
+				A93154D338F7074D60C0843E1E1C6AEC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E908215B98A3106C7BEB93F4946E33C0 /* PBXTargetDependency */,
-				0B3F4308B7FD132D7F6AD4878E544359 /* PBXTargetDependency */,
-				81676B8682C431B4359B3E15A097EA51 /* PBXTargetDependency */,
+				F5650F83164A5CA80415FA3B05F74104 /* PBXTargetDependency */,
+				57A08B8141BC9D76C52FA738BE718E33 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftiOS";
 			productName = "Pods-SwiftiOS";
@@ -590,20 +802,19 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EDADA0ECCED2F08FD92C32AEEA1E7A62 /* Products */;
+			productRefGroup = 737C0199AF116251C2BC81D24A224BC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				155BF1269EF587A2F12050C60EFF878E /* FluentDarkModeKit */,
+				0A86C228CFCBC35A1FD284274ED0930F /* GRDB.swift */,
 				FFC1FAE7A179917F0F26688F7771F768 /* Pods-SwiftiOS */,
-				3F2C1776D90B62B156DB52C41A5C419C /* SQLite.swift */,
-				6FE0C2334D8053AEB95BCCADE9C2D2E0 /* SQLiteMigrationManager.swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B5E134D08627387DE4812052E6CB0AB7 /* Copy generated compatibility header */ = {
+		74E04C389256DD9C47ED74B8BC2233A6 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,20 +823,20 @@
 			);
 			inputPaths = (
 				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift.modulemap",
-				"${PODS_ROOT}/Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift-umbrella.h",
+				"${PODS_ROOT}/Headers/Public/GRDB/GRDB.swift.modulemap",
+				"${PODS_ROOT}/Headers/Public/GRDB/GRDB.swift-umbrella.h",
 			);
 			name = "Copy generated compatibility header";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/SQLiteMigrationManager.swift-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift-umbrella.h",
 				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GRDB/GRDB.swift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/GRDB/GRDB.swift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
 		FA7857AD97BF00F7A23202A5B2EA07CA /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -651,33 +862,17 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FluentDarkModeKit/FluentDarkModeKit.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/FluentDarkModeKit/FluentDarkModeKit-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		FBDBDFFAD990AD9508B3EFA011AEFC86 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/SQLite/SQLite.swift.modulemap",
-				"${PODS_ROOT}/Headers/Public/SQLite/SQLite.swift-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SQLite/SQLite.swift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SQLite/SQLite.swift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C26DC58406BB0B924B349D24DF2E9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4720E0F7DA4C042B231521CF1B744C91 /* Pods-SwiftiOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3E208EC99908D8BB1D766C25761095D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,79 +907,152 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FF313CB6304768634D8DE5043FE96E4 /* Sources */ = {
+		94BBA1E59460B8979F37E33C4529824E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07490F3340432D3497240B126742A69D /* Pods-SwiftiOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		417515805BAB3EE060F73CE05127651D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C074FBCC49C20B9D3D5B47F1B850EBC0 /* SQLiteMigrationManager.swift in Sources */,
-				2055E68B97D1765FA677CBA34AE4FFFD /* SQLiteMigrationManager.swift-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EE6B8A56A8A13C9228CFEE7FC036FA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30E3FF5DE72D56612993D499EBED8C9B /* AggregateFunctions.swift in Sources */,
-				12AEC0B4C35E8BDE4366D57CE6805481 /* Blob.swift in Sources */,
-				D8F09E6FFEAEFBFFA69546C6F36EF74F /* Coding.swift in Sources */,
-				85290514199956D820FB90C92DBD0002 /* Collation.swift in Sources */,
-				68F7071AB87ED8CB4B8CF11F7BF9A78E /* Connection.swift in Sources */,
-				8043A7E0B334D03CF18AF57B63B8B407 /* CoreFunctions.swift in Sources */,
-				A902E94BC79F6FA99E9BB0300EA305B3 /* CustomFunctions.swift in Sources */,
-				921C1F239586B4E7118399375F45BAB5 /* DateAndTimeFunctions.swift in Sources */,
-				BC4EB746D2E13352424A93FDC7A52F78 /* Errors.swift in Sources */,
-				2D87E1AEC45003E3C2203D5A623DB6E1 /* Expression.swift in Sources */,
-				566B02F81167FAAB363014E42ED15BFF /* Foundation.swift in Sources */,
-				B592BEA6F00B6CB2A68FF21EE18DCCE5 /* FTS4.swift in Sources */,
-				CBD00AD2D050E606B432EF764F0443EF /* FTS5.swift in Sources */,
-				E78529FBA5C035888371AE6EE12276A8 /* Helpers.swift in Sources */,
-				3D38D3143F60F22FF8148BA31C508E73 /* Operators.swift in Sources */,
-				94D28595353D013C0530A91A7AA81FCF /* Query.swift in Sources */,
-				CB7A5FD2D111FB945D4C60F8F9CEB90A /* RTree.swift in Sources */,
-				26D84D2836C13B2D939D5A5E2B1BD47B /* Schema.swift in Sources */,
-				FDFC423A4243CFA179481946B523C999 /* Setter.swift in Sources */,
-				DB02626D12C516C4CD6A9EA98D20A50A /* SQLite.swift-dummy.m in Sources */,
-				6EAC3C9446063F09611B9BE55D8D34C1 /* SQLiteObjc.m in Sources */,
-				C72087EDCF1BAE223A1BB8C94BA87329 /* Statement.swift in Sources */,
-				F167CCE2838CD4DF3161F75877A2858C /* Value.swift in Sources */,
+				15C1E7531CEE93514B2A02F82E9FC9B0 /* Association.swift in Sources */,
+				7BC98E41783256C003FFDFBE3649776F /* AssociationAggregate.swift in Sources */,
+				FBBFD7CC70C4689F92BE9992CD3D5C30 /* BelongsToAssociation.swift in Sources */,
+				BDB527167C45902F3DEE6F961B4AF718 /* CGFloat.swift in Sources */,
+				6B8937166C1F974FAB7ACE70A2E2CC18 /* Column.swift in Sources */,
+				933EADD2BCA276559AF9188BB4C3D365 /* CommonTableExpression.swift in Sources */,
+				3300401EB1C1422C9394EF6F1B68C908 /* Configuration.swift in Sources */,
+				8F7929AEFCCB8D50EA905D3AD50E9F3D /* Cursor.swift in Sources */,
+				EC5114A59E22BCFF9EDB33E07695D29C /* Data.swift in Sources */,
+				4F6494B2EF9FCAE3AED51379A58824F7 /* Database+Schema.swift in Sources */,
+				79EC0EC1D7FD4CBB1CB8DEDC7BB8FDDD /* Database+Statements.swift in Sources */,
+				A7F7E8AB25362FF2B652F8F75A9A6A7D /* Database.swift in Sources */,
+				75D2F3FF4AE85DAB6C7B037C728B8D5C /* DatabaseCancellable.swift in Sources */,
+				489EE6479681A3CC94F11380A0A36F45 /* DatabaseCollation.swift in Sources */,
+				C17667A28337C848432D9FEA41113E62 /* DatabaseDateComponents.swift in Sources */,
+				177D63DA115DD5EE22FA15BDAE86DA7B /* DatabaseError.swift in Sources */,
+				EC947105BFE1325C49C96AD1416FC777 /* DatabaseFunction.swift in Sources */,
+				B59D9F8B6799C6218AB93622DB92F26B /* DatabaseMigrator.swift in Sources */,
+				80BC69FEB9B70CE2F274F761A02444DC /* DatabasePool.swift in Sources */,
+				08810CF6FDB8DD4A6A8831B7F63C460D /* DatabasePromise.swift in Sources */,
+				FC40F9E4A849251402CE2AE7F46A0788 /* DatabasePublishers.swift in Sources */,
+				A5D7051CD16A7B31C8590F7073C7812C /* DatabaseQueue.swift in Sources */,
+				ED2A5BD7BF711F9A329D9C6F3653889F /* DatabaseReader.swift in Sources */,
+				FEB5F6E6A50550F5F3D813F5F907612C /* DatabaseRegion.swift in Sources */,
+				18BC75DDCDE39EC22BB7B2741D9C2E56 /* DatabaseRegionObservation.swift in Sources */,
+				2288EBB2E2554A56967399D307877DA1 /* DatabaseSchemaCache.swift in Sources */,
+				C82D01AD44413CD4F35FCC90A65ADB5A /* DatabaseSnapshot.swift in Sources */,
+				BB007B7821C075E33B8C26667674D98A /* DatabaseValue.swift in Sources */,
+				B2E3952CD7814D0282CA134402BB05DC /* DatabaseValueConvertible+Decodable.swift in Sources */,
+				4659A0AC889D5C69F871F22542BAF80D /* DatabaseValueConvertible+Encodable.swift in Sources */,
+				2E2C396527B984AD5DDB8EFB3076F262 /* DatabaseValueConvertible+RawRepresentable.swift in Sources */,
+				D49579E6005A46523945CDD9F839BD24 /* DatabaseValueConvertible+ReferenceConvertible.swift in Sources */,
+				0C3D6EA11487AAA418B882269246FDFF /* DatabaseValueConvertible.swift in Sources */,
+				5A3F44B7A93DDE5BE8717C4208278E8E /* DatabaseWriter.swift in Sources */,
+				547C9A9FCD1E631DC314D628E79355C9 /* Date.swift in Sources */,
+				F670E9BB368076967AAAAEE10A867C3D /* EncodableRecord+Encodable.swift in Sources */,
+				959FAC066EE05C8995C1583C66CB934E /* EncodableRecord.swift in Sources */,
+				38487F3F38A0558EBB3F6C604FB33C9F /* Export.swift in Sources */,
+				DAACBD6168F7565FFE7B2A4E829CF702 /* Fetch.swift in Sources */,
+				814729FFCC305A148925E11E61D0991C /* FetchableRecord+Decodable.swift in Sources */,
+				302BD0EE1FE150BA284FD0D7CAEEF424 /* FetchableRecord+TableRecord.swift in Sources */,
+				2DB53DCF93FF14AF6C1EE79CCAF0A40C /* FetchableRecord.swift in Sources */,
+				0DF21E6735AFA1E179C214768D843C3A /* FetchRequest.swift in Sources */,
+				AD335BB0554106C3F09560178414EC88 /* ForeignKey.swift in Sources */,
+				F2B4EDBBF4E6757D1FAC949471EA1DA3 /* FTS3+QueryInterface.swift in Sources */,
+				083AF0A857C153E23B67C7658EED25C1 /* FTS3.swift in Sources */,
+				699346BAEA8F71A3E3B3D63E63F3E83A /* FTS3Pattern.swift in Sources */,
+				5E4DE477F8CB6221E1292220750F88FF /* FTS3TokenizerDescriptor.swift in Sources */,
+				93E24C5F8EB14A05DD011B6D4FE4C203 /* FTS4.swift in Sources */,
+				54FE022DAD84F16FC22CD6F0AC89728B /* FTS5+QueryInterface.swift in Sources */,
+				231D1B541EEC56E2D9C221B665B8E77E /* FTS5.swift in Sources */,
+				44494BC1D721385361F9AF8F9D106C53 /* FTS5CustomTokenizer.swift in Sources */,
+				C4D9E75023C79A28261D7A2C51AAC554 /* FTS5Pattern.swift in Sources */,
+				5A10868BEC5E738C3735E998E33684D7 /* FTS5Tokenizer.swift in Sources */,
+				8C7DDEC423FFE817CBA282D70B129122 /* FTS5TokenizerDescriptor.swift in Sources */,
+				9A16B3BEB0D9314435E738C687D26194 /* FTS5WrapperTokenizer.swift in Sources */,
+				E442487FA123D91A3D8280677EA0E571 /* GRDB-5.0.swift in Sources */,
+				2FC1601D302BF321068669EAF77BC940 /* GRDB.swift-dummy.m in Sources */,
+				E7EC3441B3E6D5CE28ED0A0C4FE7353D /* HasManyAssociation.swift in Sources */,
+				0D535024DD70E00F711E2418DC45AC33 /* HasManyThroughAssociation.swift in Sources */,
+				D282C432DE4BC61EF724A7F9554D8414 /* HasOneAssociation.swift in Sources */,
+				DEEC30E915EB852014E2EA3B9B0386A9 /* HasOneThroughAssociation.swift in Sources */,
+				86BB0588CFDF9E057D1968421FD34B61 /* Inflections+English.swift in Sources */,
+				78F8DB86866EB4652B534F223F57289D /* Inflections.swift in Sources */,
+				BC09A7A36631D396EED229EE0B024891 /* JoinAssociation.swift in Sources */,
+				BEDE54390ACF38D89A0B998D10040CAC /* LockedBox.swift in Sources */,
+				4D9326D6DC01E7E2D4BE5466547BDE85 /* Map.swift in Sources */,
+				956D50AD75111296794CFFFBDCD04175 /* Migration.swift in Sources */,
+				B88C8E3F601EA583AE99C136ABADF03B /* NSData.swift in Sources */,
+				92F397A6BB69F9D7EEEC07EDC651DC21 /* NSNull.swift in Sources */,
+				502CF832D6F53791E5F0D1F5A26F7963 /* NSNumber.swift in Sources */,
+				615D1FB11BBF4E7E57C29015FB0F7E4B /* NSString.swift in Sources */,
+				1E6C74A0C28C499846EF03F846C63810 /* OnDemandFuture.swift in Sources */,
+				53C9C6F0D15C6E1C4DACE0917FC2BCEF /* OrderedDictionary.swift in Sources */,
+				FBDB2B016EC225913682E952645A5918 /* PersistableRecord.swift in Sources */,
+				EF477833BE9BB4B74A291ECA66F0D832 /* Pool.swift in Sources */,
+				D33D7835A8D77E65884CE112D318D397 /* QueryInterfaceRequest.swift in Sources */,
+				F1B458133EC27666A67D8B5BA4215E91 /* ReadWriteBox.swift in Sources */,
+				6362FC9832005C621C2DE833E2F7C989 /* ReceiveValuesOn.swift in Sources */,
+				F014449D2FD9A2AF4EECD7E86B63A214 /* Record.swift in Sources */,
+				3D3A17D3F6F6F03B787E7400C1C3F5ED /* Refinable.swift in Sources */,
+				436B8039E658283EB9914548320950AC /* RemoveDuplicates.swift in Sources */,
+				87060C194EDC2632CA5254C2A1434A62 /* RequestProtocols.swift in Sources */,
+				D6E792A8FD8B3229D64AC109888DC043 /* Row.swift in Sources */,
+				530F3956622BDDFD1921CEF243D16B23 /* RowAdapter.swift in Sources */,
+				340298B4298FC98F2EA4536CF088C7E1 /* RowDecodingError.swift in Sources */,
+				70FB436C143C40044EF24F7A716D2E41 /* SchedulingWatchdog.swift in Sources */,
+				88DFB2CEA7BB46CFAE378934FE89183B /* SerializedDatabase.swift in Sources */,
+				2268BEB130C04D0CF0D255738B074E1B /* SQLAssociation.swift in Sources */,
+				5D5BC9D20F736B30EF245D6E50B1D117 /* SQLCollatedExpression.swift in Sources */,
+				6A6485FE8A63CCA7191C5DB2EA0880C7 /* SQLCollection.swift in Sources */,
+				9EBB3092995AE7AE730B454F06117F9B /* SQLExpression.swift in Sources */,
+				31B75D4198C71BA568753AD00A75C4E5 /* SQLForeignKeyRequest.swift in Sources */,
+				AB7A83445263E567537373CFF62DEDCC /* SQLFunctions.swift in Sources */,
+				0DDBBAACFE0179C8208C61DA5A2E007E /* SQLGenerationContext.swift in Sources */,
+				27EA2E256994A31F37ADBF6293EF4AF8 /* SQLInterpolation+QueryInterface.swift in Sources */,
+				10F90AF5CE00AC62EC5993592852ECF6 /* SQLInterpolation.swift in Sources */,
+				1971BEEAB6641BD92A30F060D7D1659D /* SQLiteDateParser.swift in Sources */,
+				6075FDA209538488800153EC91003C52 /* SQLLiteral.swift in Sources */,
+				C00116FFD7797243D782E84F7FA716FF /* SQLOperators.swift in Sources */,
+				C66D3B4DE147BFF7EB1DBE0FAB00A301 /* SQLOrdering.swift in Sources */,
+				AA608B56128AF9C2FDBE7860CDDBE9FA /* SQLQuery.swift in Sources */,
+				0F00690ED897A28C9D94D842E63110A2 /* SQLQueryGenerator.swift in Sources */,
+				792A3985C32C64FC531DB062ECD52B97 /* SQLRelation.swift in Sources */,
+				BD5BCD5FE3A474E284EE5C2224A1FCBC /* SQLRequest.swift in Sources */,
+				4772456C7547B8AFB9F1DF2DA2F674D7 /* SQLSelection.swift in Sources */,
+				FA3EE8DDFA08931875A82EC091FCB14C /* SQLSubquery.swift in Sources */,
+				53B848EE76D8000DECC7F1A336908ADB /* StandardLibrary.swift in Sources */,
+				024A636E59A0E552A989088F6EC5F0F1 /* Statement.swift in Sources */,
+				A1EF5F5CAB64309CB84D79107332D4BB /* StatementAuthorizer.swift in Sources */,
+				4DEF5FE64698089753A217EED2CE17D6 /* StatementColumnConvertible.swift in Sources */,
+				4471ECF239A4AA6C37025B8498CA6F3F /* TableDefinition.swift in Sources */,
+				79E0E451C3ABEDF124175092477BC686 /* TableRecord+Association.swift in Sources */,
+				C73F1F0E114540AB886A640530AF9CA3 /* TableRecord+QueryInterfaceRequest.swift in Sources */,
+				45CF79556D3093BFBA98966CBC825706 /* TableRecord.swift in Sources */,
+				CD1CC41BA96F2A223FE524935D53674D /* Trace.swift in Sources */,
+				2D945D4A8C4BC6BB0A5EE1C60BFABDAD /* TransactionObserver.swift in Sources */,
+				752B39DD602C5DBB695BACB4354C8DCB /* URL.swift in Sources */,
+				FC8C80E22810406D1B2D67411090C36A /* Utils.swift in Sources */,
+				DD16AFBA2FD64E827EA43597D42CCDBA /* UUID.swift in Sources */,
+				6E694D6BF657150E98C1909BA37A2AC1 /* ValueObservation.swift in Sources */,
+				E955733E1FA75C66866072E5162A5601 /* ValueObservationScheduler.swift in Sources */,
+				59614817FA12F129EA3D5570494D4E77 /* ValueObserver.swift in Sources */,
+				EB7D13CA9ACA56C5F882D72DD72C3067 /* ValueReducer.swift in Sources */,
+				1C6BDB845F61AB3D94A0440EDF74D484 /* VirtualTableModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B3F4308B7FD132D7F6AD4878E544359 /* PBXTargetDependency */ = {
+		57A08B8141BC9D76C52FA738BE718E33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SQLite.swift;
-			target = 3F2C1776D90B62B156DB52C41A5C419C /* SQLite.swift */;
-			targetProxy = 462C7F8D402DB52E175FACB0C411A6A4 /* PBXContainerItemProxy */;
+			name = GRDB.swift;
+			target = 0A86C228CFCBC35A1FD284274ED0930F /* GRDB.swift */;
+			targetProxy = 144BC92BB2C5880A8F44B899CA76342A /* PBXContainerItemProxy */;
 		};
-		0E20A8BE4696545A36FD6E4E2F94A449 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SQLite.swift;
-			target = 3F2C1776D90B62B156DB52C41A5C419C /* SQLite.swift */;
-			targetProxy = 688DF3FC932B888E937126EAB4524559 /* PBXContainerItemProxy */;
-		};
-		81676B8682C431B4359B3E15A097EA51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SQLiteMigrationManager.swift;
-			target = 6FE0C2334D8053AEB95BCCADE9C2D2E0 /* SQLiteMigrationManager.swift */;
-			targetProxy = CE1B5C4AC19166805F4E3A3E4C0BA86C /* PBXContainerItemProxy */;
-		};
-		E908215B98A3106C7BEB93F4946E33C0 /* PBXTargetDependency */ = {
+		F5650F83164A5CA80415FA3B05F74104 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FluentDarkModeKit;
 			target = 155BF1269EF587A2F12050C60EFF878E /* FluentDarkModeKit */;
-			targetProxy = 441DEF4C1B12A03B556CC6A3574BA07A /* PBXContainerItemProxy */;
+			targetProxy = FA8E29BFF30B3B4473298779B43789EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -855,7 +1123,109 @@
 			};
 			name = Debug;
 		};
-		0ABCEF417A2F27A0C26AF9F7964A72D3 /* Release */ = {
+		4DEC904979CD4296A4BB070C2FE5F620 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265832C50A208D663366F52949C9A998 /* FluentDarkModeKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FluentDarkModeKit/FluentDarkModeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/FluentDarkModeKit/FluentDarkModeKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FluentDarkModeKit;
+				PRODUCT_NAME = FluentDarkModeKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75C13AD8F1B62E3A9E42E556F203AD23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 538DD22EE2FD72AA71C4AE0A90F84760 /* GRDB.swift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GRDB.swift/GRDB.swift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/GRDB/GRDB.swift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GRDB;
+				PRODUCT_NAME = GRDB.swift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2FCDD341F7F5C01F91235C099337927 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D07DA3A55F377119B226B4524B9706 /* FluentDarkModeKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/FluentDarkModeKit/FluentDarkModeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/FluentDarkModeKit/FluentDarkModeKit.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FluentDarkModeKit;
+				PRODUCT_NAME = FluentDarkModeKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1973D492582FE4BF99AC80A00D72DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7307C780BA89FDB05068D37B0D2C9DC2 /* GRDB.swift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GRDB.swift/GRDB.swift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/GRDB/GRDB.swift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GRDB;
+				PRODUCT_NAME = GRDB.swift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBF07DFBF51642F152B4AA468216068B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07186D63C92ECFA4C0E44BC7F8DC6B0E /* Pods-SwiftiOS.release.xcconfig */;
 			buildSettings = {
@@ -878,132 +1248,7 @@
 			};
 			name = Release;
 		};
-		192BBE3093D2F42EF61C88981436315C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F207194CA770378042686032B2919DE1 /* SQLiteMigrationManager.swift.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLiteMigrationManager.swift/SQLiteMigrationManager.swift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SQLiteMigrationManager;
-				PRODUCT_NAME = SQLiteMigrationManager.swift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1F8070B50174D5EBA09DCBA7EC0D4F26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D51C66D7121D7463D897BECEFA500DE5 /* SQLite.swift.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/SQLite/SQLite.swift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SQLite;
-				PRODUCT_NAME = SQLite.swift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4DEC904979CD4296A4BB070C2FE5F620 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF6DA3668D9B86A2B1FBADA8E727A35A /* FluentDarkModeKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FluentDarkModeKit/FluentDarkModeKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/FluentDarkModeKit/FluentDarkModeKit.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FluentDarkModeKit;
-				PRODUCT_NAME = FluentDarkModeKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A2FCDD341F7F5C01F91235C099337927 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8811CEADB147A1338AEC4566E8E04538 /* FluentDarkModeKit.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FluentDarkModeKit/FluentDarkModeKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/FluentDarkModeKit/FluentDarkModeKit.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FluentDarkModeKit;
-				PRODUCT_NAME = FluentDarkModeKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ADAFC39A883138538A67F17B39685DA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8560E86D7353BF8E0B3D4451EF381FD5 /* SQLite.swift.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/SQLite/SQLite.swift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SQLite;
-				PRODUCT_NAME = SQLite.swift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B5A8FA31204F2BA612D2781396DECFE8 /* Debug */ = {
+		C0B22E150E912056784FC5A0C8BB506E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1847E31A44A137AF8A827C1489E41AC /* Pods-SwiftiOS.debug.xcconfig */;
 			buildSettings = {
@@ -1021,30 +1266,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D82F95A7EF5A9F3B51EF8B39B960DF05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E29153701112556D05FC9B02547DD9B0 /* SQLiteMigrationManager.swift.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SQLiteMigrationManager.swift/SQLiteMigrationManager.swift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/SQLiteMigrationManager/SQLiteMigrationManager.swift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SQLiteMigrationManager;
-				PRODUCT_NAME = SQLiteMigrationManager.swift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1114,11 +1335,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19A22C614E68D19DF8C2317C0943ABCF /* Build configuration list for PBXNativeTarget "SQLiteMigrationManager.swift" */ = {
+		13BE3105862B456204BDF6E2BF732DB2 /* Build configuration list for PBXNativeTarget "GRDB.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D82F95A7EF5A9F3B51EF8B39B960DF05 /* Debug */,
-				192BBE3093D2F42EF61C88981436315C /* Release */,
+				75C13AD8F1B62E3A9E42E556F203AD23 /* Debug */,
+				B1973D492582FE4BF99AC80A00D72DB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1132,15 +1353,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4831832D716DE9C50FF96385B6482F4A /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ADAFC39A883138538A67F17B39685DA2 /* Debug */,
-				1F8070B50174D5EBA09DCBA7EC0D4F26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		552420818205616FBB307BFAAA8DA832 /* Build configuration list for PBXNativeTarget "FluentDarkModeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1150,11 +1362,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B0CDCDB3CC4D2D3F9C55E2CA3F0AEF6 /* Build configuration list for PBXNativeTarget "Pods-SwiftiOS" */ = {
+		5F097F232490135EDA7060303ADC993D /* Build configuration list for PBXNativeTarget "Pods-SwiftiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5A8FA31204F2BA612D2781396DECFE8 /* Debug */,
-				0ABCEF417A2F27A0C26AF9F7964A72D3 /* Release */,
+				C0B22E150E912056784FC5A0C8BB506E /* Debug */,
+				BBF07DFBF51642F152B4AA468216068B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

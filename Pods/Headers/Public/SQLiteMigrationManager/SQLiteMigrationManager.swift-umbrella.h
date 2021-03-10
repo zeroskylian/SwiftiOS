@@ -1,1 +1,0 @@
-../../../Target Support Files/SQLiteMigrationManager.swift/SQLiteMigrationManager.swift-umbrella.h

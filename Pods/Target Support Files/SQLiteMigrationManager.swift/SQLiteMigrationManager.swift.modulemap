@@ -1,6 +1,0 @@
-module SQLiteMigrationManager {
-  umbrella header "SQLiteMigrationManager.swift-umbrella.h"
-
-  export *
-  module * { export * }
-}
