@@ -6,6 +6,7 @@ target 'SwiftiOS' do
   
   pod "FluentDarkModeKit"
   pod 'GRDB.swift'
+#  pod 'TXIMSDK_TUIKit_iOS' 
 end
 
 

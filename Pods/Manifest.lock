@@ -1,8 +1,8 @@
 PODS:
-  - FluentDarkModeKit (1.0.1)
-  - GRDB.swift (5.5.0):
-    - GRDB.swift/standard (= 5.5.0)
-  - GRDB.swift/standard (5.5.0)
+  - FluentDarkModeKit (1.0.2)
+  - GRDB.swift (5.6.0):
+    - GRDB.swift/standard (= 5.6.0)
+  - GRDB.swift/standard (5.6.0)
 
 DEPENDENCIES:
   - FluentDarkModeKit
@@ -14,9 +14,9 @@ SPEC REPOS:
     - GRDB.swift
 
 SPEC CHECKSUMS:
-  FluentDarkModeKit: 0c5f31ca81eb058f3e8b6d79b3d08afbe7c40c42
-  GRDB.swift: 10a3fda76720f3b5438e57d23455e2336226aa4d
+  FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
+  GRDB.swift: c91e3a2a59b5cdef17c2190015fd29ffee76922c
 
-PODFILE CHECKSUM: c10a02fa2c8a56120d45068fde71d3cd0b3cadbf
+PODFILE CHECKSUM: 8ff7419eb0a53c72280cedd4c3e8d8acdabba63d
 
 COCOAPODS: 1.10.1
