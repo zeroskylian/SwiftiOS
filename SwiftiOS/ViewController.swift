@@ -13,12 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "主页"
-       
     }
     
     @IBAction func leftItemAction(_ sender: Any) {
-        
-        
+        Player.insertRows()
     }
     @objc private func buttonAction() {
         
