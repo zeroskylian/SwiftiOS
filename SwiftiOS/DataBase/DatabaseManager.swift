@@ -36,6 +36,7 @@ class DatabaseManager {
     
     private func registerTables() {
         DataBaseCreation.addTarget(Player.self)
+        DataBaseCreation.addTarget(BuriedPoint.self)
         DataBaseCreation.targets.forEach { (creation) in
             do {
                 try creation.migrate(self.dbQueue)

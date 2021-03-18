@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func leftItemAction(_ sender: Any) {
-        Player.insertRows()
+        
     }
     @objc private func buttonAction() {
         

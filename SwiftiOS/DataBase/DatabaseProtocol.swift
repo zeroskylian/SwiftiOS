@@ -27,14 +27,13 @@ extension Result where Success == Void {
     public static func success() -> Self { .success(()) }
 }
 
-extension FetchableRecord where Self: MutablePersistableRecord {
+extension DatabaseProtocol where Self: MutablePersistableRecord & FetchableRecord {
+    
+    static var databaseTableName: String { table_name }
     
     @discardableResult
     mutating func insertRow() -> DatabaseResult {
         do {
-            try DatabaseManager.shared.dbQueue.inTransaction(.deferred, { (db) -> Database.TransactionCompletion in
-                return .commit
-            })
             return try DatabaseManager.shared.dbQueue.write { (dataBase) -> DatabaseResult in
                 try self.insert(dataBase)
                 return .success()

@@ -34,12 +34,8 @@ private func swizzleFailed(class cls: AnyClass, selector: Selector ) -> String {
 }
 
 private func addLog(point: String, target: String, action: String, actionType: String?) {
-    var log : [String : String] = [:]
-    log["point"] = point
-    log["target"] = target
-    log["action"] = action
-    log["actionType"] = actionType
-    print(log)
+    var point = BuriedPoint(point: point, target: target, action: action, actionType: actionType)
+    point.insertRow()
 }
 
 extension UIView {
@@ -88,7 +84,7 @@ extension UIViewController {
         }
         let imp = method_getImplementation(method)
         class_replaceMethod(UIViewController.self, selector, imp_implementationWithBlock({(self: UIViewController, animated: Bool) -> Void in
-            addLog(point: self.pointIdentifier, target: self.pointIdentifier, action: "页面出现", actionType: nil)
+            addLog(point: self.pointIdentifier, target: self.pointIdentifier, action: "页面离开", actionType: nil)
             let oldIMP = unsafeBitCast(imp, to: (@convention(c) (UIViewController, Selector, Bool) -> Void).self)
             oldIMP(self,selector,animated)
         } as @convention(block) (UIViewController, Bool) -> Void) , method_getTypeEncoding(method))
