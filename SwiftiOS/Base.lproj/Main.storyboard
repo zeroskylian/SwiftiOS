@@ -12,12 +12,27 @@
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="SwiftiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-bi-gxq">
+                                <rect key="frame" x="12" y="100" width="390" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Yro-kY-lsW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DRh-bi-gxq" secondAttribute="trailing" constant="12" id="XbK-D2-Gjc"/>
+                            <constraint firstItem="DRh-bi-gxq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="bpN-JK-sDo"/>
+                            <constraint firstItem="DRh-bi-gxq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="cgQ-g2-4Ir"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="XlD-mm-ROE">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="0Tu-Cd-xoQ">
@@ -26,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tf" destination="DRh-bi-gxq" id="S6l-Mm-8bG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

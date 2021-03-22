@@ -6,7 +6,8 @@ target 'SwiftiOS' do
   
   pod "FluentDarkModeKit"
   pod 'GRDB.swift'
-#  pod 'TXIMSDK_Smart_iOS'
+  pod 'SwiftIconFont'
+  
 end
 
 

@@ -3,20 +3,24 @@ PODS:
   - GRDB.swift (5.6.0):
     - GRDB.swift/standard (= 5.6.0)
   - GRDB.swift/standard (5.6.0)
+  - SwiftIconFont (6.1.1)
 
 DEPENDENCIES:
   - FluentDarkModeKit
   - GRDB.swift
+  - SwiftIconFont
 
 SPEC REPOS:
   trunk:
     - FluentDarkModeKit
     - GRDB.swift
+    - SwiftIconFont
 
 SPEC CHECKSUMS:
   FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
   GRDB.swift: c91e3a2a59b5cdef17c2190015fd29ffee76922c
+  SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
-PODFILE CHECKSUM: 8b90977c9af1adca1e4252a68528cf620e7b21bf
+PODFILE CHECKSUM: 78d618f435a7121ab31a088f5df23d1cdda25322
 
 COCOAPODS: 1.10.1

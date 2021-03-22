@@ -1,4 +1,14 @@
 ${PODS_ROOT}/Target Support Files/Pods-SwiftiOS/Pods-SwiftiOS-resources.sh
-${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitFace.bundle
-${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitResource.bundle
-${PODS_CONFIGURATION_BUILD_DIR}/TXIMSDK_TUIKit_iOS_Professional/TUIKitLocalizable.bundle
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Regular.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Solid.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/fontcustom.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Ionicons.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/map-icons.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/MaterialIcons-Regular.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/octicons.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/open-iconic.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Segoe mdl2 assets.ttf
+${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/themify.ttf

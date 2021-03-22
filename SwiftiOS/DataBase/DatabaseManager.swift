@@ -35,9 +35,9 @@ class DatabaseManager {
     
     
     private func registerTables() {
-        DataBaseCreation.addTarget(Player.self)
-        DataBaseCreation.addTarget(BuriedPoint.self)
-        DataBaseCreation.targets.forEach { (creation) in
+        DatabaseMigration.creation.addTarget(Player.self)
+        DatabaseMigration.creation.addTarget(BuriedPoint.self)
+        DatabaseMigration.creation.targets.forEach { (creation) in
             do {
                 try creation.migrate(self.dbQueue)
             }catch {
@@ -47,8 +47,8 @@ class DatabaseManager {
     }
     
     private func migrationTables() {
-        DatabaseMigration.addTarget(Player.self)
-        DatabaseMigration.targets.forEach { migrator in
+        DatabaseMigration.migration.addTarget(Player.self)
+        DatabaseMigration.migration.targets.forEach { migrator in
             do {
                 try migrator.migrate(self.dbQueue)
             }catch {
@@ -58,34 +58,23 @@ class DatabaseManager {
     }
 }
 
-public class DataBaseCreation {
-    
-    private static var list: [DatabaseMigrator] = []
-    private static let databaseLock = NSLock()
-    
-    public static func addTarget(_ target: DatabaseProtocol.Type) {
-        databaseLock.lock()
-        list.append(target.createOperation())
-        databaseLock.unlock()
-    }
-    
-    public static var targets: [DatabaseMigrator] {
-        return list
-    }
-}
 
 public class DatabaseMigration {
     
-    private static var list: [DatabaseMigrator] = []
-    private static let databaseLock = NSLock()
+    public static let creation = DatabaseMigration()
     
-    public static func addTarget(_ target: DatabaseProtocol.Type) {
+    public static let migration = DatabaseMigration()
+    
+    private var list: [DatabaseMigrator] = []
+    private let databaseLock = NSLock()
+    
+    public func addTarget(_ target: DatabaseProtocol.Type) {
         databaseLock.lock()
         list.append(contentsOf: target.migrators())
         databaseLock.unlock()
     }
     
-    public static var targets: [DatabaseMigrator] {
+    public var targets: [DatabaseMigrator] {
         return list
     }
 }

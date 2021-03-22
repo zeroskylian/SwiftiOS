@@ -97,14 +97,34 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitFace.bundle"
-  install_resource "${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitResource.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/TXIMSDK_TUIKit_iOS_Professional/TUIKitLocalizable.bundle"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Solid.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/fontcustom.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Ionicons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/map-icons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/MaterialIcons-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/octicons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/open-iconic.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Segoe mdl2 assets.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/themify.ttf"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitFace.bundle"
-  install_resource "${PODS_ROOT}/TXIMSDK_TUIKit_iOS_Professional/TUIKit/Resources/TUIKitResource.bundle"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/TXIMSDK_TUIKit_iOS_Professional/TUIKitLocalizable.bundle"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Free-Solid.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/fontcustom.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Ionicons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/map-icons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/MaterialIcons-Regular.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/octicons.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/open-iconic.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/Segoe mdl2 assets.ttf"
+  install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/themify.ttf"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
