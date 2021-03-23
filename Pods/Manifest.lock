@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.4.1)
   - FluentDarkModeKit (1.0.2)
   - GRDB.swift (5.6.0):
     - GRDB.swift/standard (= 5.6.0)
@@ -6,21 +7,24 @@ PODS:
   - SwiftIconFont (6.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - FluentDarkModeKit
   - GRDB.swift
   - SwiftIconFont
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FluentDarkModeKit
     - GRDB.swift
     - SwiftIconFont
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
   GRDB.swift: c91e3a2a59b5cdef17c2190015fd29ffee76922c
   SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
-PODFILE CHECKSUM: 78d618f435a7121ab31a088f5df23d1cdda25322
+PODFILE CHECKSUM: 24733bb0f417a980ca985c6cdcb961b1cb7c86bc
 
 COCOAPODS: 1.10.1

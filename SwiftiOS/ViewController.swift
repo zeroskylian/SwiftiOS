@@ -7,6 +7,7 @@
 
 import UIKit
 import GRDB
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -21,11 +22,27 @@ class ViewController: UIViewController {
     }
     
     
+    var session: Alamofire.Session = {
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = 14
+        let session = Alamofire.Session(configuration: config,startRequestsImmediately: false)
+        return session
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "主页"
         tf.keyboardAppearance = .dark
-        UITextInputTraits
+        
+        
+        let url = URL(string: "https://m.baidu.com")!
+        
+        let req = session.request(url, method: .get)
+        req.responseString { (response) in
+            print(response.result)
+        }
+        req.resume()
     }
     
     @IBAction func leftItemAction(_ sender: Any) {
@@ -112,9 +129,5 @@ class Student: Codable {
 // MARK: - Body
 class Body: Codable {
     let height, weight: Double
-
-    init(height: Double, weight: Double) {
-        self.height = height
-        self.weight = weight
-    }
+    
 }

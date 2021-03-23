@@ -7,6 +7,7 @@ target 'SwiftiOS' do
   pod "FluentDarkModeKit"
   pod 'GRDB.swift'
   pod 'SwiftIconFont'
+  pod 'Alamofire'
   
 end
 
