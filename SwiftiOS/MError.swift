@@ -10,15 +10,11 @@ import Foundation
 
 public struct AppError: Error, CustomStringConvertible {
     
-    public var description: String {
-        return _description
-    }
+    private(set) public var description: String
     
     public init(file: String = #file, function: String = #function, line: Int = #line) {
-        _description = "error at " + (file as NSString).lastPathComponent + ":\(line)"
+        description = "error at " + (file as NSString).lastPathComponent + ":\(line)"
     }
-    
-    private let _description: String
 }
 
 public struct MError: LocalizedError {

@@ -21,12 +21,25 @@ class ViewController: UIViewController {
         super.init(coder: coder)
     }
     
+    let operationQueue: OperationQueue = {
+        let queue =  OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }()
     
-    var session: Alamofire.Session = {
+    let dispathcQueue = DispatchQueue(label: "com.test")
+    
+    lazy var session: Alamofire.Session = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 14
-        let session = Alamofire.Session(configuration: config,startRequestsImmediately: false)
+        let session = Alamofire.Session(configuration: config, startRequestsImmediately: false, requestQueue: self.dispathcQueue)
         return session
+    }()
+    
+    lazy var requests: [DataRequest] = {
+        return (1 ... 4).map { (index) in
+            return generateRequest(index: index)
+        }
     }()
     
     
@@ -35,47 +48,33 @@ class ViewController: UIViewController {
         title = "主页"
         tf.keyboardAppearance = .dark
         
-        
-        let url = URL(string: "https://m.baidu.com")!
-        
-        let req = session.request(url, method: .get)
-        req.responseString { (response) in
-            print(response.result)
-        }
-        req.resume()
+        let a: AttributeString = "lian \("xin",.color(.red),.font(.systemFont(ofSize: 17)))"
+        tf.attributedText = a.attributedString
     }
     
-    @IBAction func leftItemAction(_ sender: Any) {
-        let jsonString =
-            """
-        {
-                  "stuName": "小明",
-                  "age": 12,
-                  "body": {
-                    "height": 174.4,
-                    "weight": 43.2
-                  },
-                  "subStu": [
-                  {
-                    "stuName": "小明",
-                    "age": 12,
-                    "body": {
-                      "height": 174.4,
-                      "weight": 43.2
-                    },
-                  "subStu": null
-                  }]
-                }
-        """
-        
-        do {
-            let decoder = JSONDecoder()
-            let s = try decoder.decode(Student.self, from: jsonString.data(using:.utf8)!)
-            print(s)
-        } catch  {
-            print(error)
+    func generateRequest(index: Int) -> DataRequest{
+        let url = URL(string: "http://httpbin.org/get?i=\(index)")!
+        let req = session.request(url, method: .get)
+        req.responseString { (response) in
+            switch response.result {
+            case .success(let string):
+                print(string)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
-        
+        return req
+    }
+    
+    
+    @IBAction func leftItemAction(_ sender: Any) {
+
+        for (index,req) in requests.enumerated() {
+            print("start-\(index)")
+            req.resume()
+            print("end-\(index)")
+        }
+        print("finff")
     }
     @objc private func buttonAction() {
         
