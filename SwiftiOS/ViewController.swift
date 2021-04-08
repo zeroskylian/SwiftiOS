@@ -48,8 +48,12 @@ class ViewController: UIViewController {
         title = "主页"
         tf.keyboardAppearance = .dark
         
-        let a: AttributeString = "lian \("xin",.color(.red),.font(.systemFont(ofSize: 17)))"
+        let a: AttributeString = "lian \("xin",.color(ColorAssets.ttt.color),.font(.systemFont(ofSize: 17)))"
         tf.attributedText = a.attributedString
+        
+        let imageView = UIImageView(image: Asset.iconDispalyDisable.image)
+        imageView.frame = CGRect(x: 0, y: 100, width: 100, height: 100)
+        view.addSubview(imageView)
     }
     
     func generateRequest(index: Int) -> DataRequest{

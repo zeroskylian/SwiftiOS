@@ -1,0 +1,14 @@
+input_dir: ..//SwiftiOS/
+output_dir: ..//SwiftiOS/Assets/
+xcassets:
+  - inputs: Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: AssetsColor.swift
+        params:
+          enumName: ColorAssets
+  - inputs: Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: AssetsImage.swift
+        
