@@ -1,18 +1,22 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.4.2)
   - FluentDarkModeKit (1.0.2)
-  - GRDB.swift (5.7.2):
-    - GRDB.swift/standard (= 5.7.2)
-  - GRDB.swift/standard (5.7.2)
+  - GRDB.swift (5.7.3):
+    - GRDB.swift/standard (= 5.7.3)
+  - GRDB.swift/standard (5.7.3)
+  - HLLoggerModule (0.3.0)
   - SwiftIconFont (6.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - FluentDarkModeKit
   - GRDB.swift
+  - HLLoggerModule
   - SwiftIconFont
 
 SPEC REPOS:
+  https://10.11.13.105/hlpods/HLSpecs.git:
+    - HLLoggerModule
   trunk:
     - Alamofire
     - FluentDarkModeKit
@@ -20,11 +24,12 @@ SPEC REPOS:
     - SwiftIconFont
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
-  GRDB.swift: 0b1f2d4bf81276f685b16ec412695b104e0cf479
+  GRDB.swift: 21bf3cb0c95486d65da5e83a096d5643629163e1
+  HLLoggerModule: 6ecbed081706d787314fa9b0a2f90118ab89cfa4
   SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
-PODFILE CHECKSUM: 0e6061a6c93b8b89b66f2fc6f0ed0081fe5ab1c7
+PODFILE CHECKSUM: d7a93a2d0b12a1e6caa8c65434a171423904a9e8
 
 COCOAPODS: 1.10.1

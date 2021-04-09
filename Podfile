@@ -1,3 +1,6 @@
+source 'https://10.11.13.105/hlpods/HLSpecs.git'
+source 'https://cdn.cocoapods.org/'
+
 platform :ios, '12.1'
 inhibit_all_warnings!
 use_modular_headers!
@@ -9,6 +12,7 @@ target 'SwiftiOS' do
   pod 'SwiftIconFont'
   pod 'Alamofire'
   
+  pod 'HLLoggerModule'
 end
 
 

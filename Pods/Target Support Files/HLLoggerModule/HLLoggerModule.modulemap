@@ -1,0 +1,6 @@
+module HLLoggerModule {
+  umbrella header "HLLoggerModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

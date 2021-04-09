@@ -35,9 +35,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="XlD-mm-ROE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="0Tu-Cd-xoQ">
+                        <barButtonItem key="leftBarButtonItem" title="left" id="0Tu-Cd-xoQ">
                             <connections>
                                 <action selector="leftItemAction:" destination="BYZ-38-t0r" id="eKZ-GQ-uG9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="right" id="ZTf-7x-JeE">
+                            <connections>
+                                <action selector="rightItemAction:" destination="BYZ-38-t0r" id="Jqi-ly-zRc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
