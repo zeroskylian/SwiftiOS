@@ -1,9 +1,9 @@
 PODS:
   - Alamofire (5.4.2)
   - FluentDarkModeKit (1.0.2)
-  - GRDB.swift (5.7.3):
-    - GRDB.swift/standard (= 5.7.3)
-  - GRDB.swift/standard (5.7.3)
+  - GRDB.swift (5.7.4):
+    - GRDB.swift/standard (= 5.7.4)
+  - GRDB.swift/standard (5.7.4)
   - HLLoggerModule (0.3.0)
   - SwiftIconFont (6.1.1)
 
@@ -26,7 +26,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
-  GRDB.swift: 21bf3cb0c95486d65da5e83a096d5643629163e1
+  GRDB.swift: 2064e726141f130d0b8bd819b29086f2b1157597
   HLLoggerModule: 6ecbed081706d787314fa9b0a2f90118ab89cfa4
   SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
