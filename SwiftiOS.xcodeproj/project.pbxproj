@@ -12,6 +12,15 @@
 		6339E6C125F21D21009D11FE /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339E6C025F21D21009D11FE /* OptionalExtensions.swift */; };
 		6339E6C525F21D49009D11FE /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339E6C325F21D49009D11FE /* MError.swift */; };
 		635AE3E825FEF3A100B32449 /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AE3E725FEF3A100B32449 /* DatabaseProtocol.swift */; };
+		63733902262AE3510022BCC3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733901262AE3510022BCC3 /* VideoToolbox.framework */; };
+		63733904262AE3590022BCC3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733903262AE3590022BCC3 /* OpenGLES.framework */; };
+		63733906262AE3670022BCC3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733905262AE3670022BCC3 /* MobileCoreServices.framework */; };
+		63733908262AE3700022BCC3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733907262AE3700022BCC3 /* MediaPlayer.framework */; };
+		6373390A262AE3780022BCC3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733909262AE3780022BCC3 /* CoreVideo.framework */; };
+		6373390C262AE37F0022BCC3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6373390B262AE37E0022BCC3 /* CoreMedia.framework */; };
+		6373390E262AE3850022BCC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6373390D262AE3850022BCC3 /* CoreGraphics.framework */; };
+		63733910262AE38B0022BCC3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6373390F262AE38B0022BCC3 /* AVFoundation.framework */; };
+		63733912262AE3920022BCC3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63733911262AE3920022BCC3 /* AudioToolbox.framework */; };
 		6375A4C2261F028D0016EE53 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6375A4C1261F028D0016EE53 /* Colors.xcassets */; };
 		6375A4D3261F09C10016EE53 /* AssetsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375A4D1261F09C10016EE53 /* AssetsImage.swift */; };
 		6375A4D4261F09C10016EE53 /* AssetsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375A4D2261F09C10016EE53 /* AssetsColor.swift */; };
@@ -50,6 +59,17 @@
 		6339E6C025F21D21009D11FE /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		6339E6C325F21D49009D11FE /* MError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
 		635AE3E725FEF3A100B32449 /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
+		63733901262AE3510022BCC3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		63733903262AE3590022BCC3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		63733905262AE3670022BCC3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		63733907262AE3700022BCC3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		63733909262AE3780022BCC3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6373390B262AE37E0022BCC3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6373390D262AE3850022BCC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6373390F262AE38B0022BCC3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		63733911262AE3920022BCC3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		63733913262AE39D0022BCC3 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		63733914262AE3A70022BCC3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6375A4C1261F028D0016EE53 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6375A4D1261F09C10016EE53 /* AssetsImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImage.swift; sourceTree = "<group>"; };
 		6375A4D2261F09C10016EE53 /* AssetsColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsColor.swift; sourceTree = "<group>"; };
@@ -90,7 +110,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6373390C262AE37F0022BCC3 /* CoreMedia.framework in Frameworks */,
+				6373390A262AE3780022BCC3 /* CoreVideo.framework in Frameworks */,
+				63733910262AE38B0022BCC3 /* AVFoundation.framework in Frameworks */,
+				63733912262AE3920022BCC3 /* AudioToolbox.framework in Frameworks */,
 				E6BF3054889AA72022A37A79 /* libPods-SwiftiOS.a in Frameworks */,
+				6373390E262AE3850022BCC3 /* CoreGraphics.framework in Frameworks */,
+				63733902262AE3510022BCC3 /* VideoToolbox.framework in Frameworks */,
+				63733906262AE3670022BCC3 /* MobileCoreServices.framework in Frameworks */,
+				63733908262AE3700022BCC3 /* MediaPlayer.framework in Frameworks */,
+				63733904262AE3590022BCC3 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +270,17 @@
 		EC8E31ADEAA063342BDF51CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63733914262AE3A70022BCC3 /* libz.tbd */,
+				63733913262AE39D0022BCC3 /* libbz2.tbd */,
+				63733911262AE3920022BCC3 /* AudioToolbox.framework */,
+				6373390F262AE38B0022BCC3 /* AVFoundation.framework */,
+				6373390D262AE3850022BCC3 /* CoreGraphics.framework */,
+				6373390B262AE37E0022BCC3 /* CoreMedia.framework */,
+				63733909262AE3780022BCC3 /* CoreVideo.framework */,
+				63733907262AE3700022BCC3 /* MediaPlayer.framework */,
+				63733905262AE3670022BCC3 /* MobileCoreServices.framework */,
+				63733903262AE3590022BCC3 /* OpenGLES.framework */,
+				63733901262AE3510022BCC3 /* VideoToolbox.framework */,
 				D492D5762A7A08EE8988456C /* libPods-SwiftiOS.a */,
 			);
 			name = Frameworks;
@@ -542,13 +582,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2V9J3UTZQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HL.lian.SwiftiOS;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengli.pod.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftiOS/ObjectiveC/SwiftiOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -565,13 +614,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2V9J3UTZQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SwiftiOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HL.lian.SwiftiOS;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengli.pod.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftiOS/ObjectiveC/SwiftiOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

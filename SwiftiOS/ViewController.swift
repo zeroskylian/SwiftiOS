@@ -6,29 +6,45 @@
 //
 
 import UIKit
-import GRDB
-import Alamofire
+
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tf: UITextField!
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "主页"
-        tf.keyboardAppearance = .dark
         
-        let a: AttributeString = "lian \("xin",.color(ColorAssets.ttt.color),.font(.systemFont(ofSize: 17)))"
-        tf.attributedText = a.attributedString
+        let jsonData  = """
+    {
+        "id": 0,
+        "imageUrl": "",
+        "productCategoryCode": "",
+        "productCategoryEngName": "",
+        "productCategoryName": "",
+        "productCategoryPath": "",
+        "productParentId": 0,
+        "productSort": 0,
+        "subCategoryList": [
+            {
+                "id": 0,
+                "imageUrl": "",
+                "productCategoryCode": "",
+                "productCategoryEngName": "",
+                "productCategoryName": "",
+                "productCategoryPath": "",
+                "productParentId": 0,
+                "productSort": 0,
+                "subCategoryList": []
+            }
+        ]
+    }
+""".data(using: .utf8)!
+        //        let obj =
+        do {
+            let entity = try JSONDecoder().decode(HlSortEntityLevel.self, from: jsonData)
+            print(entity.subCategoryList)
+        } catch  {
+            print(error)
+        }
     }
     
     
@@ -39,15 +55,32 @@ class ViewController: UIViewController {
     @IBAction func rightItemAction(_ sender: Any) {
         AppRouter.shared.route(to: URL(string: UniversalLinks.generatePath(path: .test)), from: self, userInfo: [AppRoutingInfoKey.object : "Test"], using: .show)
     }
+    
     @objc private func buttonAction() {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+}
+
+class HlSortEntity: Codable {
+    let id: Int?
+    let imageUrl: String?
+    let productCategoryCode: String?
+    let productCategoryEngName: String?
+    let productCategoryName: String?
+    let productCategoryPath: String?
+    let productParentId: Int?
+    let productSort: Int?
+    
+}
+
+class HlSortEntityLevel: HlSortEntity {
+    var subCategoryList: [HlSortEntity]?
+    private enum CodingKeys: String, CodingKey { case subCategoryList }
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        subCategoryList = try container.decodeIfPresent([HlSortEntity].self, forKey: .subCategoryList)
+        try super.init(from: decoder)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
 }

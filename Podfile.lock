@@ -1,17 +1,21 @@
 PODS:
-  - Alamofire (5.4.2)
-  - FluentDarkModeKit (1.0.2)
+  - Alamofire (5.4.3)
+  - CalendarKit (1.0.4)
+  - FluentDarkModeKit (1.0.3)
   - GRDB.swift (5.7.4):
     - GRDB.swift/standard (= 5.7.4)
   - GRDB.swift/standard (5.7.4)
   - HLLoggerModule (0.3.0)
+  - lottie-ios (3.2.1)
   - SwiftIconFont (6.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - CalendarKit
   - FluentDarkModeKit
   - GRDB.swift
   - HLLoggerModule
+  - lottie-ios
   - SwiftIconFont
 
 SPEC REPOS:
@@ -19,17 +23,21 @@ SPEC REPOS:
     - HLLoggerModule
   trunk:
     - Alamofire
+    - CalendarKit
     - FluentDarkModeKit
     - GRDB.swift
+    - lottie-ios
     - SwiftIconFont
 
 SPEC CHECKSUMS:
-  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
-  FluentDarkModeKit: 636f1968d2109f064f0c210dcef3cc4f9f72d0ca
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CalendarKit: 5a2db79f29ab67111137643a4ee1852ed04d1a09
+  FluentDarkModeKit: e3fe5d8aa471422480b04b0aa03d83425e3e1826
   GRDB.swift: 2064e726141f130d0b8bd819b29086f2b1157597
   HLLoggerModule: 6ecbed081706d787314fa9b0a2f90118ab89cfa4
+  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
-PODFILE CHECKSUM: d7a93a2d0b12a1e6caa8c65434a171423904a9e8
+PODFILE CHECKSUM: 9dd9c7df7f7525f1e456e8e1495e2b93ec6c01fd
 
 COCOAPODS: 1.10.1

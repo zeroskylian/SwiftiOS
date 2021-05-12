@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-SwiftiOS/Pods-SwiftiOS-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/CalendarKit/CalendarKit.bundle
 ${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf
 ${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf
 ${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf

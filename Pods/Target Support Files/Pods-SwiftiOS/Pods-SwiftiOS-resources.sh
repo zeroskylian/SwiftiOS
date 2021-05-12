@@ -97,6 +97,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CalendarKit/CalendarKit.bundle"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf"
@@ -112,6 +113,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/themify.ttf"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CalendarKit/CalendarKit.bundle"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/captainicon.ttf"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/ElegantIcons.ttf"
   install_resource "${PODS_ROOT}/SwiftIconFont/SwiftIconFont/Resources/FontAwesome5Brands-Regular.ttf"

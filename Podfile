@@ -11,8 +11,9 @@ target 'SwiftiOS' do
   pod 'GRDB.swift'
   pod 'SwiftIconFont'
   pod 'Alamofire'
-  
   pod 'HLLoggerModule'
+  pod 'CalendarKit'
+  pod 'lottie-ios'
 end
 
 
