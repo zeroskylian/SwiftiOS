@@ -14,6 +14,7 @@ target 'SwiftiOS' do
   pod 'HLLoggerModule'
   pod 'CalendarKit'
   pod 'lottie-ios'
+  pod 'Cache'
 end
 
 

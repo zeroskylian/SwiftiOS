@@ -1,16 +1,18 @@
 PODS:
   - Alamofire (5.4.3)
-  - CalendarKit (1.0.4)
+  - Cache (6.0.0)
+  - CalendarKit (1.0.6)
   - FluentDarkModeKit (1.0.3)
-  - GRDB.swift (5.7.4):
-    - GRDB.swift/standard (= 5.7.4)
-  - GRDB.swift/standard (5.7.4)
+  - GRDB.swift (5.8.0):
+    - GRDB.swift/standard (= 5.8.0)
+  - GRDB.swift/standard (5.8.0)
   - HLLoggerModule (0.3.0)
-  - lottie-ios (3.2.1)
+  - lottie-ios (3.2.3)
   - SwiftIconFont (6.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Cache
   - CalendarKit
   - FluentDarkModeKit
   - GRDB.swift
@@ -23,6 +25,7 @@ SPEC REPOS:
     - HLLoggerModule
   trunk:
     - Alamofire
+    - Cache
     - CalendarKit
     - FluentDarkModeKit
     - GRDB.swift
@@ -31,13 +34,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  CalendarKit: 5a2db79f29ab67111137643a4ee1852ed04d1a09
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  CalendarKit: eb72185fdc61a65107e4edbedb7b6a8f409fb19b
   FluentDarkModeKit: e3fe5d8aa471422480b04b0aa03d83425e3e1826
-  GRDB.swift: 2064e726141f130d0b8bd819b29086f2b1157597
+  GRDB.swift: 9b9beec114435e1d852ad68c136cff4c71134627
   HLLoggerModule: 6ecbed081706d787314fa9b0a2f90118ab89cfa4
-  lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   SwiftIconFont: 0a772c5ac65a40c9b0675efa37b4928158bd8e43
 
-PODFILE CHECKSUM: 9dd9c7df7f7525f1e456e8e1495e2b93ec6c01fd
+PODFILE CHECKSUM: 7251f3eb2c300fea46a170503ed98db3d5bc69c6
 
 COCOAPODS: 1.10.1
