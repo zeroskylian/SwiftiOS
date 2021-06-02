@@ -20,8 +20,6 @@ class MenuItemContainer: UIView {
         collectionView.register(cellWithClass: MenuItemContainerVerticalCell.self)
         collectionView.register(cellWithClass: MenuItemContainerHorizontalCell.self)
         collectionView.backgroundColor = .clear
-        
-        collectionView.backgroundColor = .black
         return collectionView
     }()
     

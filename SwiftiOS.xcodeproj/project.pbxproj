@@ -134,8 +134,8 @@
 			children = (
 				63896A5326672E1000A42807 /* MenuConstant.swift */,
 				631C46CC26665F59000227C5 /* MenuItem.swift */,
-				63896A4E26672AAA00A42807 /* MenuView.swift */,
 				63896A5026672AE400A42807 /* MenuItemContainer.swift */,
+				63896A4E26672AAA00A42807 /* MenuView.swift */,
 			);
 			path = LongPressMenu;
 			sourceTree = "<group>";
