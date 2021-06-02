@@ -39,6 +39,7 @@ class MenuView: UIView {
         self.style = style
         container = MenuItemContainer(style: style, items: items)
         super.init(frame: UIScreen.main.bounds)
+        container.delegate = self
         configureUI()
     }
     
@@ -76,9 +77,27 @@ class MenuView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    private let animationDuration: TimeInterval = 0.2
+    
     func show() {
         guard let keyWindow = keyWindow() else { return }
         keyWindow.addSubview(self)
+        self.arrowView.alpha = 0
+        UIView.animate(withDuration: animationDuration) {
+            self.arrowView.alpha = 1
+        } completion: { _ in
+            
+        }
+    }
+    
+    func hide() {
+        self.arrowView.alpha = 1
+        UIView.animate(withDuration: animationDuration) {
+            self.arrowView.alpha = 0
+        } completion: { _ in
+            self.removeFromSuperview()
+        }
     }
     
     
@@ -101,7 +120,7 @@ class MenuView: UIView {
     }
     
     @objc private func tapGestureAction(_ tap: UITapGestureRecognizer) {
-        removeFromSuperview()
+        hide()
     }
     
     deinit {
@@ -125,7 +144,6 @@ class MenuView: UIView {
             backgroundLayer.masksToBounds = false
             backgroundLayer.shouldRasterize = true
             backgroundLayer.rasterizationScale = UIScreen.main.scale
-            
         }
         arrowView.layer.insertSublayer(backgroundLayer, at: 0)
     }
@@ -201,5 +219,12 @@ class MenuView: UIView {
             path.close()
         }
         return path
+    }
+}
+
+extension MenuView: MenuItemContainerDelegate {
+    func menuItemContainer(view: MenuItemContainer, didSelect item: MenuItem) {
+        item.action()
+        hide()
     }
 }

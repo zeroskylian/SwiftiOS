@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MenuItemContainerDelegate: AnyObject {
+    func menuItemContainer(view: MenuItemContainer, didSelect item: MenuItem)
+}
+
 class MenuItemContainer: UIView {
+    
+    weak var delegate: MenuItemContainerDelegate?
     
     var items: [MenuItem]
     
@@ -89,7 +95,7 @@ extension MenuItemContainer: UICollectionViewDelegateFlowLayout {
 extension MenuItemContainer: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
-        item.action()
+        delegate?.menuItemContainer(view: self, didSelect: item)
     }
 }
 
