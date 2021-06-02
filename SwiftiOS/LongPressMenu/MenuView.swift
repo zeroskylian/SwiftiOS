@@ -116,6 +116,17 @@ class MenuView: UIView {
         backgroundLayer.fillColor = style.backgroundColor.cgColor
         backgroundLayer.strokeColor = style.borderColor.cgColor
         backgroundLayer.lineWidth = style.borderWidth
+        
+        if style.shadow {
+            backgroundLayer.shadowColor = UIColor.black.cgColor
+            backgroundLayer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            backgroundLayer.shadowRadius = 24.0
+            backgroundLayer.shadowOpacity = 0.9
+            backgroundLayer.masksToBounds = false
+            backgroundLayer.shouldRasterize = true
+            backgroundLayer.rasterizationScale = UIScreen.main.scale
+            
+        }
         arrowView.layer.insertSublayer(backgroundLayer, at: 0)
     }
     

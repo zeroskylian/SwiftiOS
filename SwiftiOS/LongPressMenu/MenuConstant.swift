@@ -40,6 +40,8 @@ class MenuStyle {
     
     var borderWidth: CGFloat = 1
     
+    var shadow: Bool = false
+    
     init() {}
 }
 
