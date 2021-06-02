@@ -6,50 +6,37 @@
 //
 
 import UIKit
-
+import Cache
+import SnapKit
 
 class ViewController: UIViewController {
+
+    let storage = MemoryStorage<Date, String>.init(config: MemoryConfig(expiry: .never, countLimit: 100, totalCostLimit: 100))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let jsonData  = """
-    {
-        "id": 0,
-        "imageUrl": "",
-        "productCategoryCode": "",
-        "productCategoryEngName": "",
-        "productCategoryName": "",
-        "productCategoryPath": "",
-        "productParentId": 0,
-        "productSort": 0,
-        "subCategoryList": [
-            {
-                "id": 0,
-                "imageUrl": "",
-                "productCategoryCode": "",
-                "productCategoryEngName": "",
-                "productCategoryName": "",
-                "productCategoryPath": "",
-                "productParentId": 0,
-                "productSort": 0,
-                "subCategoryList": []
-            }
-        ]
-    }
-""".data(using: .utf8)!
-        //        let obj =
-        do {
-            let entity = try JSONDecoder().decode(HlSortEntityLevel.self, from: jsonData)
-            print(entity.subCategoryList)
-        } catch  {
-            print(error)
-        }
+        let button = UIButton(frame: CGRect(x: 100, y: 200, width: 100, height: 100))
+        button.setTitle("点击", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(buttoClick(sender:)), for: .touchUpInside)
+        button.backgroundColor = .cyan
+        view.addSubview(button)
     }
     
+    
+    @objc func buttoClick(sender: UIButton) {
+        let viewArray = (0 ..< 5).map { index -> MenuItem in
+            let item = MenuItem(title: "测试\(index)", image: UIImage(named: "message_video_goback")) {
+                print(index)
+            }
+            return item
+        }
+        MenuView.show(from: sender, style: .horizontal, items: viewArray)
+    }
     
     @IBAction func leftItemAction(_ sender: Any) {
-        AppRouter.shared.route(to: URL(string: UniversalLinks.generatePath(path: .main)), from: self, userInfo: [AppRoutingInfoKey.object : "Main"], using: .show)
+        
     }
     
     @IBAction func rightItemAction(_ sender: Any) {
@@ -58,29 +45,6 @@ class ViewController: UIViewController {
     
     @objc private func buttonAction() {
         
-    }
-    
-}
-
-class HlSortEntity: Codable {
-    let id: Int?
-    let imageUrl: String?
-    let productCategoryCode: String?
-    let productCategoryEngName: String?
-    let productCategoryName: String?
-    let productCategoryPath: String?
-    let productParentId: Int?
-    let productSort: Int?
-    
-}
-
-class HlSortEntityLevel: HlSortEntity {
-    var subCategoryList: [HlSortEntity]?
-    private enum CodingKeys: String, CodingKey { case subCategoryList }
-    required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        subCategoryList = try container.decodeIfPresent([HlSortEntity].self, forKey: .subCategoryList)
-        try super.init(from: decoder)
     }
     
 }

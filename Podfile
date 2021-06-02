@@ -15,6 +15,7 @@ target 'SwiftiOS' do
   pod 'CalendarKit'
   pod 'lottie-ios'
   pod 'Cache'
+  pod 'SnapKit'
 end
 
 

@@ -38,13 +38,6 @@ class MainVC: UIViewController {
         dayView.translatesAutoresizingMaskIntoConstraints  = false
         dayView.isHeaderViewVisible = false
         dayView.updateStyle(style)
-//        NSLayoutConstraint.activate([
-//            dayView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            dayView.rightAnchor.constraint(equalTo: view.rightAnchor),
-//            dayView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            dayView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-//        ])
-        
         dayView.dataSource = self
         dayView.delegate = self
         observer = dayView.observe(\.frame, options: [.new], changeHandler: { _, v in

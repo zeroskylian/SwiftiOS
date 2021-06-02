@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol RoutingSource: class {}
+public protocol RoutingSource: AnyObject {}
 
 public typealias RoutingSourceProvider = () -> RoutingSource?
 
