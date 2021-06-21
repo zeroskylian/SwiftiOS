@@ -16,6 +16,7 @@ target 'SwiftiOS' do
   pod 'lottie-ios'
   pod 'Cache'
   pod 'SnapKit'
+  pod 'MagazineLayout'
 end
 
 

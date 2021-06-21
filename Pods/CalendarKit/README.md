@@ -9,6 +9,9 @@
 # CalendarKit
 **CalendarKit** is a Swift calendar UI library for iOS, iPadOS and Mac Catalyst. It looks similar to the Apple Calendar app out-of-the-box, while allowing customization when needed. CalendarKit is composed of multiple modules which can be used together or independently.
 
+## Tutorials
+[Create iOS Calendar App in Swift with CalendarKit](https://www.youtube.com/watch?v=cvF1D-F_LPw&list=PLqaZLRBv1aCJMLC_DKtzVZv72L0LvBRRA&index=1)
+
 ## Need Help?
 If you have a **programming question** about how to use CalendarKit in your application, ask it on StackOverflow with the [CalendarKit](https://stackoverflow.com/questions/tagged/calendarkit) tag. Check out the [Sample App](https://github.com/richardtop/CalendarApp) for reference.
 
@@ -118,7 +121,7 @@ dayView.updateStyle(style)
 ## Requirements
 
 - iOS 9.0+, iPadOS 13.0+, macOS 10.15+
-- Swift 4+ (Library is written in Swift 5.3)
+- Swift 4+ (Library is written in Swift 5.4)
 
 ## Contributing
 The list of features currently in development can be viewed on the [issues](https://github.com/richardtop/CalendarKit/issues) page.
