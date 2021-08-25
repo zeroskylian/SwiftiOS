@@ -19,14 +19,16 @@ public struct CommonTableExpression<RowDecoder> {
     /// For example:
     ///
     ///     // WITH p AS (SELECT * FROM player) ...
-    ///     let p = CommonTableExpression<Void>(
+    ///     let p = CommonTableExpression(
     ///         named: "p",
-    ///         request: Player.all())
+    ///         request: Player.all(),
+    ///         type: Void.self)
     ///
     ///     // WITH p AS (SELECT * FROM player) ...
-    ///     let p = CommonTableExpression<Void>(
+    ///     let p = CommonTableExpression(
     ///         named: "p",
-    ///         request: SQLRequest<Player>(sql: "SELECT * FROM player"))
+    ///         request: SQLRequest<Player>(sql: "SELECT * FROM player"),
+    ///         type: Void.self)
     ///
     /// - parameter recursive: Whether this common table expression needs a
     ///   `WITH RECURSIVE` sql clause.
@@ -113,7 +115,7 @@ extension CommonTableExpression {
             recursive: recursive,
             named: tableName,
             columns: columns,
-            request: SQLRequest<Void>(sql: sql, arguments: arguments),
+            request: SQLRequest(sql: sql, arguments: arguments),
             type: RowDecoder.self)
     }
     
@@ -144,7 +146,7 @@ extension CommonTableExpression {
             recursive: recursive,
             named: tableName,
             columns: columns,
-            request: SQLRequest<Void>(literal: sqlLiteral),
+            request: SQLRequest(literal: sqlLiteral),
             type: RowDecoder.self)
     }
 }
@@ -213,7 +215,7 @@ extension CommonTableExpression where RowDecoder == Row {
             recursive: recursive,
             named: tableName,
             columns: columns,
-            request: SQLRequest<Void>(sql: sql, arguments: arguments),
+            request: SQLRequest(sql: sql, arguments: arguments),
             type: Row.self)
     }
     
@@ -244,7 +246,7 @@ extension CommonTableExpression where RowDecoder == Row {
             recursive: recursive,
             named: tableName,
             columns: columns,
-            request: SQLRequest<Void>(literal: sqlLiteral),
+            request: SQLRequest(literal: sqlLiteral),
             type: Row.self)
     }
 }
@@ -378,7 +380,8 @@ extension CommonTableExpression {
     ///
     /// The key of the returned association is the table name of `Destination`.
     ///
-    /// - parameter cte: A common table expression.
+    /// - parameter destination: The record type at the other side of
+    ///   the association.
     /// - parameter condition: A function that returns the joining clause.
     /// - parameter left: A `TableAlias` for the left table.
     /// - parameter right: A `TableAlias` for the right table.
@@ -399,7 +402,8 @@ extension CommonTableExpression {
     ///
     /// The key of the returned association is the table name of `Destination`.
     ///
-    /// - parameter cte: A common table expression.
+    /// - parameter destination: The record type at the other side of
+    ///   the association.
     /// - returns: An association to the common table expression.
     public func association<Destination>(
         to destination: Destination.Type)
@@ -407,5 +411,39 @@ extension CommonTableExpression {
     where Destination: TableRecord
     {
         JoinAssociation(to: Destination.relationForAll, condition: .none)
+    }
+    
+    /// Creates an association to a table that you can join
+    /// or include in another request.
+    ///
+    /// The key of the returned association is the table name of `Destination`.
+    ///
+    /// - parameter destination: The table at the other side of the association.
+    /// - parameter condition: A function that returns the joining clause.
+    /// - parameter left: A `TableAlias` for the left table.
+    /// - parameter right: A `TableAlias` for the right table.
+    /// - returns: An association to the common table expression.
+    public func association<Destination>(
+        to destination: Table<Destination>,
+        on condition: @escaping (_ left: TableAlias, _ right: TableAlias) -> SQLExpressible)
+    -> JoinAssociation<RowDecoder, Destination>
+    {
+        JoinAssociation(
+            to: destination.relationForAll,
+            condition: .expression { condition($0, $1).sqlExpression })
+    }
+    
+    /// Creates an association to a table that you can join
+    /// or include in another request.
+    ///
+    /// The key of the returned association is the table name of `Destination`.
+    ///
+    /// - parameter destination: The table at the other side of the association.
+    /// - returns: An association to the common table expression.
+    public func association<Destination>(
+        to destination: Table<Destination>)
+    -> JoinAssociation<RowDecoder, Destination>
+    {
+        JoinAssociation(to: destination.relationForAll, condition: .none)
     }
 }

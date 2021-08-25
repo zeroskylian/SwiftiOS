@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		637F1526261FF7E400055087 /* RoutingSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F1525261FF7E400055087 /* RoutingSource.swift */; };
 		637F152A261FF8FA00055087 /* UIViewController+Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F1529261FF8FA00055087 /* UIViewController+Mediator.swift */; };
 		637F152D261FF9C600055087 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F152C261FF9C600055087 /* Navigator.swift */; };
+		638322142681E709002613D4 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 638322132681E709002613D4 /* Logging */; };
 		63896A4F26672AAA00A42807 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63896A4E26672AAA00A42807 /* MenuView.swift */; };
 		63896A5126672AE400A42807 /* MenuItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63896A5026672AE400A42807 /* MenuItemContainer.swift */; };
 		63896A5426672E1000A42807 /* MenuConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63896A5326672E1000A42807 /* MenuConstant.swift */; };
@@ -99,6 +100,7 @@
 		63AD54D3262008EE008712A7 /* HLDefaultHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLDefaultHeaders.swift; sourceTree = "<group>"; };
 		63D205DD26202B3500437600 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 		63D5F8C625F8EA5400006BA8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		63E004B226848E240012EF39 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = SwiftiOS/README.md; sourceTree = "<group>"; };
 		63E08B5726805E86007F7DB6 /* 111.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpeg; sourceTree = "<group>"; };
 		63EA23AB25EC891800F44502 /* SwiftiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EA23AE25EC891800F44502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638322142681E709002613D4 /* Logging in Frameworks */,
 				E6BF3054889AA72022A37A79 /* libPods-SwiftiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +227,7 @@
 		63EA23A225EC891800F44502 = {
 			isa = PBXGroup;
 			children = (
+				63E004B226848E240012EF39 /* README.md */,
 				63EA23AD25EC891800F44502 /* SwiftiOS */,
 				63EA23AC25EC891800F44502 /* Products */,
 				DF4918B7C2C90F6D2FDC00F7 /* Pods */,
@@ -250,15 +254,15 @@
 				630B25352601CF8A006EA813 /* BuriedPoint */,
 				635AE3E625FEF37700B32449 /* DataBase */,
 				6339E6BF25F21D18009D11FE /* Extensions */,
-				63EA23AE25EC891800F44502 /* AppDelegate.swift */,
+				63F2F19A25F89C1900E75C16 /* PointDemo */,
+				63AB19CB25EF8F0F00FB51CC /* ObjectiveC */,
 				63EA23B225EC891800F44502 /* ViewController.swift */,
+				63EA23AE25EC891800F44502 /* AppDelegate.swift */,
 				63AD54C926200858008712A7 /* NavigatorRouter.swift */,
 				63D205DD26202B3500437600 /* TestRouter.swift */,
 				637F151D261FF78100055087 /* UniversalLinks.swift */,
 				63AD54C626200803008712A7 /* MainVC.swift */,
-				63F2F19A25F89C1900E75C16 /* PointDemo */,
 				6339E6C325F21D49009D11FE /* MError.swift */,
-				63AB19CB25EF8F0F00FB51CC /* ObjectiveC */,
 				63AB19CD25EF90E400FB51CC /* UIGestureRecognizer+Extension.swift */,
 				63AD54D3262008EE008712A7 /* HLDefaultHeaders.swift */,
 				63EA23B425EC891800F44502 /* Main.storyboard */,
@@ -326,6 +330,9 @@
 			dependencies = (
 			);
 			name = SwiftiOS;
+			packageProductDependencies = (
+				638322132681E709002613D4 /* Logging */,
+			);
 			productName = SwiftiOS;
 			productReference = 63EA23AB25EC891800F44502 /* SwiftiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -354,6 +361,9 @@
 				Base,
 			);
 			mainGroup = 63EA23A225EC891800F44502;
+			packageReferences = (
+				638322122681E709002613D4 /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			productRefGroup = 63EA23AC25EC891800F44502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -689,6 +699,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		638322122681E709002613D4 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		638322132681E709002613D4 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 638322122681E709002613D4 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63EA23A325EC891800F44502 /* Project object */;
 }

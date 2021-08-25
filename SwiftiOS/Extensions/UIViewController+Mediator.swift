@@ -6,11 +6,10 @@
 //  Copyright © 2018 James. All rights reserved.
 //
 
-import UIKit
 import HLLoggerModule
+import UIKit
 
 extension UIViewController {
-    
     private class var sharedApplication: UIApplication? {
         do {
             let selector = NSSelectorFromString("sharedApplication")
@@ -37,7 +36,6 @@ extension UIViewController {
         } catch {
             return nil
         }
-        
     }
     
     open class func topMost(of viewController: UIViewController?) -> UIViewController? {
@@ -48,19 +46,22 @@ extension UIViewController {
         
         // UITabBarController
         if let tabBarController = viewController as? UITabBarController,
-            let selectedViewController = tabBarController.selectedViewController {
+           let selectedViewController = tabBarController.selectedViewController
+        {
             return self.topMost(of: selectedViewController)
         }
         
         // UINavigationController
         if let navigationController = viewController as? UINavigationController,
-            let visibleViewController = navigationController.visibleViewController {
+           let visibleViewController = navigationController.visibleViewController
+        {
             return self.topMost(of: visibleViewController)
         }
         
         // UIPageController
         if let pageViewController = viewController as? UIPageViewController,
-            pageViewController.viewControllers?.count == 1 {
+           pageViewController.viewControllers?.count == 1
+        {
             return self.topMost(of: pageViewController.viewControllers?.first)
         }
         

@@ -238,7 +238,6 @@ private struct _RowDecoder<R: FetchableRecord>: Decoder {
         
         // Helper methods
         
-        @inline(__always)
         private func decode<T>(
             _ type: T.Type,
             fromRow row: Row,
@@ -255,7 +254,6 @@ private struct _RowDecoder<R: FetchableRecord>: Decoder {
             }
         }
         
-        @inline(__always)
         private func decode<T>(
             _ type: T.Type,
             fromRow row: Row,
@@ -396,9 +394,6 @@ extension ColumnDecoder: SingleValueDecodingContainer {
     }
 }
 
-/// The error that triggers JSON decoding
-private struct JSONRequiredError: Error { }
-
 @available(macOS 10.12, watchOS 3.0, tvOS 10.0, *)
 private var iso8601Formatter: ISO8601DateFormatter = {
     let formatter = ISO8601DateFormatter()
@@ -407,7 +402,6 @@ private var iso8601Formatter: ISO8601DateFormatter = {
 }()
 
 extension DatabaseDateDecodingStrategy {
-    @inline(__always)
     fileprivate func decodeIfPresent(fromRow row: Row, atUncheckedIndex index: Int) throws -> Date? {
         if let sqliteStatement = row.sqliteStatement {
             return try decodeIfPresent(
@@ -421,7 +415,6 @@ extension DatabaseDateDecodingStrategy {
         }
     }
     
-    @inline(__always)
     fileprivate func decode(fromRow row: Row, atUncheckedIndex index: Int) throws -> Date {
         if let sqliteStatement = row.sqliteStatement {
             return try decode(
@@ -435,7 +428,6 @@ extension DatabaseDateDecodingStrategy {
         }
     }
     
-    @inline(__always)
     fileprivate func decode(
         fromStatement sqliteStatement: SQLiteStatement,
         atUncheckedIndex index: Int32,
@@ -494,7 +486,6 @@ extension DatabaseDateDecodingStrategy {
         }
     }
     
-    @inline(__always)
     fileprivate func decodeIfPresent(
         fromStatement sqliteStatement: SQLiteStatement,
         atUncheckedIndex index: Int32,
@@ -507,7 +498,6 @@ extension DatabaseDateDecodingStrategy {
         return try decode(fromStatement: sqliteStatement, atUncheckedIndex: index, context: context())
     }
     
-    @inline(__always)
     fileprivate func decode(
         fromDatabaseValue dbValue: DatabaseValue,
         context: @autoclosure () -> RowDecodingContext)
@@ -520,7 +510,6 @@ extension DatabaseDateDecodingStrategy {
         }
     }
     
-    @inline(__always)
     fileprivate func decodeIfPresent(
         fromDatabaseValue dbValue: DatabaseValue,
         context: @autoclosure () -> RowDecodingContext)
@@ -536,7 +525,6 @@ extension DatabaseDateDecodingStrategy {
     }
     
     // Returns nil if decoding fails
-    @inline(__always)
     private func dateFromDatabaseValue(_ dbValue: DatabaseValue) -> Date? {
         switch self {
         case .deferredToDate:

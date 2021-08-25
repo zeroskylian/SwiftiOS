@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (5.4.3)
   - Cache (6.0.0)
-  - CalendarKit (1.0.10)
+  - CalendarKit (1.0.12)
   - FluentDarkModeKit (1.0.4)
-  - GRDB.swift (5.8.0):
-    - GRDB.swift/standard (= 5.8.0)
-  - GRDB.swift/standard (5.8.0)
+  - GRDB.swift (5.10.0):
+    - GRDB.swift/standard (= 5.10.0)
+  - GRDB.swift/standard (5.10.0)
   - HLLoggerModule (0.3.0)
   - lottie-ios (3.2.3)
   - MagazineLayout (1.6.4)
@@ -41,9 +41,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
-  CalendarKit: 4bcc7dcf4a6e558550a46d91db2d23dc1fb608a9
+  CalendarKit: 3da636e7e5ebfd6f75791b4d727e9531b50a896c
   FluentDarkModeKit: b6317653a00329564582884772ec57c4eaad1a1f
-  GRDB.swift: 9b9beec114435e1d852ad68c136cff4c71134627
+  GRDB.swift: 114f40bf1202f459fbb9d40eb761e5fc58b996a3
   HLLoggerModule: 6ecbed081706d787314fa9b0a2f90118ab89cfa4
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   MagazineLayout: 10598ab8b3554c224b75da32b613c76becd9786c
@@ -52,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 99ca9fa3a1745935f3e84c9aa0643ef89d54da86
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

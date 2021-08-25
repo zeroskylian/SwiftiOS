@@ -14,8 +14,9 @@ public final class Row: Equatable, Hashable, RandomAccessCollection,
     ///
     ///     let rows = try Row.fetchCursor(db, sql: "SELECT ...")
     ///     let players = try Player.fetchAll(db, sql: "SELECT ...")
-    @usableFromInline let statement: SelectStatement?
-    @usableFromInline let sqliteStatement: SQLiteStatement?
+    let statement: Statement?
+    @usableFromInline
+    let sqliteStatement: SQLiteStatement?
     
     /// The number of columns in the row.
     public let count: Int
@@ -96,7 +97,7 @@ public final class Row: Equatable, Hashable, RandomAccessCollection,
     /// The row is implemented on top of StatementRowImpl, which grants *direct*
     /// access to the SQLite statement. Iteration of the statement does modify
     /// the row.
-    init(statement: SelectStatement) {
+    init(statement: Statement) {
         self.statement = statement
         self.sqliteStatement = statement.sqliteStatement
         self.impl = StatementRowImpl(sqliteStatement: statement.sqliteStatement, statement: statement)
@@ -120,7 +121,7 @@ public final class Row: Equatable, Hashable, RandomAccessCollection,
     /// statement does not modify the row.
     convenience init(
         copiedFromSQLiteStatement sqliteStatement: SQLiteStatement,
-        statement: SelectStatement)
+        statement: Statement)
     {
         self.init(impl: StatementCopyRowImpl(
                     sqliteStatement: sqliteStatement,
@@ -165,8 +166,8 @@ extension Row {
     // MARK: - Extracting Values
     
     /// Fatal errors if index is out of bounds
-    @inlinable
-    func checkedIndex(_ index: Int, file: StaticString = #file, line: UInt = #line) -> Int {
+    @usableFromInline
+    /* private */ func _checkedIndex(_ index: Int, file: StaticString = #file, line: UInt = #line) -> Int {
         GRDBPrecondition(index >= 0 && index < count, "row index out of range", file: file, line: line)
         return index
     }
@@ -203,7 +204,7 @@ extension Row {
     /// in performance-critical code because it can avoid decoding database
     /// values.
     public func hasNull(atIndex index: Int) -> Bool {
-        impl.hasNull(atUncheckedIndex: checkedIndex(index))
+        impl.hasNull(atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns Int64, Double, String, Data or nil, depending on the value
@@ -212,7 +213,7 @@ extension Row {
     /// Indexes span from 0 for the leftmost column to (row.count - 1) for the
     /// righmost column.
     public subscript(_ index: Int) -> DatabaseValueConvertible? {
-        impl.databaseValue(atUncheckedIndex: checkedIndex(index)).storage.value
+        impl.databaseValue(atUncheckedIndex: _checkedIndex(index)).storage.value
     }
     
     /// Returns the value at given index, converted to the requested type.
@@ -239,7 +240,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value: DatabaseValueConvertible & StatementColumnConvertible>(_ index: Int) -> Value? {
         try! decodeIfPresent(Value.self, atIndex: index)
@@ -267,7 +268,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value: DatabaseValueConvertible & StatementColumnConvertible>(_ index: Int) -> Value {
         try! decode(Value.self, atIndex: index)
@@ -318,7 +319,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value: DatabaseValueConvertible & StatementColumnConvertible>(_ columnName: String) -> Value? {
         try! decodeIfPresent(Value.self, forKey: columnName)
@@ -350,7 +351,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value: DatabaseValueConvertible & StatementColumnConvertible>(_ columnName: String) -> Value {
         try! decode(Value.self, forKey: columnName)
@@ -363,7 +364,6 @@ extension Row {
     /// the same name, the leftmost column is considered.
     ///
     /// The result is nil if the row does not contain the column.
-    @inlinable
     public subscript<Column: ColumnExpression>(_ column: Column) -> DatabaseValueConvertible? {
         self[column.name]
     }
@@ -392,7 +392,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value, Column>(_ column: Column)
     -> Value?
@@ -429,7 +429,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     public subscript<Value, Column>(_ column: Column)
     -> Value
@@ -531,7 +531,7 @@ extension Row {
     /// A fatal error is raised if the scope is not available, or contains only
     /// null values.
     ///
-    /// See https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support
+    /// See <https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support>
     /// for more information.
     public subscript<Record: FetchableRecord>(_ scope: String) -> Record {
         try! decode(Record.self, forKey: scope)
@@ -566,7 +566,7 @@ extension Row {
     /// Nil is returned if the scope is not available, or contains only
     /// null values.
     ///
-    /// See https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support
+    /// See <https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support>
     /// for more information.
     public subscript<Record: FetchableRecord>(_ scope: String) -> Record? {
         try! decodeIfPresent(Record.self, forKey: scope)
@@ -712,7 +712,7 @@ extension Row {
         atIndex index: Int)
     throws -> Value?
     {
-        try Value.decodeIfPresent(fromRow: self, atUncheckedIndex: checkedIndex(index))
+        try Value.decodeIfPresent(fromRow: self, atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the value at given index, converted to the requested type.
@@ -728,7 +728,7 @@ extension Row {
         atIndex index: Int)
     throws -> Value
     {
-        try Value.decode(fromRow: self, atUncheckedIndex: checkedIndex(index))
+        try Value.decode(fromRow: self, atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the value at given column, converted to the requested type.
@@ -786,14 +786,14 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     func decodeIfPresent<Value: DatabaseValueConvertible & StatementColumnConvertible>(
         _ type: Value.Type = Value.self,
         atIndex index: Int)
     throws -> Value?
     {
-        try Value.fastDecodeIfPresent(fromRow: self, atUncheckedIndex: checkedIndex(index))
+        try Value.fastDecodeIfPresent(fromRow: self, atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the value at given index, converted to the requested type.
@@ -806,14 +806,14 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     func decode<Value: DatabaseValueConvertible & StatementColumnConvertible>(
         _ type: Value.Type = Value.self,
         atIndex index: Int)
     throws -> Value
     {
-        try Value.fastDecode(fromRow: self, atUncheckedIndex: checkedIndex(index))
+        try Value.fastDecode(fromRow: self, atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the value at given column, converted to the requested type.
@@ -827,7 +827,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     func decodeIfPresent<Value: DatabaseValueConvertible & StatementColumnConvertible>(
         _ type: Value.Type = Value.self,
@@ -851,7 +851,7 @@ extension Row {
     ///
     /// This method exists as an optimization opportunity for types that adopt
     /// StatementColumnConvertible. It *may* trigger SQLite built-in conversions
-    /// (see https://www.sqlite.org/datatype3.html).
+    /// (see <https://www.sqlite.org/datatype3.html>).
     @inlinable
     func decode<Value: DatabaseValueConvertible & StatementColumnConvertible>(
         _ type: Value.Type = Value.self,
@@ -899,7 +899,7 @@ extension Row {
     /// The returned data does not owns its bytes: it must not be used longer
     /// than the row's lifetime.
     func decodeDataNoCopyIfPresent(atIndex index: Int) throws -> Data? {
-        try impl.fastDecodeDataNoCopyIfPresent(atUncheckedIndex: checkedIndex(index))
+        try impl.fastDecodeDataNoCopyIfPresent(atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the Data at given index.
@@ -913,7 +913,7 @@ extension Row {
     /// The returned data does not owns its bytes: it must not be used longer
     /// than the row's lifetime.
     func decodeDataNoCopy(atIndex index: Int) throws -> Data {
-        try impl.fastDecodeDataNoCopy(atUncheckedIndex: checkedIndex(index))
+        try impl.fastDecodeDataNoCopy(atUncheckedIndex: _checkedIndex(index))
     }
     
     /// Returns the optional Data at given column.
@@ -953,13 +953,11 @@ extension Row {
     }
     
     // Support for fast decoding in scoped rows
-    @usableFromInline
     func fastDecodeDataNoCopy(atUncheckedIndex index: Int) throws -> Data {
         try impl.fastDecodeDataNoCopy(atUncheckedIndex: index)
     }
     
     // Support for fast decoding in scoped rows
-    @usableFromInline
     func fastDecodeDataNoCopyIfPresent(atUncheckedIndex index: Int) throws -> Data? {
         try impl.fastDecodeDataNoCopyIfPresent(atUncheckedIndex: index)
     }
@@ -997,7 +995,7 @@ extension Row {
     /// Nil is returned if the scope is not available, or contains only
     /// null values.
     ///
-    /// See https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support
+    /// See <https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support>
     /// for more information.
     func decodeIfPresent<Record: FetchableRecord>(
         _ type: Record.Type = Record.self,
@@ -1039,7 +1037,7 @@ extension Row {
     /// A fatal error is raised if the scope is not available, or contains only
     /// null values.
     ///
-    /// See https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support
+    /// See <https://github.com/groue/GRDB.swift/blob/master/README.md#joined-queries-support>
     /// for more information.
     func decode<Record: FetchableRecord>(
         _ type: Record.Type = Record.self,
@@ -1189,54 +1187,75 @@ extension Row {
 ///         let rows: RowCursor = try Row.fetchCursor(db, sql: "SELECT * FROM player")
 ///     }
 public final class RowCursor: Cursor {
-    /// The statement iterated by this cursor
-    public let statement: SelectStatement
-    @usableFromInline let _sqliteStatement: SQLiteStatement
-    @usableFromInline let _row: Row // Reused for performance
-    @usableFromInline var _done = false
+    private enum _State {
+        case idle, busy, done, failed
+    }
     
-    init(statement: SelectStatement, arguments: StatementArguments? = nil, adapter: RowAdapter? = nil) throws {
+    /// The statement iterated by this cursor
+    public let statement: Statement
+    private let _sqliteStatement: SQLiteStatement
+    private let _row: Row // Reused for performance
+    private var _state = _State.idle
+    
+    init(statement: Statement, arguments: StatementArguments? = nil, adapter: RowAdapter? = nil) throws {
         self.statement = statement
         self._row = try Row(statement: statement).adapted(with: adapter, layout: statement)
         self._sqliteStatement = statement.sqliteStatement
-        statement.reset(withArguments: arguments)
         
-        // Assume cursor is created for iteration
-        try statement.database.selectStatementWillExecute(statement)
+        // Assume cursor is created for immediate iteration: reset and set arguments
+        statement.reset(withArguments: arguments)
     }
     
     deinit {
+        if _state == .busy {
+            try? statement.database.statementDidExecute(statement)
+        }
+        
         // Statement reset fails when sqlite3_step has previously failed.
         // Just ignore reset error.
         try? statement.reset()
     }
     
-    @inlinable
     public func next() throws -> Row? {
-        if _done {
+        switch _state {
+        case .done:
             // make sure this instance never yields a value again, even if the
             // statement is reset by another cursor.
             return nil
+        case .idle:
+            guard try statement.database.statementWillExecute(statement) == nil else {
+                throw DatabaseError(
+                    resultCode: SQLITE_MISUSE,
+                    message: "Can't run statement that requires a customized authorizer from a cursor",
+                    sql: statement.sql,
+                    arguments: statement.arguments)
+            }
+            _state = .busy
+        default:
+            break
         }
+        
         switch sqlite3_step(_sqliteStatement) {
         case SQLITE_DONE:
-            _done = true
+            _state = .done
+            try statement.database.statementDidExecute(statement)
             return nil
         case SQLITE_ROW:
             return _row
         case let code:
-            try statement.didFail(withResultCode: code)
+            _state = .failed
+            try statement.database.statementDidFail(statement, withResultCode: code)
         }
     }
 }
 
 extension Row {
     
-    // MARK: - Fetching From SelectStatement
+    // MARK: - Fetching From Prepared Statement
     
     /// Returns a cursor over rows fetched from a prepared statement.
     ///
-    ///     let statement = try db.makeSelectStatement(sql: "SELECT ...")
+    ///     let statement = try db.makeStatement(sql: "SELECT ...")
     ///     let rows = try Row.fetchCursor(statement) // RowCursor
     ///     while let row = try rows.next() { // Row
     ///         let id: Int64 = row[0]
@@ -1264,7 +1283,7 @@ extension Row {
     /// - returns: A cursor over fetched rows.
     /// - throws: A DatabaseError is thrown whenever an SQLite error occurs.
     public static func fetchCursor(
-        _ statement: SelectStatement,
+        _ statement: Statement,
         arguments: StatementArguments? = nil,
         adapter: RowAdapter? = nil)
     throws -> RowCursor
@@ -1274,7 +1293,7 @@ extension Row {
     
     /// Returns an array of rows fetched from a prepared statement.
     ///
-    ///     let statement = try db.makeSelectStatement(sql: "SELECT ...")
+    ///     let statement = try db.makeStatement(sql: "SELECT ...")
     ///     let rows = try Row.fetchAll(statement)
     ///
     /// - parameters:
@@ -1284,7 +1303,7 @@ extension Row {
     /// - returns: An array of rows.
     /// - throws: A DatabaseError is thrown whenever an SQLite error occurs.
     public static func fetchAll(
-        _ statement: SelectStatement,
+        _ statement: Statement,
         arguments: StatementArguments? = nil,
         adapter: RowAdapter? = nil)
     throws -> [Row]
@@ -1295,7 +1314,7 @@ extension Row {
     
     /// Returns a set of rows fetched from a prepared statement.
     ///
-    ///     let statement = try db.makeSelectStatement(sql: "SELECT ...")
+    ///     let statement = try db.makeStatement(sql: "SELECT ...")
     ///     let rows = try Row.fetchSet(statement)
     ///
     /// - parameters:
@@ -1305,7 +1324,7 @@ extension Row {
     /// - returns: A set of rows.
     /// - throws: A DatabaseError is thrown whenever an SQLite error occurs.
     public static func fetchSet(
-        _ statement: SelectStatement,
+        _ statement: Statement,
         arguments: StatementArguments? = nil,
         adapter: RowAdapter? = nil)
     throws -> Set<Row>
@@ -1316,7 +1335,7 @@ extension Row {
     
     /// Returns a single row fetched from a prepared statement.
     ///
-    ///     let statement = try db.makeSelectStatement(sql: "SELECT ...")
+    ///     let statement = try db.makeStatement(sql: "SELECT ...")
     ///     let row = try Row.fetchOne(statement)
     ///
     /// - parameters:
@@ -1326,7 +1345,7 @@ extension Row {
     /// - returns: An optional row.
     /// - throws: A DatabaseError is thrown whenever an SQLite error occurs.
     public static func fetchOne(
-        _ statement: SelectStatement,
+        _ statement: Statement,
         arguments: StatementArguments? = nil,
         adapter: RowAdapter? = nil)
     throws -> Row?
@@ -1378,7 +1397,7 @@ extension Row {
         adapter: RowAdapter? = nil)
     throws -> RowCursor
     {
-        try fetchCursor(db, SQLRequest<Void>(sql: sql, arguments: arguments, adapter: adapter))
+        try fetchCursor(db, SQLRequest(sql: sql, arguments: arguments, adapter: adapter))
     }
     
     /// Returns an array of rows fetched from an SQL query.
@@ -1403,7 +1422,7 @@ extension Row {
         adapter: RowAdapter? = nil)
     throws -> [Row]
     {
-        try fetchAll(db, SQLRequest<Void>(sql: sql, arguments: arguments, adapter: adapter))
+        try fetchAll(db, SQLRequest(sql: sql, arguments: arguments, adapter: adapter))
     }
     
     /// Returns a set of rows fetched from an SQL query.
@@ -1428,7 +1447,7 @@ extension Row {
         adapter: RowAdapter? = nil)
     throws -> Set<Row>
     {
-        try fetchSet(db, SQLRequest<Void>(sql: sql, arguments: arguments, adapter: adapter))
+        try fetchSet(db, SQLRequest(sql: sql, arguments: arguments, adapter: adapter))
     }
     
     /// Returns a single row fetched from an SQL query.
@@ -1453,7 +1472,7 @@ extension Row {
         adapter: RowAdapter? = nil)
     throws -> Row?
     {
-        try fetchOne(db, SQLRequest<Void>(sql: sql, arguments: arguments, adapter: adapter))
+        try fetchOne(db, SQLRequest(sql: sql, arguments: arguments, adapter: adapter))
     }
 }
 
@@ -1638,7 +1657,7 @@ extension Row {
     
     /// Accesses the (ColumnName, DatabaseValue) pair at given index.
     public subscript(position: RowIndex) -> (String, DatabaseValue) {
-        let index = checkedIndex(position.index)
+        let index = _checkedIndex(position.index)
         return (
             impl.columnName(atUncheckedIndex: index),
             impl.databaseValue(atUncheckedIndex: index))
@@ -2225,11 +2244,11 @@ private struct StatementCopyRowImpl: RowImpl {
 
 /// See Row.init(statement:)
 private struct StatementRowImpl: RowImpl {
-    let statement: SelectStatement
+    let statement: Statement
     let sqliteStatement: SQLiteStatement
     let lowercaseColumnIndexes: [String: Int]
     
-    init(sqliteStatement: SQLiteStatement, statement: SelectStatement) {
+    init(sqliteStatement: SQLiteStatement, statement: Statement) {
         self.statement = statement
         self.sqliteStatement = sqliteStatement
         // Optimize row[columnName]
